@@ -1,1 +1,4 @@
-dGFyZ2V0LwpDYXJnby5sb2NrCm5vZGVfbW9kdWxlcy8Kc3JjLXRhdXJpL2ljb25zLyoucG5nCg==
+target/
+Cargo.lock
+node_modules/
+src-tauri/icons/*.png
