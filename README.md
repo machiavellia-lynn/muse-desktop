@@ -1,1 +1,210 @@
-IyBNdXNlIERlc2t0b3AgKFVub2ZmaWNpYWwpCgoqKkEgbGlnaHR3ZWlnaHQsIG9wZW4tc291cmNlIFdpbmRvd3MgY29tcGFuaW9uIGZvciB5b3VyIG93biBNdXNlIGFnZW50LioqCgpNdXNlIERlc2t0b3AgZ2l2ZXMgdGhlIE11c2UgYWdlbnQgdGhhdCBsaXZlcyBpbiB5b3VyIE11c2UgYWNjb3VudCBhCnBhaXIgb2YgKmhhbmRzKiBvbiB5b3VyIG93biBXaW5kb3dzIFBDOiBpdCBvcGVucyB0aGUgb2ZmaWNpYWwKW211c2UuYWldKGh0dHBzOi8vbXVzZS5haSkgaW4gaXRzIG93biB3aW5kb3cgYW5kIHJ1bnMgYSBzbWFsbCBsb2NhbApicmlkZ2UgdGhhdCBsZXRzIHlvdXIgTXVzZSByZWFkIGFuZCB3cml0ZSBmaWxlcyBpbnNpZGUgKipvbmUgZm9sZGVyCnlvdSBjaG9vc2UqKiDigJQgYW5kLCBvbmx5IGlmIHlvdSB0dXJuIGl0IG9uLCBydW4gdGVybWluYWwgY29tbWFuZHMgdGhhdAp5b3UgYXBwcm92ZSBvbmUgYnkgb25lLgoKQnVpbHQgd2l0aCAqKlRhdXJpICsgUnVzdCoqOiBhIGZldyBNQiBvbiBkaXNrLCBhIGZldyBkb3plbiBNQiBvZiBSQU0sCmJlY2F1c2UgaXQgdXNlcyB0aGUgV2ViVmlldzIgcnVudGltZSB0aGF0IGFscmVhZHkgc2hpcHMgd2l0aCBXaW5kb3dzCmluc3RlYWQgb2YgYnVuZGxpbmcgYSB3aG9sZSBicm93c2VyLgoKPiAjIyMg4pqg77iPIFVub2ZmaWNpYWwgcHJvamVjdAo+IFRoaXMgcHJvamVjdCBpcyAqKm5vdCBtYWRlIGJ5IE1ldGEqKiBhbmQgaXMgbm90IGFmZmlsaWF0ZWQgd2l0aCBNZXRhCj4gaW4gYW55IHdheS4g4oCcTXVzZeKAnSBpcyBhIHRyYWRlbWFyayBvZiBNZXRhLiBUaGlzIGFwcCBzaW1wbHkgb3BlbnMKPiBNZXRh4oCZcyBvZmZpY2lhbCBtdXNlLmFpIHdlYnNpdGUgaW4gYSB3aW5kb3cgYW5kIGFkZHMgYSBsb2NhbCwKPiBzYW5kYm94ZWQgYnJpZGdlIG9uIHlvdXIgb3duIG1hY2hpbmUuIEFsbCBzb3VyY2UgY29kZSBpcyBpbiB0aGlzCj4gcmVwb3NpdG9yeSDigJQgcGxlYXNlIHJlYWQgaXQgYmVmb3JlIHRydXN0aW5nIGl0IHdpdGggeW91ciBmaWxlcy4KCi0tLQoKIyMgV2h5IGRvZXMgdGhpcyBleGlzdD8KCk1ldGHigJlzIE11c2UgaGFzIGFwcHMgZm9yIGlPUywgQW5kcm9pZCwgTWFjIGFuZCB0aGUgd2ViIOKAlCBidXQgKipubwpXaW5kb3dzIGFwcCoqLiBZb3VyIE11c2Ugd29ya3Mgb24gaXRzIG93biBjbG91ZCBjb21wdXRlcjsgaXQgY2Fubm90CnRvdWNoIGZpbGVzIG9uIHlvdXIgV2luZG93cyBQQy4gVGhpcyBwcm9qZWN0IGNsb3NlcyB0aGF0IGdhcCAqd2l0aG91dCoKaGFuZGluZyB5b3VyIFBDIHRvIGEgY2xvc2VkLXNvdXJjZSBiaW5hcnkgb3IgYSB0aGlyZC1wYXJ0eSBjbG91ZDoKCi0gKipObyB0aGlyZC1wYXJ0eSBzZXJ2ZXIuKiogVGhlIGJyaWRnZSBvbiB5b3VyIFBDIG9ubHkgdGFsa3MgdG8geW91cgogIG93biBNdXNlLCBvdmVyIHlvdXIgb3duIFtUYWlsc2NhbGVdKGh0dHBzOi8vdGFpbHNjYWxlLmNvbSkgbmV0d29yay4KLSAqKk5vIGNyZWRlbnRpYWwgaGFuZGxpbmcuKiogU2lnbi1pbiBoYXBwZW5zIG9uIE1ldGHigJlzIHJlYWwgbXVzZS5haQogIHBhZ2UgaW5zaWRlIHRoZSBhcHAgd2luZG93LiBUaGUgYXBwIG5ldmVyIHNlZXMsIHN0b3JlcyBvciB0cmFuc21pdHMKICB5b3VyIHBhc3N3b3JkLCBhbmQgaW5qZWN0cyBubyBjb2RlIGludG8gdGhhdCBwYWdlICh0aGUgbXVzZS5haQogIHdpbmRvdyBpcyBkZW5pZWQgYWxsIGFwcC9JUEMgcGVybWlzc2lvbnMgYnkgY29uZmlndXJhdGlvbiDigJQgc2VlCiAgYHNyYy10YXVyaS9jYXBhYmlsaXRpZXMvcGFuZWwuanNvbmApLgotICoqVGVybWluYWwgaXMgb2ZmIGJ5IGRlZmF1bHQuKiogRXZlbiB3aGVuIGVuYWJsZWQsIGV2ZXJ5IHNpbmdsZQogIGNvbW1hbmQgcG9wcyB1cCBvbiAqeW91ciogc2NyZWVuIGFuZCBydW5zIG9ubHkgaWYgeW91IGNsaWNrCiAgKipBbGxvdyoqLiBObyBzaWxlbnQgcmVtb3RlIGV4ZWN1dGlvbiwgZXZlciDigJQgdGhlIGV4YWN0IG9wcG9zaXRlIG9mCiAgaG93IHNvbWUgY2xvc2VkIOKAnGdhdGV3YXnigJ0gYXBwcyBiZWhhdmUuCgojIyBIb3cgaXQgd29ya3MKCmBgYArilIzilIAgWW91ciBXaW5kb3dzIFBDIOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUkArilIIgIE11c2UgRGVza3RvcCAob25lIHNtYWxsIFJ1c3QgcHJvY2VzcykgICAgICAg4pSCCuKUgiAg4pSc4pSAIFdpbmRvdyAxOiBtdXNlLmFpIChvZmZpY2lhbCwgYnkgTWV0YSkgICAg4pSCCuKUgiAg4pSCICAgICAgICAgICAg4oCUIG5vIElQQyByaWdodHMsIG5vIGluamVjdGlvbiAgIOKUggrilIIgIOKUnOKUgCBXaW5kb3cgMjogQ29udHJvbCBQYW5lbCAobG9jYWwgcGFnZSkgICAgIOKUggrilIIgIOKUgiAgICAgICAgICAgIOKAlCBmb2xkZXIsIHRva2VuLCBsb2csIGFwcHJvdmFscyDilIIK4pSCICDilJzilIAgVHJheSBpY29uIOKAlCBvcGVuIC8gcGFuZWwgLyBxdWl0ICAgICAgICAgIOKUggrilIIgIOKUlOKUgCBCcmlkZ2UgKEhUVFAsIHBvcnQgODc2NSkgICAgICAgICAgICAgICAgIOKUggrilIIgICAgICAgYm91bmQgdG8geW91ciBUYWlsc2NhbGUgSVAgb25seSAgICAgICAg4pSCCuKUlOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUrOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUmAogICAgICAgICAgICAgICDilIIgIFRhaWxzY2FsZSAoZW5jcnlwdGVkLCB5b3VyIG93biBuZXR3b3JrKQrilIzilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilrzilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilIDilJAK4pSCICBZb3VyIE11c2UgKGl0cyBvd24gY2xvdWQgY29tcHV0ZXIpICAgICAgICAgIOKUggrilIIgIHVzZXMgY2xpZW50L2JyaWRnZV9jbGllbnQucHkgKyB5b3VyIHRva2VuICAg4pSCCuKUlOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUgOKUmApgYGAKClRoZSBicmlkZ2UgZW5mb3JjZXMsIGluIGNvZGUgKHNlZSBgY3JhdGVzL211c2UtYnJpZGdlYCwgdW5pdC10ZXN0ZWQpOgoKfCBSdWxlIHwgQmVoYXZpb3VyIHwKfC0tLXwtLS18CnwgV29ya3NwYWNlIHNhbmRib3ggfCBPbmx5IHRoZSBvbmUgZm9sZGVyIHlvdSBwaWNrLiBgLi4vYCBhbmQgc3ltbGluayBlc2NhcGVzIGFyZSByZWplY3RlZCB8CnwgUGFpcmluZyB0b2tlbiB8IEV2ZXJ5IHJlcXVlc3QgbmVlZHMgeW91ciB0b2tlbiAoY29uc3RhbnQtdGltZSBjb21wYXJlKS4gTm8gdG9rZW4g4oaSIDQwMSB8CnwgVGVybWluYWwgfCBPZmYgYnkgZGVmYXVsdDsgcGVyLWNvbW1hbmQgbWFudWFsIGFwcHJvdmFsIG9uIHlvdXIgc2NyZWVuOyA2MCBzIHRpbWVvdXQgfAp8IEJpbmQgYWRkcmVzcyB8IFRhaWxzY2FsZSBJUCBvciBgMTI3LjAuMC4xYCBvbmx5IOKAlCBgMC4wLjAuMGAgaXMgcmVmdXNlZCBpbiBjb2RlIHwKfCBPdXRib3VuZCBjb25uZWN0aW9ucyB8IE5vbmUuIFRoZSBhcHAgbmV2ZXIgcGhvbmVzIGhvbWUgfAp8IEZpbGUgbGltaXRzIHwgVGV4dCBmaWxlcyBvbmx5LCByZWFkIOKJpCAxIE1CLCB3cml0ZSDiiaQgMiBNQiB8CnwgTG9nZ2luZyB8IEV2ZXJ5IGFjY2VzcyBpcyBsb2dnZWQgYW5kIHNob3duIGxpdmUgaW4gdGhlIENvbnRyb2wgUGFuZWwgfAp8IEtpbGwgc3dpdGNoIHwgUXVpdCBmcm9tIHRoZSB0cmF5ID0gYnJpZGdlIGZ1bGx5IHN0b3BzLiBOb3RoaW5nIGF1dG9zdGFydHMgfAoKIyMgUmVxdWlyZW1lbnRzCgotIFdpbmRvd3MgMTAvMTEgKFdlYlZpZXcyIHJ1bnRpbWUg4oCUIHByZWluc3RhbGxlZCBvbiBXaW5kb3dzIDExLCBhbmQgb24KICBtb3N0IFdpbmRvd3MgMTAgbWFjaGluZXMpCi0gQSBNdXNlIGFjY291bnQgKHlvdSBzaWduIGluIHdpdGggeW91ciBvd24gYWNjb3VudCkKLSBBIGZyZWUgW1RhaWxzY2FsZV0oaHR0cHM6Ly90YWlsc2NhbGUuY29tKSBhY2NvdW50LCBpbnN0YWxsZWQgb24geW91ciBQQwotIFlvdXIgTXVzZSBjb25uZWN0ZWQgdG8geW91ciB0YWlsbmV0IChzZWUgW1NFVFVQLm1kXShTRVRVUC5tZCkpCgojIyBRdWljayBzdGFydAoKMS4gKipEb3dubG9hZCoqIHRoZSBpbnN0YWxsZXIgZnJvbSB0aGUKICAgW2xhdGVzdCByZWxlYXNlXSguLi8uLi9yZWxlYXNlcy9sYXRlc3QpIChvciBidWlsZCBpdCB5b3Vyc2VsZiwgYmVsb3cpLgoyLiAqKkluc3RhbGwgVGFpbHNjYWxlKiogb24geW91ciBQQyBhbmQgc2lnbiBpbi4KMy4gKipSdW4gTXVzZSBEZXNrdG9wKiosIHNpZ24gaW4gdG8gbXVzZS5haSBpbiB0aGUgbWFpbiB3aW5kb3cuCjQuICoqRm9sbG93IFtTRVRVUC5tZF0oU0VUVVAubWQpKiogdG8gY29ubmVjdCB5b3VyIE11c2UgdG8geW91cgogICB0YWlsbmV0IGFuZCBwYWlyIGl0IHdpdGggdGhlIHRva2VuIGZyb20gdGhlIENvbnRyb2wgUGFuZWwKICAgKGluY2x1ZGVzIGEgY29weS1wYXN0ZSBwcm9tcHQgZm9yIHlvdXIgTXVzZSkuCjUuIEFzayB5b3VyIE11c2U6ICrigJxMaXN0IHRoZSBmaWxlcyBpbiBteSBsYXB0b3Agd29ya3NwYWNlLuKAnSoKCiMjIEJ1aWxkIGl0IHlvdXJzZWxmCgpZb3UgZG9u4oCZdCBoYXZlIHRvIHRydXN0IG91ciBiaW5hcmllcyDigJQgYnVpbGRpbmcgaXMgb25lIGNsaWNrIGhlcmU6CgotIFB1c2ggdGhpcyByZXBvIHRvIEdpdEh1YiDihpIgdGhlICoqQnVpbGQgTXVzZSBEZXNrdG9wIChXaW5kb3dzKSoqCiAgd29ya2Zsb3cgKGAuZ2l0aHViL3dvcmtmbG93cy9gKSBydW5zIHRoZSBSdXN0IHRlc3RzIGFuZCBwcm9kdWNlcyB0aGUKICBpbnN0YWxsZXIgKyBwb3J0YWJsZSBgLmV4ZWAgYXMgYSBkb3dubG9hZGFibGUgYXJ0aWZhY3QuCi0gT3IgbG9jYWxseSBvbiBXaW5kb3dzOiBpbnN0YWxsIFJ1c3QgKyBOb2RlLCB0aGVuCiAgYG5wbSBpbnN0YWxsICYmIG5weCB0YXVyaSBidWlsZGAuCgojIyBSZXBvc2l0b3J5IGxheW91dAoKLSBgY3JhdGVzL211c2UtYnJpZGdlL2Ag4oCUIHRoZSBicmlkZ2UgY29yZTogcHVyZSBSdXN0IChzdGQgKyBzZXJkZV9qc29uKSwKICBpbmRlcGVuZGVudGx5IHVuaXQtdGVzdGVkIChgY2FyZ28gdGVzdCAtcCBtdXNlLWJyaWRnZWApCi0gYHNyYy10YXVyaS9gIOKAlCB0aGUgVGF1cmkgc2hlbGw6IHdpbmRvd3MsIHRyYXksIGFwcHJvdmFsIGRpYWxvZ3MKLSBgc3JjL2Ag4oCUIHRoZSBDb250cm9sIFBhbmVsIChwbGFpbiBIVE1ML0NTUy9KUywgbm8gZnJhbWV3b3JrKQotIGBjbGllbnQvYCDigJQgdGhlIHNtYWxsIFB5dGhvbiBjbGllbnQgeW91ciBNdXNlIHVzZXMsIHBsdXMgdGhlCiAgcGFpcmluZyBwcm9tcHQgdG8gcGFzdGUgdG8gaXQKCiMjIFNlY3VyaXR5CgpTZWUgW1NFQ1VSSVRZLm1kXShTRUNVUklUWS5tZCkgZm9yIHRoZSB0aHJlYXQgbW9kZWwsIHdoYXQgdGhlIHBhaXJpbmcKdG9rZW4gZG9lcyBhbmQgZG9lcyBub3QgcHJvdGVjdCwgYW5kIGhvdyB0byByZXZva2UgYWNjZXNzLgpJbiBzaG9ydDogKip0aGUgdG9rZW4gaXMgYSBrZXkgdG8geW91ciBjaG9zZW4gZm9sZGVyIOKAlCB0cmVhdCBpdCBsaWtlIGEKcGFzc3dvcmQqKiwgYW5kIG9ubHkgZXZlciBnaXZlIGl0IHRvIHlvdXIgb3duIE11c2UuCgojIyBMaWNlbnNlCgpbTUlUXShMSUNFTlNFKS4gVXNlIGl0LCBmb3JrIGl0LCBzaGlwIGl0IOKAlCBqdXN0IGtlZXAgdGhlIGNvcHlyaWdodApub3RpY2UsIGFuZCBrZWVwIHRoZSB1bm9mZmljaWFsIGRpc2NsYWltZXI6IHRoaXMgaXMgbm90IE1ldGHigJlzIHByb2R1Y3QuCgotLS0KCiMjIEJhaGFzYSBJbmRvbmVzaWEgKHJpbmdrYXMpCgpNdXNlIERlc2t0b3AgKHRpZGFrIHJlc21pKSBhZGFsYWggcGVuZGFtcGluZyBXaW5kb3dzIHlhbmcgcmluZ2FuCnVudHVrIE11c2Uga2FtdSBzZW5kaXJpOiBtZW1idWthIG11c2UuYWkgcmVzbWkgZGkgamVuZGVsYW55YSBkYW4KbWVuamFsYW5rYW4gYnJpZGdlIGxva2FsIGtlY2lsIHN1cGF5YSBNdXNlIGthbXUgYmlzYSBiZWtlcmphIGRpCioqc2F0dSBmb2xkZXIgcGlsaWhhbm11KiogZGkgbGFwdG9wbXUsIGxld2F0IGphcmluZ2FuIFRhaWxzY2FsZQptaWxpa211IHNlbmRpcmkuIFRlcm1pbmFsIG1hdGkgc2VjYXJhIGRlZmF1bHQgZGFuIHNldGlhcCBwZXJpbnRhaAp3YWppYiBwZXJzZXR1anVhbiBtYW51YWwgZGkgbGF5YXJtdS4gQnVrYW4gYnVhdGFuIE1ldGE7IHNlbHVydWgga29kZQp0ZXJidWthIGRpIHJlcG8gaW5pIOKAlCBiYWNhIGR1bHUgc2ViZWx1bSBwZXJjYXlhLiBQYW5kdWFuIHBlbWFzYW5nYW46CltTRVRVUC5tZF0oU0VUVVAubWQpLgo=
+<div align="center">
+
+# Muse Desktop
+
+### Your Muse, now with hands on your own Windows PC — safely.
+
+A lightweight, open-source desktop companion that lets **your own Muse
+agent** work in **one folder you choose** on your Windows PC.
+
+[![Build](https://github.com/machiavellia-lynn/muse-desktop/actions/workflows/build-windows.yml/badge.svg)](https://github.com/machiavellia-lynn/muse-desktop/actions/workflows/build-windows.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-blue)
+![Built with Tauri + Rust](https://img.shields.io/badge/built%20with-Tauri%20%2B%20Rust-orange)
+
+**English** · [Bahasa Indonesia](README.id.md)
+
+</div>
+
+> [!WARNING]
+> **This is an unofficial, community project.** It is not made by Meta
+> and is not affiliated with Meta. “Muse” is a trademark of Meta.
+> This app only opens Meta’s official [muse.ai](https://muse.ai) in a
+> window and adds a small, sandboxed local bridge on your own machine.
+> The full source code is right here — read it before you trust it.
+
+---
+
+## ⬇️ Download
+
+**[➡️ Get the latest build from GitHub Actions](https://github.com/machiavellia-lynn/muse-desktop/actions/workflows/build-windows.yml)**
+— open the newest green run → download the **Muse-Desktop-Windows**
+artifact → it contains:
+
+| File | What it is |
+|---|---|
+| `Muse Desktop_0.2.0_x64-setup.exe` | Installer (recommended) |
+| `muse-desktop.exe` | Portable — no install, just run it |
+
+> Windows may show a SmartScreen warning because the app is not
+> code-signed yet. Click **More info → Run anyway** — or build it
+> yourself from this source (instructions below) so you don’t have to
+> trust anyone’s binary.
+
+**You need:**
+- ✅ A Windows 10/11 PC
+- ✅ A Muse account (you sign in with *your own*)
+- ✅ A free [Tailscale](https://tailscale.com) account (explained below)
+- ⏱️ About 10 minutes, once
+
+---
+
+## 🚀 Install in 5 steps
+
+**1. Install the app**
+Run the installer (or the portable `.exe`). Two windows open: the main
+**Muse** window and a small **Control Panel**.
+
+**2. Sign in**
+In the main window, sign in to muse.ai with your own Muse account —
+exactly like in your browser. The app never sees your password.
+
+**3. Install Tailscale on your PC**
+Download [Tailscale](https://tailscale.com/download), install it,
+sign in, leave it running. Tailscale is the private, encrypted tunnel
+between your PC and your Muse — the bridge is never exposed to the
+internet.
+
+**4. Connect your Muse to your network**
+Ask your Muse to join your Tailscale network and approve the device.
+Full walkthrough: **[SETUP.md](SETUP.md)** (steps 2–3).
+
+**5. Pair them**
+In the Control Panel you’ll see an address (like
+`http://100.x.x.x:8765`) and a **pairing token**. Give both to your
+Muse, together with the ready-made prompt in
+[client/PROMPT-FOR-YOUR-MUSE.md](client/PROMPT-FOR-YOUR-MUSE.md).
+
+Done. Try asking your Muse:
+
+> “List the files in my laptop workspace.”
+
+---
+
+## ✨ What your Muse can do with it
+
+- 📁 List, read and create files — **only** inside the one workspace
+  folder you picked
+- 📝 Save summaries, drafts, code and reports straight onto your PC
+- 🖥️ Run terminal commands — **only** if you enable it, and **only**
+  after you click *Allow* on a dialog on your own screen, every time
+
+## 🔒 What it can never do
+
+- ❌ Touch anything outside your chosen folder (path escapes and
+  symlink tricks are rejected in code, covered by tests)
+- ❌ Run a command silently — there is no remote-exec-without-approval
+  path, by design
+- ❌ See your Muse password or account — sign-in happens on Meta’s
+  real page; the app injects nothing into it and that window is denied
+  all app permissions
+- ❌ Phone home — there is no telemetry, no update server, no
+  third-party cloud in the loop at all
+
+Every access is logged live in the Control Panel. Closing the app from
+the tray kills the bridge completely.
+
+---
+
+## 🧩 How it works
+
+```
+┌─ Your Windows PC ─────────────────────────────┐
+│  Muse Desktop (one small Rust process)        │
+│  ├─ Window 1 · muse.ai (official, by Meta)    │
+│  │             no app permissions, no scripts  │
+│  ├─ Window 2 · Control Panel (local page)     │
+│  │             folder · token · log · approve  │
+│  ├─ Tray icon · open / panel / quit           │
+│  └─ Bridge · HTTP on your Tailscale IP only   │
+└──────────────────┬────────────────────────────┘
+                   │  Tailscale — encrypted,
+                   │  your private network
+┌──────────────────▼────────────────────────────┐
+│  Your Muse · its own cloud computer          │
+│  talks to the bridge with your pairing token  │
+└───────────────────────────────────────────────┘
+```
+
+The bridge core is ~700 lines of Rust (`crates/muse-bridge`,
+std + serde_json only) with unit tests for the sandbox, the token
+check, and the approval flow: `cargo test -p muse-bridge`.
+
+Full threat model: **[SECURITY.md](SECURITY.md)**.
+
+---
+
+## ❓ FAQ
+
+**Is this the official Muse app for Windows?**
+No. Meta does not offer a Windows app — Muse is on web, iOS, Android
+and Mac. This is an independent open-source project (MIT) that opens
+the official website in a window and adds the local bridge.
+
+**Is it safe?**
+Judge for yourself: the source is small and fully here; the terminal
+is off by default and needs your click per command; the bridge only
+listens on your private Tailscale network and demands a token only
+you can see. The honest list of limitations is in
+[SECURITY.md](SECURITY.md).
+
+**Why Tailscale?**
+Your Muse lives on its own cloud computer — it needs *some* private
+road to your PC. Tailscale is free for personal use, encrypted, and
+works without opening any port on your router. The bridge refuses to
+listen on anything else.
+
+**Which folder should I pick as the workspace?**
+A dedicated folder (the default is `Documents`-style:
+`C:\Users\<you>\MuseWorkspace`). Don’t point it at your whole drive,
+Documents, or anything with secrets you wouldn’t hand your Muse
+directly.
+
+**Can I revoke access?**
+Instantly: quit the app from the tray. Permanently: delete `token.txt`
+in the app data folder (a new token is generated on next start) and/or
+remove the `muse` device from your Tailscale admin page.
+
+**macOS / Linux?**
+Not yet. The bridge core is platform-neutral Rust; a Tauri build for
+other systems is welcome as a contribution.
+
+---
+
+## 🛠️ Build from source
+
+**The easy way (no tooling on your PC):** fork this repo → the
+**Build Muse Desktop (Windows)** GitHub Actions workflow builds the
+installer and portable exe for you, running the bridge tests first.
+
+**Locally on Windows:**
+
+```powershell
+# needs: Rust (rustup) + Node.js 22
+npm install
+python scripts\make_icon.py   # pip install pillow first
+npx tauri icon src-tauri\icons\icon.png
+npx tauri build
+```
+
+## 📂 What’s in this repo
+
+| Path | Contents |
+|---|---|
+| `crates/muse-bridge/` | The bridge core (pure Rust) + all tests |
+| `src-tauri/` | Tauri shell — windows, tray, approval dialogs, permissions |
+| `src/` | The Control Panel (plain HTML/CSS/JS) |
+| `client/` | Tiny Python client + the pairing prompt for your Muse |
+| `SETUP.md` | Step-by-step connection guide |
+| `SECURITY.md` | Threat model & limitations, honestly |
+
+## 📜 License
+
+[MIT](LICENSE) — use it, fork it, share it. Keep the copyright notice
+and the unofficial disclaimer: **this is not Meta’s product.**
+
+<div align="center">
+
+Made with Rust, Tauri, and a healthy distrust of closed-source binaries.
+
+</div>
