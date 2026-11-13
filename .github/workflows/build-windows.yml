@@ -49,6 +49,6 @@ jobs:
         with:
           name: Muse-Desktop-Windows
           path: |
-            src-tauri/target/release/bundle/nsis/*.exe
-            src-tauri/target/release/muse-desktop.exe
+            target/release/bundle/nsis/*.exe
+            target/release/muse-desktop.exe
           if-no-files-found: error
