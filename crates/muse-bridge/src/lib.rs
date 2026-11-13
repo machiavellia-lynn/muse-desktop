@@ -1,1 +1,674 @@
-Ly8hIE11c2UgQnJpZGdlIOKAlCBzZXJ2ZXIgSFRUUCBsb2thbCB5YW5nIHRlcnNhbmRib3gga2UgU0FUVSBmb2xkZXIuCi8vIQovLyEgQXR1cmFuIHlhbmcgZGlrdW5jaSAoc2FtYSBkaSB2ZXJzaSBQeXRob24sIE5vZGUsIGRhbiBSdXN0IGluaSk6Ci8vISAtIFNlbXVhIHJvdXRlIGtlY3VhbGkgYC9oZWFsdGhgIHdhamliIGhlYWRlciBgWC1CcmlkZ2UtVG9rZW5gCi8vISAgIChkaWJhbmRpbmdrYW4gY29uc3RhbnQtdGltZSkuCi8vISAtIFBhdGggZGkgbHVhciB3b3Jrc3BhY2UgZGl0b2xhaywgdGVybWFzdWsgYC4uL2AgZGFuIHN5bWxpbmsga2VsdWFyCi8vISAgIChzZW11YSBwYXRoIGRpLWNhbm9uaWNhbGl6ZSBkdWx1IHNlYmVsdW0gZGljZWspLgovLyEgLSBFeGVjIE1BVEkga2VjdWFsaSBgYWxsb3dfZXhlY2AgaGlkdXAsIGRhbiBzZXRpYXAgcGVyaW50YWggdGV0YXAKLy8hICAgaGFydXMgbG9sb3MgY2FsbGJhY2sgYGFwcHJvdmVgIChkaSBhcHA6IGRpYWxvZyBkaSBsYXB0b3AgcGVuZ2d1bmEpLgovLyEgLSBCaW5kIGAwLjAuMC4wYCBkaXRvbGFrIG1lbnRhaC1tZW50YWguCi8vIQovLyEgTW9kdWwgaW5pIG11cm5pIHN0ZCArIHNlcmRlX2pzb246IHRpZGFrIGFkYSBmcmFtZXdvcmsgd2ViLCB0aWRhayBhZGEKLy8hIGtvbmVrc2kga2VsdWFyLCBzdXBheWEgc2VsdXJ1aCBwZXJtdWthYW4gc2VyYW5nYW5ueWEgYmlzYSBkaWJhY2EuCgp1c2Ugc3RkOjppbzo6e1JlYWQsIFdyaXRlfTsKdXNlIHN0ZDo6bmV0Ojp7VGNwTGlzdGVuZXIsIFRjcFN0cmVhbSwgVWRwU29ja2V0fTsKdXNlIHN0ZDo6cGF0aDo6e1BhdGgsIFBhdGhCdWZ9Owp1c2Ugc3RkOjpzeW5jOjphdG9taWM6OntBdG9taWNCb29sLCBPcmRlcmluZ307CnVzZSBzdGQ6OnN5bmM6OntBcmMsIFJ3TG9ja307CnVzZSBzdGQ6OnRpbWU6OkR1cmF0aW9uOwoKcHViIGNvbnN0IE1BWF9SRUFEOiB1NjQgPSAxXzAwMF8wMDA7CnB1YiBjb25zdCBNQVhfV1JJVEU6IHVzaXplID0gMl8wMDBfMDAwOwpwdWIgY29uc3QgRVhFQ19USU1FT1VUOiBEdXJhdGlvbiA9IER1cmF0aW9uOjpmcm9tX3NlY3MoNjApOwpwdWIgY29uc3QgVkVSU0lPTjogJnN0ciA9ICIwLjIuMCI7CgovLy8gQ2FsbGJhY2sgcGVyc2V0dWp1YW4gZXhlYzogKGNvbW1hbmQsIHdvcmtzcGFjZSkgLT4gYm9sZWggamFsYW4/CnB1YiB0eXBlIEFwcHJvdmVGbiA9IEFyYzxkeW4gRm4oJnN0ciwgJlBhdGgpIC0+IGJvb2wgKyBTZW5kICsgU3luYz47Ci8vLyBDYWxsYmFjayBsb2c6IGRpcGFuZ2dpbCB1bnR1ayBzZXRpYXAgcGVyaXN0aXdhIChhcHAgbWVuYW1waWxrYW5ueWEKLy8vIGRpIHBhbmVsICsgbWVudWxpcyBrZSBmaWxlIGxvZykuCnB1YiB0eXBlIExvZ0ZuID0gQXJjPGR5biBGbigmc3RyKSArIFNlbmQgKyBTeW5jPjsKCiNbZGVyaXZlKENsb25lKV0KcHViIHN0cnVjdCBCcmlkZ2VTdGF0ZSB7CiAgICBwdWIgd29ya3NwYWNlOiBBcmM8UndMb2NrPFBhdGhCdWY+PiwKICAgIHB1YiB0b2tlbjogU3RyaW5nLAogICAgcHViIGFsbG93X2V4ZWM6IEFyYzxBdG9taWNCb29sPiwKICAgIHB1YiBhcHByb3ZlOiBBcHByb3ZlRm4sCiAgICBwdWIgbG9nOiBMb2dGbiwKfQoKaW1wbCBCcmlkZ2VTdGF0ZSB7CiAgICBwdWIgZm4gbmV3KAogICAgICAgIHdvcmtzcGFjZTogUGF0aEJ1ZiwKICAgICAgICB0b2tlbjogU3RyaW5nLAogICAgICAgIGFsbG93X2V4ZWM6IGJvb2wsCiAgICAgICAgYXBwcm92ZTogQXBwcm92ZUZuLAogICAgICAgIGxvZzogTG9nRm4sCiAgICApIC0+IHN0ZDo6aW86OlJlc3VsdDxTZWxmPiB7CiAgICAgICAgbGV0IHdzID0gd29ya3NwYWNlLmNhbm9uaWNhbGl6ZSgpPzsKICAgICAgICBPayhTZWxmIHsKICAgICAgICAgICAgd29ya3NwYWNlOiBBcmM6Om5ldyhSd0xvY2s6Om5ldyh3cykpLAogICAgICAgICAgICB0b2tlbiwKICAgICAgICAgICAgYWxsb3dfZXhlYzogQXJjOjpuZXcoQXRvbWljQm9vbDo6bmV3KGFsbG93X2V4ZWMpKSwKICAgICAgICAgICAgYXBwcm92ZSwKICAgICAgICAgICAgbG9nLAogICAgICAgIH0pCiAgICB9CgogICAgcHViIGZuIHdvcmtzcGFjZSgmc2VsZikgLT4gUGF0aEJ1ZiB7CiAgICAgICAgc2VsZi53b3Jrc3BhY2UucmVhZCgpLnVud3JhcCgpLmNsb25lKCkKICAgIH0KCiAgICBwdWIgZm4gc2V0X3dvcmtzcGFjZSgmc2VsZiwgZGlyOiAmUGF0aCkgLT4gc3RkOjppbzo6UmVzdWx0PCgpPiB7CiAgICAgICAgbGV0IHdzID0gZGlyLmNhbm9uaWNhbGl6ZSgpPzsKICAgICAgICAqc2VsZi53b3Jrc3BhY2Uud3JpdGUoKS51bndyYXAoKSA9IHdzOwogICAgICAgIE9rKCgpKQogICAgfQp9CgovLy8gUGVyYmFuZGluZ2FuIHRva2VuIGNvbnN0YW50LXRpbWUgKHBhbmphbmcgYmVkYSA9IGxhbmdzdW5nIGZhbHNlLAovLy8gaXNpIGRpYmFuZGluZ2thbiB0YW5wYSBlYXJseS1leGl0KS4KcHViIGZuIHRva2VuX2VxKGdvdDogJnN0ciwgd2FudDogJnN0cikgLT4gYm9vbCB7CiAgICBsZXQgKGEsIGIpID0gKGdvdC5hc19ieXRlcygpLCB3YW50LmFzX2J5dGVzKCkpOwogICAgaWYgYS5sZW4oKSAhPSBiLmxlbigpIHsKICAgICAgICByZXR1cm4gZmFsc2U7CiAgICB9CiAgICBsZXQgbXV0IGRpZmY6IHU4ID0gMDsKICAgIGZvciBpIGluIDAuLmEubGVuKCkgewogICAgICAgIGRpZmYgfD0gYVtpXSBeIGJbaV07CiAgICB9CiAgICBkaWZmID09IDAKfQoKLy8vIFJlc29sdmUgYHJlbGAgZGkgZGFsYW0gd29ya3NwYWNlLiBOb25lID0gZGkgbHVhciAvIGlsZWdhbC4KLy8vIFRhcmdldCB5YW5nIGJlbHVtIGFkYSBkaWNlayBsZXdhdCBwYXJlbnQtbnlhIHlhbmcgc3VkYWggYWRhLAovLy8gc3VwYXlhIHN5bWxpbmsgZGkgdGVuZ2FoIHBhdGggdGV0YXAgdGVydGFuZ2thcC4KcHViIGZuIHNhZmVfcGF0aCh3b3Jrc3BhY2U6ICZQYXRoLCByZWw6ICZzdHIpIC0+IE9wdGlvbjxQYXRoQnVmPiB7CiAgICAvLyAxKSBOb3JtYWxpc2FzaSBrb21wb25lbiBzZWNhcmEgbWFudWFsOiAiLi4iIHlhbmcga2VsdWFyIGRhcmkKICAgIC8vICAgIHdvcmtzcGFjZSBsYW5nc3VuZyBkaXRvbGFrLCAiLiIgZGlhYmFpa2FuLgogICAgbGV0IG11dCBwYXJ0czogVmVjPHN0ZDo6ZmZpOjpPc1N0cmluZz4gPSBWZWM6Om5ldygpOwogICAgZm9yIGNvbXAgaW4gUGF0aDo6bmV3KHJlbCkuY29tcG9uZW50cygpIHsKICAgICAgICB1c2Ugc3RkOjpwYXRoOjpDb21wb25lbnQ6Oio7CiAgICAgICAgbWF0Y2ggY29tcCB7CiAgICAgICAgICAgIE5vcm1hbChjKSA9PiBwYXJ0cy5wdXNoKGMudG9fb3Nfc3RyaW5nKCkpLAogICAgICAgICAgICBDdXJEaXIgPT4ge30KICAgICAgICAgICAgUGFyZW50RGlyID0+IHsKICAgICAgICAgICAgICAgIGlmIHBhcnRzLnBvcCgpLmlzX25vbmUoKSB7CiAgICAgICAgICAgICAgICAgICAgcmV0dXJuIE5vbmU7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgUm9vdERpciB8IFByZWZpeChfKSA9PiByZXR1cm4gTm9uZSwKICAgICAgICB9CiAgICB9CiAgICBsZXQgbXV0IGNhbmRpZGF0ZSA9IHdvcmtzcGFjZS50b19wYXRoX2J1ZigpOwogICAgZm9yIHAgaW4gJnBhcnRzIHsKICAgICAgICBjYW5kaWRhdGUucHVzaChwKTsKICAgIH0KICAgIC8vIDIpIENhbm9uaWNhbGl6ZSBwcmVmaXggdGVycGFuamFuZyB5YW5nIHN1ZGFoIGFkYSAobWVuYW5na2FwCiAgICAvLyAgICBzeW1saW5rIGRpIHRlbmdhaCBwYXRoKSwgbGFsdSB0ZW1wZWwgc2lzYSBrb21wb25lbm55YS4KICAgIGxldCBtdXQgZXhpc3RpbmcgPSBjYW5kaWRhdGUuY2xvbmUoKTsKICAgIGxldCBtdXQgcmVzdDogVmVjPHN0ZDo6ZmZpOjpPc1N0cmluZz4gPSBWZWM6Om5ldygpOwogICAgd2hpbGUgIWV4aXN0aW5nLmV4aXN0cygpIHsKICAgICAgICByZXN0LnB1c2goZXhpc3RpbmcuZmlsZV9uYW1lKCk/LnRvX29zX3N0cmluZygpKTsKICAgICAgICBleGlzdGluZyA9IGV4aXN0aW5nLnBhcmVudCgpPy50b19wYXRoX2J1ZigpOwogICAgfQogICAgbGV0IG11dCByZWFsID0gZXhpc3RpbmcuY2Fub25pY2FsaXplKCkub2soKT87CiAgICBmb3IgcCBpbiByZXN0Lml0ZXIoKS5yZXYoKSB7CiAgICAgICAgcmVhbC5wdXNoKHApOwogICAgfQogICAgaWYgcmVhbCA9PSB3b3Jrc3BhY2UgfHwgcmVhbC5zdGFydHNfd2l0aCh3b3Jrc3BhY2UpIHsKICAgICAgICBTb21lKHJlYWwpCiAgICB9IGVsc2UgewogICAgICAgIE5vbmUKICAgIH0KfQoKLy8vIFRlYmFrIElQIFRhaWxzY2FsZSBtZXNpbiBpbmkgKDEwMC42NC4wLjAvMTApIHRhbnBhIGNyYXRlIHRhbWJhaGFuOgovLy8gInNhbWJ1bmdrYW4iIHNva2V0IFVEUCBrZSAxMDAuMTAwLjEwMC4xMDAgKFF1YWQxMDAsIHNlbGFsdSBhZGEgZGkKLy8vIHRhaWxuZXQpIGxhbHUgYmFjYSBhbGFtYXQgbG9rYWwgeWFuZyBkaXBpbGloIE9TLiBUaWRhayBhZGEgcGFrZXQKLy8vIHlhbmcgYmVuYXItYmVuYXIgZGlraXJpbSBvbGVoIGNvbm5lY3QoKSBVRFAuCnB1YiBmbiBkZXRlY3RfdGFpbHNjYWxlX2lwKCkgLT4gT3B0aW9uPFN0cmluZz4gewogICAgbGV0IHNvY2sgPSBVZHBTb2NrZXQ6OmJpbmQoIjAuMC4wLjA6MCIpLm9rKCk/OwogICAgc29jay5jb25uZWN0KCIxMDAuMTAwLjEwMC4xMDA6ODAiKS5vaygpPzsKICAgIGxldCBpcCA9IHNvY2subG9jYWxfYWRkcigpLm9rKCk/LmlwKCkudG9fc3RyaW5nKCk7CiAgICBsZXQgcGFydHM6IFZlYzx1MzI+ID0gaXAuc3BsaXQoJy4nKS5maWx0ZXJfbWFwKHxwfCBwLnBhcnNlKCkub2soKSkuY29sbGVjdCgpOwogICAgaWYgcGFydHMubGVuKCkgPT0gNCAmJiBwYXJ0c1swXSA9PSAxMDAgJiYgKDY0Li49MTI3KS5jb250YWlucygmcGFydHNbMV0pIHsKICAgICAgICBTb21lKGlwKQogICAgfSBlbHNlIHsKICAgICAgICBOb25lCiAgICB9Cn0KCi8vIC0tLS0tLS0tLS0tLS0tLS0gSFRUUCBtaW5pbWFsIC0tLS0tLS0tLS0tLS0tLS0KCnN0cnVjdCBSZXF1ZXN0IHsKICAgIG1ldGhvZDogU3RyaW5nLAogICAgcGF0aDogU3RyaW5nLAogICAgcXVlcnk6IFZlYzwoU3RyaW5nLCBTdHJpbmcpPiwKICAgIHRva2VuOiBTdHJpbmcsCiAgICBib2R5OiBWZWM8dTg+LAp9CgpmbiB1cmxfZGVjb2RlKHM6ICZzdHIpIC0+IFN0cmluZyB7CiAgICBsZXQgYnl0ZXMgPSBzLmFzX2J5dGVzKCk7CiAgICBsZXQgbXV0IG91dCA9IFZlYzo6d2l0aF9jYXBhY2l0eShieXRlcy5sZW4oKSk7CiAgICBsZXQgbXV0IGkgPSAwOwogICAgd2hpbGUgaSA8IGJ5dGVzLmxlbigpIHsKICAgICAgICBtYXRjaCBieXRlc1tpXSB7CiAgICAgICAgICAgIGInJScgaWYgaSArIDIgPCBieXRlcy5sZW4oKSA9PiB7CiAgICAgICAgICAgICAgICBsZXQgaGV4ID0gc3RkOjpzdHI6OmZyb21fdXRmOCgmYnl0ZXNbaSArIDEuLmkgKyAzXSkudW53cmFwX29yKCIiKTsKICAgICAgICAgICAgICAgIG1hdGNoIHU4Ojpmcm9tX3N0cl9yYWRpeChoZXgsIDE2KSB7CiAgICAgICAgICAgICAgICAgICAgT2sodikgPT4gewogICAgICAgICAgICAgICAgICAgICAgICBvdXQucHVzaCh2KTsKICAgICAgICAgICAgICAgICAgICAgICAgaSArPSAzOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICBFcnIoXykgPT4gewogICAgICAgICAgICAgICAgICAgICAgICBvdXQucHVzaChieXRlc1tpXSk7CiAgICAgICAgICAgICAgICAgICAgICAgIGkgKz0gMTsKICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgYicrJyA9PiB7CiAgICAgICAgICAgICAgICBvdXQucHVzaChiJyAnKTsKICAgICAgICAgICAgICAgIGkgKz0gMTsKICAgICAgICAgICAgfQogICAgICAgICAgICBjID0+IHsKICAgICAgICAgICAgICAgIG91dC5wdXNoKGMpOwogICAgICAgICAgICAgICAgaSArPSAxOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQogICAgU3RyaW5nOjpmcm9tX3V0ZjhfbG9zc3koJm91dCkuaW50b19vd25lZCgpCn0KCmZuIHJlYWRfcmVxdWVzdChzdHJlYW06ICZtdXQgVGNwU3RyZWFtKSAtPiBPcHRpb248UmVxdWVzdD4gewogICAgbGV0IG11dCBidWY6IFZlYzx1OD4gPSBWZWM6Om5ldygpOwogICAgbGV0IG11dCBjaHVuayA9IFswdTg7IDgxOTJdOwogICAgbGV0IGhlYWRlcl9lbmQ7CiAgICBsb29wIHsKICAgICAgICBsZXQgbiA9IHN0cmVhbS5yZWFkKCZtdXQgY2h1bmspLm9rKCk/OwogICAgICAgIGlmIG4gPT0gMCB7CiAgICAgICAgICAgIHJldHVybiBOb25lOwogICAgICAgIH0KICAgICAgICBidWYuZXh0ZW5kX2Zyb21fc2xpY2UoJmNodW5rWy4ubl0pOwogICAgICAgIGlmIGxldCBTb21lKHBvcykgPSBmaW5kKCZidWYsIGIiXHJcblxyXG4iKSB7CiAgICAgICAgICAgIGhlYWRlcl9lbmQgPSBwb3MgKyA0OwogICAgICAgICAgICBicmVhazsKICAgICAgICB9CiAgICAgICAgaWYgYnVmLmxlbigpID4gNjU1MzYgewogICAgICAgICAgICByZXR1cm4gTm9uZTsKICAgICAgICB9CiAgICB9CiAgICBsZXQgaGVhZCA9IFN0cmluZzo6ZnJvbV91dGY4X2xvc3N5KCZidWZbLi5oZWFkZXJfZW5kXSkuaW50b19vd25lZCgpOwogICAgbGV0IG11dCBsaW5lcyA9IGhlYWQubGluZXMoKTsKICAgIGxldCBmaXJzdCA9IGxpbmVzLm5leHQoKT87CiAgICBsZXQgbXV0IHBhcnRzID0gZmlyc3Quc3BsaXRfd2hpdGVzcGFjZSgpOwogICAgbGV0IG1ldGhvZCA9IHBhcnRzLm5leHQoKT8udG9fc3RyaW5nKCk7CiAgICBsZXQgcmF3X3BhdGggPSBwYXJ0cy5uZXh0KCk/LnRvX3N0cmluZygpOwoKICAgIGxldCBtdXQgY29udGVudF9sZW5ndGggPSAwdXNpemU7CiAgICBsZXQgbXV0IHRva2VuID0gU3RyaW5nOjpuZXcoKTsKICAgIGZvciBsaW5lIGluIGxpbmVzIHsKICAgICAgICBpZiBsZXQgU29tZSgoaywgdikpID0gbGluZS5zcGxpdF9vbmNlKCc6JykgewogICAgICAgICAgICBsZXQgKGssIHYpID0gKGsudHJpbSgpLnRvX2FzY2lpX2xvd2VyY2FzZSgpLCB2LnRyaW0oKSk7CiAgICAgICAgICAgIGlmIGsgPT0gImNvbnRlbnQtbGVuZ3RoIiB7CiAgICAgICAgICAgICAgICBjb250ZW50X2xlbmd0aCA9IHYucGFyc2UoKS51bndyYXBfb3IoMCk7CiAgICAgICAgICAgIH0gZWxzZSBpZiBrID09ICJ4LWJyaWRnZS10b2tlbiIgewogICAgICAgICAgICAgICAgdG9rZW4gPSB2LnRvX3N0cmluZygpOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgfQogICAgaWYgY29udGVudF9sZW5ndGggPiBNQVhfV1JJVEUgKyA2NTUzNiB7CiAgICAgICAgcmV0dXJuIE5vbmU7CiAgICB9CiAgICBsZXQgbXV0IGJvZHkgPSBidWZbaGVhZGVyX2VuZC4uXS50b192ZWMoKTsKICAgIHdoaWxlIGJvZHkubGVuKCkgPCBjb250ZW50X2xlbmd0aCB7CiAgICAgICAgbGV0IG4gPSBzdHJlYW0ucmVhZCgmbXV0IGNodW5rKS5vaygpPzsKICAgICAgICBpZiBuID09IDAgewogICAgICAgICAgICBicmVhazsKICAgICAgICB9CiAgICAgICAgYm9keS5leHRlbmRfZnJvbV9zbGljZSgmY2h1bmtbLi5uXSk7CiAgICB9CiAgICBib2R5LnRydW5jYXRlKGNvbnRlbnRfbGVuZ3RoKTsKCiAgICBsZXQgKHBhdGgsIHF1ZXJ5KSA9IG1hdGNoIHJhd19wYXRoLnNwbGl0X29uY2UoJz8nKSB7CiAgICAgICAgU29tZSgocCwgcSkpID0+IHsKICAgICAgICAgICAgbGV0IHBhaXJzID0gcQogICAgICAgICAgICAgICAgLnNwbGl0KCcmJykKICAgICAgICAgICAgICAgIC5maWx0ZXJfbWFwKHxrdnwgewogICAgICAgICAgICAgICAgICAgIGxldCAoaywgdikgPSBrdi5zcGxpdF9vbmNlKCc9Jyk/OwogICAgICAgICAgICAgICAgICAgIFNvbWUoKHVybF9kZWNvZGUoayksIHVybF9kZWNvZGUodikpKQogICAgICAgICAgICAgICAgfSkKICAgICAgICAgICAgICAgIC5jb2xsZWN0KCk7CiAgICAgICAgICAgICh1cmxfZGVjb2RlKHApLCBwYWlycykKICAgICAgICB9CiAgICAgICAgTm9uZSA9PiAodXJsX2RlY29kZSgmcmF3X3BhdGgpLCBWZWM6Om5ldygpKSwKICAgIH07CiAgICBTb21lKFJlcXVlc3QgeyBtZXRob2QsIHBhdGgsIHF1ZXJ5LCB0b2tlbiwgYm9keSB9KQp9CgpmbiBmaW5kKGhheTogJlt1OF0sIG5lZWRsZTogJlt1OF0pIC0+IE9wdGlvbjx1c2l6ZT4gewogICAgaGF5LndpbmRvd3MobmVlZGxlLmxlbigpKS5wb3NpdGlvbih8d3wgdyA9PSBuZWVkbGUpCn0KCmZuIHJlc3BvbmQoc3RyZWFtOiAmbXV0IFRjcFN0cmVhbSwgY29kZTogdTMyLCBvYmo6IHNlcmRlX2pzb246OlZhbHVlKSB7CiAgICBsZXQgYm9keSA9IHNlcmRlX2pzb246OnRvX3ZlYygmb2JqKS51bndyYXBfb3JfZGVmYXVsdCgpOwogICAgbGV0IHJlYXNvbiA9IG1hdGNoIGNvZGUgewogICAgICAgIDIwMCA9PiAiT0siLAogICAgICAgIDQwMCA9PiAiQmFkIFJlcXVlc3QiLAogICAgICAgIDQwMSA9PiAiVW5hdXRob3JpemVkIiwKICAgICAgICA0MDMgPT4gIkZvcmJpZGRlbiIsCiAgICAgICAgNDA0ID0+ICJOb3QgRm91bmQiLAogICAgICAgIDQwOCA9PiAiUmVxdWVzdCBUaW1lb3V0IiwKICAgICAgICA0MTMgPT4gIlBheWxvYWQgVG9vIExhcmdlIiwKICAgICAgICA0MTUgPT4gIlVuc3VwcG9ydGVkIE1lZGlhIFR5cGUiLAogICAgICAgIF8gPT4gIkVycm9yIiwKICAgIH07CiAgICBsZXQgaGVhZCA9IGZvcm1hdCEoCiAgICAgICAgIkhUVFAvMS4xIHtjb2RlfSB7cmVhc29ufVxyXG5Db250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb247IGNoYXJzZXQ9dXRmLThcclxuQ29udGVudC1MZW5ndGg6IHt9XHJcbkNvbm5lY3Rpb246IGNsb3NlXHJcblxyXG4iLAogICAgICAgIGJvZHkubGVuKCkKICAgICk7CiAgICBsZXQgXyA9IHN0cmVhbS53cml0ZV9hbGwoaGVhZC5hc19ieXRlcygpKTsKICAgIGxldCBfID0gc3RyZWFtLndyaXRlX2FsbCgmYm9keSk7CiAgICBsZXQgXyA9IHN0cmVhbS5mbHVzaCgpOwp9CgpmbiBlcnIobXNnOiAmc3RyKSAtPiBzZXJkZV9qc29uOjpWYWx1ZSB7CiAgICBzZXJkZV9qc29uOjpqc29uISh7ICJvayI6IGZhbHNlLCAiZXJyb3IiOiBtc2cgfSkKfQoKZm4gcXVlcnlfZ2V0PCdhPihyZXE6ICYnYSBSZXF1ZXN0LCBrZXk6ICZzdHIpIC0+ICYnYSBzdHIgewogICAgcmVxLnF1ZXJ5CiAgICAgICAgLml0ZXIoKQogICAgICAgIC5maW5kKHwoaywgXyl8IGsgPT0ga2V5KQogICAgICAgIC5tYXAofChfLCB2KXwgdi5hc19zdHIoKSkKICAgICAgICAudW53cmFwX29yKCIuIikKfQoKLy8gLS0tLS0tLS0tLS0tLS0tLSBoYW5kbGVyIC0tLS0tLS0tLS0tLS0tLS0KCmZuIHJ1bl9leGVjKHN0YXRlOiAmQnJpZGdlU3RhdGUsIGNvbW1hbmQ6ICZzdHIpIC0+ICh1MzIsIHNlcmRlX2pzb246OlZhbHVlKSB7CiAgICBsZXQgd3MgPSBzdGF0ZS53b3Jrc3BhY2UoKTsKICAgIGlmICEoc3RhdGUuYXBwcm92ZSkoY29tbWFuZCwgJndzKSB7CiAgICAgICAgKHN0YXRlLmxvZykoJmZvcm1hdCEoIkVYRUMgRElUT0xBSyBVU0VSOiB7Y29tbWFuZH0iKSk7CiAgICAgICAgcmV0dXJuICg0MDMsIGVycigiZGl0b2xhayBkaSBsYXB0b3AiKSk7CiAgICB9CiAgICAoc3RhdGUubG9nKSgmZm9ybWF0ISgiRVhFQyBESVNFVFVKVUk6IHtjb21tYW5kfSIpKTsKICAgIGxldCBtdXQgY21kID0gaWYgY2ZnISh0YXJnZXRfb3MgPSAid2luZG93cyIpIHsKICAgICAgICBsZXQgbXV0IGMgPSBzdGQ6OnByb2Nlc3M6OkNvbW1hbmQ6Om5ldygiY21kLmV4ZSIpOwogICAgICAgIGMuYXJncyhbIi9kIiwgIi9zIiwgIi9jIiwgY29tbWFuZF0pOwogICAgICAgIGMKICAgIH0gZWxzZSB7CiAgICAgICAgbGV0IG11dCBjID0gc3RkOjpwcm9jZXNzOjpDb21tYW5kOjpuZXcoIi9iaW4vc2giKTsKICAgICAgICBjLmFyZ3MoWyItYyIsIGNvbW1hbmRdKTsKICAgICAgICBjCiAgICB9OwogICAgY21kLmN1cnJlbnRfZGlyKCZ3cykKICAgICAgICAuc3Rkb3V0KHN0ZDo6cHJvY2Vzczo6U3RkaW86OnBpcGVkKCkpCiAgICAgICAgLnN0ZGVycihzdGQ6OnByb2Nlc3M6OlN0ZGlvOjpwaXBlZCgpKTsKICAgIGxldCBtdXQgY2hpbGQgPSBtYXRjaCBjbWQuc3Bhd24oKSB7CiAgICAgICAgT2soYykgPT4gYywKICAgICAgICBFcnIoZSkgPT4gcmV0dXJuICg1MDAsIGVycigmZm9ybWF0ISgiZ2FnYWwgbWVuamFsYW5rYW46IHtlfSIpKSksCiAgICB9OwogICAgLy8gQmFjYSBzdGRvdXQvc3RkZXJyIGRpIHRocmVhZCB0ZXJwaXNhaCBzdXBheWEgcGlwZSB0aWRhayBidW50dS4KICAgIGxldCBtdXQgb3V0X3BpcGUgPSBjaGlsZC5zdGRvdXQudGFrZSgpLnVud3JhcCgpOwogICAgbGV0IG11dCBlcnJfcGlwZSA9IGNoaWxkLnN0ZGVyci50YWtlKCkudW53cmFwKCk7CiAgICBsZXQgKHR4bywgcnhvKSA9IHN0ZDo6c3luYzo6bXBzYzo6Y2hhbm5lbDo6PFZlYzx1OD4+KCk7CiAgICBsZXQgKHR4ZSwgcnhlKSA9IHN0ZDo6c3luYzo6bXBzYzo6Y2hhbm5lbDo6PFZlYzx1OD4+KCk7CiAgICBzdGQ6OnRocmVhZDo6c3Bhd24obW92ZSB8fCB7CiAgICAgICAgbGV0IG11dCB2ID0gVmVjOjpuZXcoKTsKICAgICAgICBsZXQgXyA9IG91dF9waXBlLnJlYWRfdG9fZW5kKCZtdXQgdik7CiAgICAgICAgbGV0IF8gPSB0eG8uc2VuZCh2KTsKICAgIH0pOwogICAgc3RkOjp0aHJlYWQ6OnNwYXduKG1vdmUgfHwgewogICAgICAgIGxldCBtdXQgdiA9IFZlYzo6bmV3KCk7CiAgICAgICAgbGV0IF8gPSBlcnJfcGlwZS5yZWFkX3RvX2VuZCgmbXV0IHYpOwogICAgICAgIGxldCBfID0gdHhlLnNlbmQodik7CiAgICB9KTsKICAgIGxldCBzdGFydGVkID0gc3RkOjp0aW1lOjpJbnN0YW50Ojpub3coKTsKICAgIGxldCBzdGF0dXMgPSBsb29wIHsKICAgICAgICBtYXRjaCBjaGlsZC50cnlfd2FpdCgpIHsKICAgICAgICAgICAgT2soU29tZShzKSkgPT4gYnJlYWsgU29tZShzKSwKICAgICAgICAgICAgT2soTm9uZSkgPT4gewogICAgICAgICAgICAgICAgaWYgc3RhcnRlZC5lbGFwc2VkKCkgPiBFWEVDX1RJTUVPVVQgewogICAgICAgICAgICAgICAgICAgIGxldCBfID0gY2hpbGQua2lsbCgpOwogICAgICAgICAgICAgICAgICAgIGxldCBfID0gY2hpbGQud2FpdCgpOwogICAgICAgICAgICAgICAgICAgIGJyZWFrIE5vbmU7CiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICBzdGQ6OnRocmVhZDo6c2xlZXAoRHVyYXRpb246OmZyb21fbWlsbGlzKDUwKSk7CiAgICAgICAgICAgIH0KICAgICAgICAgICAgRXJyKF8pID0+IGJyZWFrIE5vbmUsCiAgICAgICAgfQogICAgfTsKICAgIG1hdGNoIHN0YXR1cyB7CiAgICAgICAgU29tZShzKSA9PiB7CiAgICAgICAgICAgIGxldCBjb2RlID0gcy5jb2RlKCkudW53cmFwX29yKC0xKTsKICAgICAgICAgICAgKHN0YXRlLmxvZykoJmZvcm1hdCEoIkVYRUMgU0VMRVNBSSAoZXhpdCB7Y29kZX0pOiB7Y29tbWFuZH0iKSk7CiAgICAgICAgICAgIGxldCBzdGRvdXQgPSBTdHJpbmc6OmZyb21fdXRmOF9sb3NzeSgmcnhvLnJlY3YoKS51bndyYXBfb3JfZGVmYXVsdCgpKS5pbnRvX293bmVkKCk7CiAgICAgICAgICAgIGxldCBzdGRlcnIgPSBTdHJpbmc6OmZyb21fdXRmOF9sb3NzeSgmcnhlLnJlY3YoKS51bndyYXBfb3JfZGVmYXVsdCgpKS5pbnRvX293bmVkKCk7CiAgICAgICAgICAgIGxldCB0YWlsID0gfHM6ICZzdHIsIG46IHVzaXplfCAtPiBTdHJpbmcgewogICAgICAgICAgICAgICAgbGV0IHJldjogU3RyaW5nID0gcy5jaGFycygpLnJldigpLnRha2UobikuY29sbGVjdCgpOwogICAgICAgICAgICAgICAgcmV2LmNoYXJzKCkucmV2KCkuY29sbGVjdCgpCiAgICAgICAgICAgIH07CiAgICAgICAgICAgICgKICAgICAgICAgICAgICAgIDIwMCwKICAgICAgICAgICAgICAgIHNlcmRlX2pzb246Ompzb24hKHsKICAgICAgICAgICAgICAgICAgICAib2siOiB0cnVlLAogICAgICAgICAgICAgICAgICAgICJleGl0X2NvZGUiOiBjb2RlLAogICAgICAgICAgICAgICAgICAgICJzdGRvdXQiOiB0YWlsKCZzdGRvdXQsIDIwMDAwKSwKICAgICAgICAgICAgICAgICAgICAic3RkZXJyIjogdGFpbCgmc3RkZXJyLCA1MDAwKSwKICAgICAgICAgICAgICAgIH0pLAogICAgICAgICAgICApCiAgICAgICAgfQogICAgICAgIE5vbmUgPT4gewogICAgICAgICAgICAoc3RhdGUubG9nKSgmZm9ybWF0ISgiRVhFQyBUSU1FT1VUOiB7Y29tbWFuZH0iKSk7CiAgICAgICAgICAgICg0MDgsIGVycigidGltZW91dCA2MHMiKSkKICAgICAgICB9CiAgICB9Cn0KCmZuIGhhbmRsZShzdGF0ZTogJkJyaWRnZVN0YXRlLCByZXE6ICZSZXF1ZXN0LCBzdHJlYW06ICZtdXQgVGNwU3RyZWFtKSB7CiAgICAvLyAvaGVhbHRoIHNhdHUtc2F0dW55YSB0YW5wYSB0b2tlbiDigJQgaGFueWEgbWVtYnVrdGlrYW4gYnJpZGdlIGhpZHVwLgogICAgaWYgcmVxLm1ldGhvZCA9PSAiR0VUIiAmJiByZXEucGF0aCA9PSAiL2hlYWx0aCIgewogICAgICAgIHJldHVybiByZXNwb25kKAogICAgICAgICAgICBzdHJlYW0sCiAgICAgICAgICAgIDIwMCwKICAgICAgICAgICAgc2VyZGVfanNvbjo6anNvbiEoeyAib2siOiB0cnVlLCAiYXBwIjogIm11c2UtYnJpZGdlIiwgInZlcnNpb24iOiBWRVJTSU9OIH0pLAogICAgICAgICk7CiAgICB9CiAgICBpZiAhdG9rZW5fZXEoJnJlcS50b2tlbiwgJnN0YXRlLnRva2VuKSB7CiAgICAgICAgKHN0YXRlLmxvZykoJmZvcm1hdCEoIlRPTEFLIHt9IHt9IOKAlCB0b2tlbiBzYWxhaC90aWRhayBhZGEiLCByZXEubWV0aG9kLCByZXEucGF0aCkpOwogICAgICAgIHJldHVybiByZXNwb25kKHN0cmVhbSwgNDAxLCBlcnIoInVuYXV0aG9yaXplZCIpKTsKICAgIH0KICAgIGxldCB3cyA9IHN0YXRlLndvcmtzcGFjZSgpOwoKICAgIGlmIHJlcS5tZXRob2QgPT0gIkdFVCIgJiYgcmVxLnBhdGggPT0gIi9saXN0IiB7CiAgICAgICAgbGV0IHJlbCA9IHF1ZXJ5X2dldChyZXEsICJwYXRoIik7CiAgICAgICAgbGV0IHRhcmdldCA9IG1hdGNoIHNhZmVfcGF0aCgmd3MsIHJlbCkgewogICAgICAgICAgICBTb21lKHApID0+IHAsCiAgICAgICAgICAgIE5vbmUgPT4gcmV0dXJuIHJlc3BvbmQoc3RyZWFtLCA0MDMsIGVycigicGF0aCBkaSBsdWFyIHdvcmtzcGFjZSIpKSwKICAgICAgICB9OwogICAgICAgIGxldCBtZXRhID0gbWF0Y2ggc3RkOjpmczo6bWV0YWRhdGEoJnRhcmdldCkgewogICAgICAgICAgICBPayhtKSBpZiBtLmlzX2RpcigpID0+IG0sCiAgICAgICAgICAgIF8gPT4gcmV0dXJuIHJlc3BvbmQoc3RyZWFtLCA0MDQsIGVycigiYnVrYW4gZm9sZGVyIC8gdGlkYWsgYWRhIikpLAogICAgICAgIH07CiAgICAgICAgbGV0IF8gPSBtZXRhOwogICAgICAgIGxldCBtdXQgZW50cmllczogVmVjPHNlcmRlX2pzb246OlZhbHVlPiA9IFZlYzo6bmV3KCk7CiAgICAgICAgaWYgbGV0IE9rKHJkKSA9IHN0ZDo6ZnM6OnJlYWRfZGlyKCZ0YXJnZXQpIHsKICAgICAgICAgICAgZm9yIGUgaW4gcmQuZmxhdHRlbigpIHsKICAgICAgICAgICAgICAgIGxldCBpc19kaXIgPSBlLmZpbGVfdHlwZSgpLm1hcCh8dHwgdC5pc19kaXIoKSkudW53cmFwX29yKGZhbHNlKTsKICAgICAgICAgICAgICAgIGxldCBzaXplID0gaWYgaXNfZGlyIHsKICAgICAgICAgICAgICAgICAgICBzZXJkZV9qc29uOjpWYWx1ZTo6TnVsbAogICAgICAgICAgICAgICAgfSBlbHNlIHsKICAgICAgICAgICAgICAgICAgICBlLm1ldGFkYXRhKCkubWFwKHxtfCBtLmxlbigpLmludG8oKSkudW53cmFwX29yKHNlcmRlX2pzb246OlZhbHVlOjpOdWxsKQogICAgICAgICAgICAgICAgfTsKICAgICAgICAgICAgICAgIGVudHJpZXMucHVzaChzZXJkZV9qc29uOjpqc29uISh7CiAgICAgICAgICAgICAgICAgICAgIm5hbWUiOiBlLmZpbGVfbmFtZSgpLnRvX3N0cmluZ19sb3NzeSgpLAogICAgICAgICAgICAgICAgICAgICJ0eXBlIjogaWYgaXNfZGlyIHsgImRpciIgfSBlbHNlIHsgImZpbGUiIH0sCiAgICAgICAgICAgICAgICAgICAgInNpemUiOiBzaXplLAogICAgICAgICAgICAgICAgfSkpOwogICAgICAgICAgICB9CiAgICAgICAgfQogICAgICAgIGVudHJpZXMuc29ydF9ieSh8YSwgYnwgewogICAgICAgICAgICBsZXQgKHRhLCB0YikgPSAoYVsidHlwZSJdLmFzX3N0cigpLnVud3JhcF9vcigiIiksIGJbInR5cGUiXS5hc19zdHIoKS51bndyYXBfb3IoIiIpKTsKICAgICAgICAgICAgdGIuY21wKHRhKS50aGVuX3dpdGgofHwgewogICAgICAgICAgICAgICAgYVsibmFtZSJdLmFzX3N0cigpLnVud3JhcF9vcigiIikudG9fbG93ZXJjYXNlKCkKICAgICAgICAgICAgICAgICAgICAuY21wKCZiWyJuYW1lIl0uYXNfc3RyKCkudW53cmFwX29yKCIiKS50b19sb3dlcmNhc2UoKSkKICAgICAgICAgICAgfSkKICAgICAgICB9KTsKICAgICAgICAoc3RhdGUubG9nKSgmZm9ybWF0ISgiTElTVCB7cmVsfSAtPiB7fSBlbnRyaSIsIGVudHJpZXMubGVuKCkpKTsKICAgICAgICByZXR1cm4gcmVzcG9uZChzdHJlYW0sIDIwMCwgc2VyZGVfanNvbjo6anNvbiEoeyAib2siOiB0cnVlLCAicGF0aCI6IHJlbCwgImVudHJpZXMiOiBlbnRyaWVzIH0pKTsKICAgIH0KCiAgICBpZiByZXEubWV0aG9kID09ICJHRVQiICYmIHJlcS5wYXRoID09ICIvcmVhZCIgewogICAgICAgIGxldCByZWwgPSBxdWVyeV9nZXQocmVxLCAicGF0aCIpOwogICAgICAgIGxldCB0YXJnZXQgPSBtYXRjaCBzYWZlX3BhdGgoJndzLCByZWwpIHsKICAgICAgICAgICAgU29tZShwKSA9PiBwLAogICAgICAgICAgICBOb25lID0+IHJldHVybiByZXNwb25kKHN0cmVhbSwgNDAzLCBlcnIoInBhdGggZGkgbHVhciB3b3Jrc3BhY2UiKSksCiAgICAgICAgfTsKICAgICAgICBsZXQgbWV0YSA9IG1hdGNoIHN0ZDo6ZnM6Om1ldGFkYXRhKCZ0YXJnZXQpIHsKICAgICAgICAgICAgT2sobSkgaWYgbS5pc19maWxlKCkgPT4gbSwKICAgICAgICAgICAgXyA9PiByZXR1cm4gcmVzcG9uZChzdHJlYW0sIDQwNCwgZXJyKCJmaWxlIHRpZGFrIGFkYSIpKSwKICAgICAgICB9OwogICAgICAgIGlmIG1ldGEubGVuKCkgPiBNQVhfUkVBRCB7CiAgICAgICAgICAgIHJldHVybiByZXNwb25kKHN0cmVhbSwgNDEzLCBlcnIoImZpbGUgPiAxIE1CIikpOwogICAgICAgIH0KICAgICAgICBsZXQgZGF0YSA9IHN0ZDo6ZnM6OnJlYWQoJnRhcmdldCkudW53cmFwX29yX2RlZmF1bHQoKTsKICAgICAgICBpZiBkYXRhLmNvbnRhaW5zKCYwKSB7CiAgICAgICAgICAgIHJldHVybiByZXNwb25kKHN0cmVhbSwgNDE1LCBlcnIoImZpbGUgYmluZXIg4oCUIGhhbnlhIHRla3MiKSk7CiAgICAgICAgfQogICAgICAgIChzdGF0ZS5sb2cpKCZmb3JtYXQhKCJSRUFEIHtyZWx9ICh7fSBieXRlKSIsIG1ldGEubGVuKCkpKTsKICAgICAgICByZXR1cm4gcmVzcG9uZCgKICAgICAgICAgICAgc3RyZWFtLAogICAgICAgICAgICAyMDAsCiAgICAgICAgICAgIHNlcmRlX2pzb246Ompzb24hKHsgIm9rIjogdHJ1ZSwgInBhdGgiOiByZWwsCiAgICAgICAgICAgICAgICAiY29udGVudCI6IFN0cmluZzo6ZnJvbV91dGY4X2xvc3N5KCZkYXRhKSB9KSwKICAgICAgICApOwogICAgfQoKICAgIGlmIHJlcS5tZXRob2QgPT0gIlBPU1QiICYmIHJlcS5wYXRoID09ICIvd3JpdGUiIHsKICAgICAgICBsZXQgZGF0YTogc2VyZGVfanNvbjo6VmFsdWUgPSBzZXJkZV9qc29uOjpmcm9tX3NsaWNlKCZyZXEuYm9keSkudW53cmFwX29yX2RlZmF1bHQoKTsKICAgICAgICBsZXQgcmVsID0gZGF0YVsicGF0aCJdLmFzX3N0cigpLnVud3JhcF9vcigiIik7CiAgICAgICAgbGV0IGNvbnRlbnQgPSBkYXRhWyJjb250ZW50Il0uYXNfc3RyKCk7CiAgICAgICAgaWYgcmVsLmlzX2VtcHR5KCkgfHwgY29udGVudC5pc19ub25lKCkgewogICAgICAgICAgICByZXR1cm4gcmVzcG9uZChzdHJlYW0sIDQwMCwgZXJyKCJidXR1aCBwYXRoICsgY29udGVudCAodGVrcykiKSk7CiAgICAgICAgfQogICAgICAgIGxldCBjb250ZW50ID0gY29udGVudC51bndyYXAoKTsKICAgICAgICBpZiBjb250ZW50LmxlbigpID4gTUFYX1dSSVRFIHsKICAgICAgICAgICAgcmV0dXJuIHJlc3BvbmQoc3RyZWFtLCA0MTMsIGVycigia29udGVuIHRlcmxhbHUgYmVzYXIiKSk7CiAgICAgICAgfQogICAgICAgIGxldCB0YXJnZXQgPSBtYXRjaCBzYWZlX3BhdGgoJndzLCByZWwpIHsKICAgICAgICAgICAgU29tZShwKSA9PiBwLAogICAgICAgICAgICBOb25lID0+IHJldHVybiByZXNwb25kKHN0cmVhbSwgNDAzLCBlcnIoInBhdGggZGkgbHVhciB3b3Jrc3BhY2UiKSksCiAgICAgICAgfTsKICAgICAgICBpZiBsZXQgU29tZShwYXJlbnQpID0gdGFyZ2V0LnBhcmVudCgpIHsKICAgICAgICAgICAgbGV0IF8gPSBzdGQ6OmZzOjpjcmVhdGVfZGlyX2FsbChwYXJlbnQpOwogICAgICAgIH0KICAgICAgICBtYXRjaCBzdGQ6OmZzOjp3cml0ZSgmdGFyZ2V0LCBjb250ZW50KSB7CiAgICAgICAgICAgIE9rKCgpKSA9PiB7CiAgICAgICAgICAgICAgICAoc3RhdGUubG9nKSgmZm9ybWF0ISgiV1JJVEUge3JlbH0gKHt9IGthcmFrdGVyKSIsIGNvbnRlbnQuY2hhcnMoKS5jb3VudCgpKSk7CiAgICAgICAgICAgICAgICBsZXQgc2l6ZSA9IHN0ZDo6ZnM6Om1ldGFkYXRhKCZ0YXJnZXQpLm1hcCh8bXwgbS5sZW4oKSkudW53cmFwX29yKDApOwogICAgICAgICAgICAgICAgcmV0dXJuIHJlc3BvbmQoc3RyZWFtLCAyMDAsIHNlcmRlX2pzb246Ompzb24hKHsgIm9rIjogdHJ1ZSwgInBhdGgiOiByZWwsICJieXRlcyI6IHNpemUgfSkpOwogICAgICAgICAgICB9CiAgICAgICAgICAgIEVycihlKSA9PiByZXR1cm4gcmVzcG9uZChzdHJlYW0sIDUwMCwgZXJyKCZmb3JtYXQhKCJnYWdhbCB0dWxpczoge2V9IikpKSwKICAgICAgICB9CiAgICB9CgogICAgaWYgcmVxLm1ldGhvZCA9PSAiUE9TVCIgJiYgcmVxLnBhdGggPT0gIi9leGVjIiB7CiAgICAgICAgaWYgIXN0YXRlLmFsbG93X2V4ZWMubG9hZChPcmRlcmluZzo6U2VxQ3N0KSB7CiAgICAgICAgICAgIChzdGF0ZS5sb2cpKCJUT0xBSyBFWEVDIOKAlCB0ZXJtaW5hbCBtYXRpIik7CiAgICAgICAgICAgIHJldHVybiByZXNwb25kKHN0cmVhbSwgNDAzLCBlcnIoImV4ZWMgbWF0aS4gSGlkdXBrYW4gZGFyaSBQYW5lbCBLb250cm9sIE11c2UgRGVza3RvcC4iKSk7CiAgICAgICAgfQogICAgICAgIGxldCBkYXRhOiBzZXJkZV9qc29uOjpWYWx1ZSA9IHNlcmRlX2pzb246OmZyb21fc2xpY2UoJnJlcS5ib2R5KS51bndyYXBfb3JfZGVmYXVsdCgpOwogICAgICAgIGxldCBjb21tYW5kID0gZGF0YVsiY29tbWFuZCJdLmFzX3N0cigpLnVud3JhcF9vcigiIik7CiAgICAgICAgaWYgY29tbWFuZC50cmltKCkuaXNfZW1wdHkoKSB7CiAgICAgICAgICAgIHJldHVybiByZXNwb25kKHN0cmVhbSwgNDAwLCBlcnIoImJ1dHVoIGNvbW1hbmQgKHN0cmluZykiKSk7CiAgICAgICAgfQogICAgICAgIGxldCAoY29kZSwgb2JqKSA9IHJ1bl9leGVjKHN0YXRlLCBjb21tYW5kKTsKICAgICAgICByZXR1cm4gcmVzcG9uZChzdHJlYW0sIGNvZGUsIG9iaik7CiAgICB9CgogICAgcmVzcG9uZChzdHJlYW0sIDQwNCwgZXJyKCJyb3V0ZSB0aWRhayBkaWtlbmFsIikpCn0KCi8vIC0tLS0tLS0tLS0tLS0tLS0gc2VydmVyIC0tLS0tLS0tLS0tLS0tLS0KCnB1YiBzdHJ1Y3QgQnJpZGdlU2VydmVyIHsKICAgIHN0b3A6IEFyYzxBdG9taWNCb29sPiwKICAgIHB1YiBhZGRyOiBzdGQ6Om5ldDo6U29ja2V0QWRkciwKICAgIGhhbmRsZTogT3B0aW9uPHN0ZDo6dGhyZWFkOjpKb2luSGFuZGxlPCgpPj4sCn0KCmltcGwgQnJpZGdlU2VydmVyIHsKICAgIHB1YiBmbiBzdGFydChzdGF0ZTogQnJpZGdlU3RhdGUsIGJpbmQ6ICZzdHIsIHBvcnQ6IHUxNikgLT4gc3RkOjppbzo6UmVzdWx0PFNlbGY+IHsKICAgICAgICBpZiBiaW5kID09ICIwLjAuMC4wIiB8fCBiaW5kID09ICI6OiIgewogICAgICAgICAgICByZXR1cm4gRXJyKHN0ZDo6aW86OkVycm9yOjpuZXcoCiAgICAgICAgICAgICAgICBzdGQ6OmlvOjpFcnJvcktpbmQ6OkludmFsaWRJbnB1dCwKICAgICAgICAgICAgICAgICJiaW5kIDAuMC4wLjAgZGl0b2xhazogYnJpZGdlIHRpZGFrIGJvbGVoIG1lbWJ1a2Ega2Ugc2VtdWEgamFyaW5nYW4iLAogICAgICAgICAgICApKTsKICAgICAgICB9CiAgICAgICAgbGV0IGxpc3RlbmVyID0gVGNwTGlzdGVuZXI6OmJpbmQoKGJpbmQsIHBvcnQpKT87CiAgICAgICAgbGlzdGVuZXIuc2V0X25vbmJsb2NraW5nKHRydWUpPzsKICAgICAgICBsZXQgYWRkciA9IGxpc3RlbmVyLmxvY2FsX2FkZHIoKT87CiAgICAgICAgbGV0IHN0b3AgPSBBcmM6Om5ldyhBdG9taWNCb29sOjpuZXcoZmFsc2UpKTsKICAgICAgICBsZXQgc3RvcF90aHJlYWQgPSBzdG9wLmNsb25lKCk7CiAgICAgICAgbGV0IGhhbmRsZSA9IHN0ZDo6dGhyZWFkOjpzcGF3bihtb3ZlIHx8IHsKICAgICAgICAgICAgd2hpbGUgIXN0b3BfdGhyZWFkLmxvYWQoT3JkZXJpbmc6OlNlcUNzdCkgewogICAgICAgICAgICAgICAgbWF0Y2ggbGlzdGVuZXIuYWNjZXB0KCkgewogICAgICAgICAgICAgICAgICAgIE9rKChtdXQgc3RyZWFtLCBfKSkgPT4gewogICAgICAgICAgICAgICAgICAgICAgICBsZXQgc3QgPSBzdGF0ZS5jbG9uZSgpOwogICAgICAgICAgICAgICAgICAgICAgICBzdGQ6OnRocmVhZDo6c3Bhd24obW92ZSB8fCB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBsZXQgXyA9IHN0cmVhbS5zZXRfcmVhZF90aW1lb3V0KFNvbWUoRHVyYXRpb246OmZyb21fc2Vjcyg5MCkpKTsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIGxldCBTb21lKHJlcSkgPSByZWFkX3JlcXVlc3QoJm11dCBzdHJlYW0pIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBoYW5kbGUoJnN0LCAmcmVxLCAmbXV0IHN0cmVhbSk7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgICAgIH0pOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICBFcnIoZSkgaWYgZS5raW5kKCkgPT0gc3RkOjppbzo6RXJyb3JLaW5kOjpXb3VsZEJsb2NrID0+IHsKICAgICAgICAgICAgICAgICAgICAgICAgc3RkOjp0aHJlYWQ6OnNsZWVwKER1cmF0aW9uOjpmcm9tX21pbGxpcyg1MCkpOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICBFcnIoXykgPT4gYnJlYWssCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICB9KTsKICAgICAgICBPayhTZWxmIHsgc3RvcCwgYWRkciwgaGFuZGxlOiBTb21lKGhhbmRsZSkgfSkKICAgIH0KCiAgICBwdWIgZm4gc3RvcChtdXQgc2VsZikgewogICAgICAgIHNlbGYuc3RvcC5zdG9yZSh0cnVlLCBPcmRlcmluZzo6U2VxQ3N0KTsKICAgICAgICBpZiBsZXQgU29tZShoKSA9IHNlbGYuaGFuZGxlLnRha2UoKSB7CiAgICAgICAgICAgIGxldCBfID0gaC5qb2luKCk7CiAgICAgICAgfQogICAgfQp9CgovLyAtLS0tLS0tLS0tLS0tLS0tIHRlc3RzIC0tLS0tLS0tLS0tLS0tLS0KCiNbY2ZnKHRlc3QpXQptb2QgdGVzdHMgewogICAgdXNlIHN1cGVyOjoqOwogICAgdXNlIHN0ZDo6aW86OntSZWFkLCBXcml0ZX07CgogICAgZm4gdG1wX3dzKCkgLT4gUGF0aEJ1ZiB7CiAgICAgICAgc3RhdGljIENPVU5URVI6IHN0ZDo6c3luYzo6YXRvbWljOjpBdG9taWNVNjQgPSBzdGQ6OnN5bmM6OmF0b21pYzo6QXRvbWljVTY0OjpuZXcoMCk7CiAgICAgICAgbGV0IG4gPSBDT1VOVEVSLmZldGNoX2FkZCgxLCBzdGQ6OnN5bmM6OmF0b21pYzo6T3JkZXJpbmc6OlNlcUNzdCk7CiAgICAgICAgbGV0IGRpciA9IHN0ZDo6ZW52Ojp0ZW1wX2RpcigpLmpvaW4oZm9ybWF0ISgiZmItdGVzdC17fS17bn0iLCBzdGQ6OnByb2Nlc3M6OmlkKCkpKTsKICAgICAgICBsZXQgXyA9IHN0ZDo6ZnM6OnJlbW92ZV9kaXJfYWxsKCZkaXIpOwogICAgICAgIHN0ZDo6ZnM6OmNyZWF0ZV9kaXJfYWxsKCZkaXIpLnVud3JhcCgpOwogICAgICAgIGRpci5jYW5vbmljYWxpemUoKS51bndyYXAoKQogICAgfQoKICAgIGZuIHN0YXRlKHdzOiAmUGF0aCwgYWxsb3dfZXhlYzogYm9vbCwgYXBwcm92ZV9vazogYm9vbCkgLT4gQnJpZGdlU3RhdGUgewogICAgICAgIEJyaWRnZVN0YXRlOjpuZXcoCiAgICAgICAgICAgIHdzLnRvX3BhdGhfYnVmKCksCiAgICAgICAgICAgICJ0ZXN0LXRva2VuLTEyMzQ1Njc4OTAiLnRvX3N0cmluZygpLAogICAgICAgICAgICBhbGxvd19leGVjLAogICAgICAgICAgICBBcmM6Om5ldyhtb3ZlIHxfLCBffCBhcHByb3ZlX29rKSwKICAgICAgICAgICAgQXJjOjpuZXcofF98IHt9KSwKICAgICAgICApCiAgICAgICAgLnVud3JhcCgpCiAgICB9CgogICAgZm4gcmF3KGFkZHI6IHN0ZDo6bmV0OjpTb2NrZXRBZGRyLCByZXF1ZXN0OiAmc3RyKSAtPiBTdHJpbmcgewogICAgICAgIGxldCBtdXQgcyA9IFRjcFN0cmVhbTo6Y29ubmVjdChhZGRyKS51bndyYXAoKTsKICAgICAgICBzLndyaXRlX2FsbChyZXF1ZXN0LmFzX2J5dGVzKCkpLnVud3JhcCgpOwogICAgICAgIGxldCBtdXQgb3V0ID0gU3RyaW5nOjpuZXcoKTsKICAgICAgICBzLnJlYWRfdG9fc3RyaW5nKCZtdXQgb3V0KS51bndyYXAoKTsKICAgICAgICBvdXQKICAgIH0KCiAgICBmbiBnZXQoYWRkcjogc3RkOjpuZXQ6OlNvY2tldEFkZHIsIHBhdGg6ICZzdHIsIHRva2VuOiBPcHRpb248JnN0cj4pIC0+IFN0cmluZyB7CiAgICAgICAgbGV0IHQgPSB0b2tlbi5tYXAofHR8IGZvcm1hdCEoIlgtQnJpZGdlLVRva2VuOiB7dH1cclxuIikpLnVud3JhcF9vcl9kZWZhdWx0KCk7CiAgICAgICAgcmF3KGFkZHIsICZmb3JtYXQhKCJHRVQge3BhdGh9IEhUVFAvMS4xXHJcbkhvc3Q6IHhcclxue3R9Q29ubmVjdGlvbjogY2xvc2VcclxuXHJcbiIpKQogICAgfQoKICAgIGZuIHBvc3QoYWRkcjogc3RkOjpuZXQ6OlNvY2tldEFkZHIsIHBhdGg6ICZzdHIsIGJvZHk6ICZzdHIsIHRva2VuOiBPcHRpb248JnN0cj4pIC0+IFN0cmluZyB7CiAgICAgICAgbGV0IHQgPSB0b2tlbi5tYXAofHR8IGZvcm1hdCEoIlgtQnJpZGdlLVRva2VuOiB7dH1cclxuIikpLnVud3JhcF9vcl9kZWZhdWx0KCk7CiAgICAgICAgcmF3KGFkZHIsICZmb3JtYXQhKAogICAgICAgICAgICAiUE9TVCB7cGF0aH0gSFRUUC8xLjFcclxuSG9zdDogeFxyXG57dH1Db250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL2pzb25cclxuQ29udGVudC1MZW5ndGg6IHt9XHJcbkNvbm5lY3Rpb246IGNsb3NlXHJcblxyXG57Ym9keX0iLAogICAgICAgICAgICBib2R5LmxlbigpCiAgICAgICAgKSkKICAgIH0KCiAgICBjb25zdCBUT0s6ICZzdHIgPSAidGVzdC10b2tlbi0xMjM0NTY3ODkwIjsKCiAgICAjW3Rlc3RdCiAgICBmbiB0b2tlbl9jb21wYXJlKCkgewogICAgICAgIGFzc2VydCEodG9rZW5fZXEoImFiYyIsICJhYmMiKSk7CiAgICAgICAgYXNzZXJ0ISghdG9rZW5fZXEoImFiYyIsICJhYmQiKSk7CiAgICAgICAgYXNzZXJ0ISghdG9rZW5fZXEoImFiYyIsICJhYmNkIikpOwogICAgfQoKICAgICNbdGVzdF0KICAgIGZuIHNhZmVfcGF0aF9ibG9ja3NfZXNjYXBlKCkgewogICAgICAgIGxldCB3cyA9IHRtcF93cygpOwogICAgICAgIGFzc2VydCEoc2FmZV9wYXRoKCZ3cywgImEvYi50eHQiKS5pc19zb21lKCkpOwogICAgICAgIGFzc2VydCEoc2FmZV9wYXRoKCZ3cywgIi4uL3NlY3JldCIpLmlzX25vbmUoKSk7CiAgICAgICAgYXNzZXJ0IShzYWZlX3BhdGgoJndzLCAiLi4iKS5pc19ub25lKCkpOwogICAgfQoKICAgICNbY2ZnKHVuaXgpXQogICAgI1t0ZXN0XQogICAgZm4gc2FmZV9wYXRoX2Jsb2Nrc19zeW1saW5rKCkgewogICAgICAgIGxldCB3cyA9IHRtcF93cygpOwogICAgICAgIHN0ZDo6b3M6OnVuaXg6OmZzOjpzeW1saW5rKCIvZXRjL3Bhc3N3ZCIsIHdzLmpvaW4oImxpbmsta2VsdWFyIikpLnVud3JhcCgpOwogICAgICAgIGFzc2VydCEoc2FmZV9wYXRoKCZ3cywgImxpbmsta2VsdWFyIikuaXNfbm9uZSgpKTsKICAgIH0KCiAgICAjW3Rlc3RdCiAgICBmbiBodHRwX2Zsb3coKSB7CiAgICAgICAgbGV0IHdzID0gdG1wX3dzKCk7CiAgICAgICAgc3RkOjpmczo6d3JpdGUod3Muam9pbigiY2F0YXRhbi50eHQiKSwgImhhbG8gZGFyaSB3b3Jrc3BhY2VcbiIpLnVud3JhcCgpOwogICAgICAgIGxldCBzZXJ2ZXIgPSBCcmlkZ2VTZXJ2ZXI6OnN0YXJ0KHN0YXRlKCZ3cywgdHJ1ZSwgdHJ1ZSksICIxMjcuMC4wLjEiLCAwKS51bndyYXAoKTsKICAgICAgICBsZXQgYSA9IHNlcnZlci5hZGRyOwoKICAgICAgICBsZXQgciA9IGdldChhLCAiL2hlYWx0aCIsIE5vbmUpOwogICAgICAgIGFzc2VydCEoci5jb250YWlucygiMjAwIikgJiYgci5jb250YWlucygibXVzZS1icmlkZ2UiKSwgIntyfSIpOwoKICAgICAgICBsZXQgciA9IGdldChhLCAiL2xpc3Q/cGF0aD0uIiwgTm9uZSk7CiAgICAgICAgYXNzZXJ0IShyLmNvbnRhaW5zKCI0MDEiKSwgIntyfSIpOwoKICAgICAgICBsZXQgciA9IGdldChhLCAiL2xpc3Q/cGF0aD0uIiwgU29tZShUT0spKTsKICAgICAgICBhc3NlcnQhKHIuY29udGFpbnMoImNhdGF0YW4udHh0IiksICJ7cn0iKTsKCiAgICAgICAgbGV0IHIgPSBnZXQoYSwgIi9yZWFkP3BhdGg9Y2F0YXRhbi50eHQiLCBTb21lKFRPSykpOwogICAgICAgIGFzc2VydCEoci5jb250YWlucygiaGFsbyIpLCAie3J9Iik7CgogICAgICAgIGxldCByID0gZ2V0KGEsICIvcmVhZD9wYXRoPS4uJTJGc2VjcmV0IiwgU29tZShUT0spKTsKICAgICAgICBhc3NlcnQhKHIuY29udGFpbnMoIjQwMyIpLCAie3J9Iik7CgogICAgICAgIGxldCByID0gcG9zdChhLCAiL3dyaXRlIiwgciMieyJwYXRoIjoiYmFydS9zdWIudHh0IiwiY29udGVudCI6ImlzaSBiYXJ1In0iIywgU29tZShUT0spKTsKICAgICAgICBhc3NlcnQhKHIuY29udGFpbnMoIjIwMCIpLCAie3J9Iik7CiAgICAgICAgYXNzZXJ0X2VxIShzdGQ6OmZzOjpyZWFkX3RvX3N0cmluZyh3cy5qb2luKCJiYXJ1L3N1Yi50eHQiKSkudW53cmFwKCksICJpc2kgYmFydSIpOwoKICAgICAgICBsZXQgciA9IHBvc3QoYSwgIi93cml0ZSIsIHIjInsicGF0aCI6Ii4uL2V2aWwudHh0IiwiY29udGVudCI6IngifSIjLCBTb21lKFRPSykpOwogICAgICAgIGFzc2VydCEoci5jb250YWlucygiNDAzIiksICJ7cn0iKTsKCiAgICAgICAgbGV0IHIgPSBwb3N0KGEsICIvZXhlYyIsIHIjInsiY29tbWFuZCI6ImVjaG8gcGVyaW50YWgtamFsYW4ifSIjLCBTb21lKFRPSykpOwogICAgICAgIGFzc2VydCEoci5jb250YWlucygicGVyaW50YWgtamFsYW4iKSwgIntyfSIpOwoKICAgICAgICBzZXJ2ZXIuc3RvcCgpOwogICAgfQoKICAgICNbdGVzdF0KICAgIGZuIGV4ZWNfZGVuaWVkX2FuZF9kaXNhYmxlZCgpIHsKICAgICAgICBsZXQgd3MgPSB0bXBfd3MoKTsKICAgICAgICBsZXQgc2VydmVyID0gQnJpZGdlU2VydmVyOjpzdGFydChzdGF0ZSgmd3MsIHRydWUsIGZhbHNlKSwgIjEyNy4wLjAuMSIsIDApLnVud3JhcCgpOwogICAgICAgIGxldCByID0gcG9zdChzZXJ2ZXIuYWRkciwgIi9leGVjIiwgciMieyJjb21tYW5kIjoiZWNobyB4In0iIywgU29tZShUT0spKTsKICAgICAgICBhc3NlcnQhKHIuY29udGFpbnMoIjQwMyIpLCAie3J9Iik7CiAgICAgICAgc2VydmVyLnN0b3AoKTsKCiAgICAgICAgbGV0IHNlcnZlciA9IEJyaWRnZVNlcnZlcjo6c3RhcnQoc3RhdGUoJndzLCBmYWxzZSwgdHJ1ZSksICIxMjcuMC4wLjEiLCAwKS51bndyYXAoKTsKICAgICAgICBsZXQgciA9IHBvc3Qoc2VydmVyLmFkZHIsICIvZXhlYyIsIHIjInsiY29tbWFuZCI6ImVjaG8geCJ9IiMsIFNvbWUoVE9LKSk7CiAgICAgICAgYXNzZXJ0IShyLmNvbnRhaW5zKCI0MDMiKSwgIntyfSIpOwogICAgICAgIHNlcnZlci5zdG9wKCk7CiAgICB9CgogICAgI1t0ZXN0XQogICAgZm4gYmluZF9hbGxfcmVqZWN0ZWQoKSB7CiAgICAgICAgbGV0IHdzID0gdG1wX3dzKCk7CiAgICAgICAgYXNzZXJ0IShCcmlkZ2VTZXJ2ZXI6OnN0YXJ0KHN0YXRlKCZ3cywgZmFsc2UsIHRydWUpLCAiMC4wLjAuMCIsIDApLmlzX2VycigpKTsKICAgIH0KfQo=
+//! Muse Bridge — server HTTP lokal yang tersandbox ke SATU folder.
+//!
+//! Aturan yang dikunci (sama di versi Python, Node, dan Rust ini):
+//! - Semua route kecuali `/health` wajib header `X-Bridge-Token`
+//!   (dibandingkan constant-time).
+//! - Path di luar workspace ditolak, termasuk `../` dan symlink keluar
+//!   (semua path di-canonicalize dulu sebelum dicek).
+//! - Exec MATI kecuali `allow_exec` hidup, dan setiap perintah tetap
+//!   harus lolos callback `approve` (di app: dialog di laptop pengguna).
+//! - Bind `0.0.0.0` ditolak mentah-mentah.
+//!
+//! Modul ini murni std + serde_json: tidak ada framework web, tidak ada
+//! koneksi keluar, supaya seluruh permukaan serangannya bisa dibaca.
+
+use std::io::{Read, Write};
+use std::net::{TcpListener, TcpStream, UdpSocket};
+use std::path::{Path, PathBuf};
+use std::sync::atomic::{AtomicBool, Ordering};
+use std::sync::{Arc, RwLock};
+use std::time::Duration;
+
+pub const MAX_READ: u64 = 1_000_000;
+pub const MAX_WRITE: usize = 2_000_000;
+pub const EXEC_TIMEOUT: Duration = Duration::from_secs(60);
+pub const VERSION: &str = "0.2.0";
+
+/// Callback persetujuan exec: (command, workspace) -> boleh jalan?
+pub type ApproveFn = Arc<dyn Fn(&str, &Path) -> bool + Send + Sync>;
+/// Callback log: dipanggil untuk setiap peristiwa (app menampilkannya
+/// di panel + menulis ke file log).
+pub type LogFn = Arc<dyn Fn(&str) + Send + Sync>;
+
+#[derive(Clone)]
+pub struct BridgeState {
+    pub workspace: Arc<RwLock<PathBuf>>,
+    pub token: String,
+    pub allow_exec: Arc<AtomicBool>,
+    pub approve: ApproveFn,
+    pub log: LogFn,
+}
+
+impl BridgeState {
+    pub fn new(
+        workspace: PathBuf,
+        token: String,
+        allow_exec: bool,
+        approve: ApproveFn,
+        log: LogFn,
+    ) -> std::io::Result<Self> {
+        let ws = workspace.canonicalize()?;
+        Ok(Self {
+            workspace: Arc::new(RwLock::new(ws)),
+            token,
+            allow_exec: Arc::new(AtomicBool::new(allow_exec)),
+            approve,
+            log,
+        })
+    }
+
+    pub fn workspace(&self) -> PathBuf {
+        self.workspace.read().unwrap().clone()
+    }
+
+    pub fn set_workspace(&self, dir: &Path) -> std::io::Result<()> {
+        let ws = dir.canonicalize()?;
+        *self.workspace.write().unwrap() = ws;
+        Ok(())
+    }
+}
+
+/// Perbandingan token constant-time (panjang beda = langsung false,
+/// isi dibandingkan tanpa early-exit).
+pub fn token_eq(got: &str, want: &str) -> bool {
+    let (a, b) = (got.as_bytes(), want.as_bytes());
+    if a.len() != b.len() {
+        return false;
+    }
+    let mut diff: u8 = 0;
+    for i in 0..a.len() {
+        diff |= a[i] ^ b[i];
+    }
+    diff == 0
+}
+
+/// Resolve `rel` di dalam workspace. None = di luar / ilegal.
+/// Target yang belum ada dicek lewat parent-nya yang sudah ada,
+/// supaya symlink di tengah path tetap tertangkap.
+pub fn safe_path(workspace: &Path, rel: &str) -> Option<PathBuf> {
+    // 1) Normalisasi komponen secara manual: ".." yang keluar dari
+    //    workspace langsung ditolak, "." diabaikan.
+    let mut parts: Vec<std::ffi::OsString> = Vec::new();
+    for comp in Path::new(rel).components() {
+        use std::path::Component::*;
+        match comp {
+            Normal(c) => parts.push(c.to_os_string()),
+            CurDir => {}
+            ParentDir => {
+                if parts.pop().is_none() {
+                    return None;
+                }
+            }
+            RootDir | Prefix(_) => return None,
+        }
+    }
+    let mut candidate = workspace.to_path_buf();
+    for p in &parts {
+        candidate.push(p);
+    }
+    // 2) Canonicalize prefix terpanjang yang sudah ada (menangkap
+    //    symlink di tengah path), lalu tempel sisa komponennya.
+    let mut existing = candidate.clone();
+    let mut rest: Vec<std::ffi::OsString> = Vec::new();
+    while !existing.exists() {
+        rest.push(existing.file_name()?.to_os_string());
+        existing = existing.parent()?.to_path_buf();
+    }
+    let mut real = existing.canonicalize().ok()?;
+    for p in rest.iter().rev() {
+        real.push(p);
+    }
+    if real == workspace || real.starts_with(workspace) {
+        Some(real)
+    } else {
+        None
+    }
+}
+
+/// Tebak IP Tailscale mesin ini (100.64.0.0/10) tanpa crate tambahan:
+/// "sambungkan" soket UDP ke 100.100.100.100 (Quad100, selalu ada di
+/// tailnet) lalu baca alamat lokal yang dipilih OS. Tidak ada paket
+/// yang benar-benar dikirim oleh connect() UDP.
+pub fn detect_tailscale_ip() -> Option<String> {
+    let sock = UdpSocket::bind("0.0.0.0:0").ok()?;
+    sock.connect("100.100.100.100:80").ok()?;
+    let ip = sock.local_addr().ok()?.ip().to_string();
+    let parts: Vec<u32> = ip.split('.').filter_map(|p| p.parse().ok()).collect();
+    if parts.len() == 4 && parts[0] == 100 && (64..=127).contains(&parts[1]) {
+        Some(ip)
+    } else {
+        None
+    }
+}
+
+// ---------------- HTTP minimal ----------------
+
+struct Request {
+    method: String,
+    path: String,
+    query: Vec<(String, String)>,
+    token: String,
+    body: Vec<u8>,
+}
+
+fn url_decode(s: &str) -> String {
+    let bytes = s.as_bytes();
+    let mut out = Vec::with_capacity(bytes.len());
+    let mut i = 0;
+    while i < bytes.len() {
+        match bytes[i] {
+            b'%' if i + 2 < bytes.len() => {
+                let hex = std::str::from_utf8(&bytes[i + 1..i + 3]).unwrap_or("");
+                match u8::from_str_radix(hex, 16) {
+                    Ok(v) => {
+                        out.push(v);
+                        i += 3;
+                    }
+                    Err(_) => {
+                        out.push(bytes[i]);
+                        i += 1;
+                    }
+                }
+            }
+            b'+' => {
+                out.push(b' ');
+                i += 1;
+            }
+            c => {
+                out.push(c);
+                i += 1;
+            }
+        }
+    }
+    String::from_utf8_lossy(&out).into_owned()
+}
+
+fn read_request(stream: &mut TcpStream) -> Option<Request> {
+    let mut buf: Vec<u8> = Vec::new();
+    let mut chunk = [0u8; 8192];
+    let header_end;
+    loop {
+        let n = stream.read(&mut chunk).ok()?;
+        if n == 0 {
+            return None;
+        }
+        buf.extend_from_slice(&chunk[..n]);
+        if let Some(pos) = find(&buf, b"\r\n\r\n") {
+            header_end = pos + 4;
+            break;
+        }
+        if buf.len() > 65536 {
+            return None;
+        }
+    }
+    let head = String::from_utf8_lossy(&buf[..header_end]).into_owned();
+    let mut lines = head.lines();
+    let first = lines.next()?;
+    let mut parts = first.split_whitespace();
+    let method = parts.next()?.to_string();
+    let raw_path = parts.next()?.to_string();
+
+    let mut content_length = 0usize;
+    let mut token = String::new();
+    for line in lines {
+        if let Some((k, v)) = line.split_once(':') {
+            let (k, v) = (k.trim().to_ascii_lowercase(), v.trim());
+            if k == "content-length" {
+                content_length = v.parse().unwrap_or(0);
+            } else if k == "x-bridge-token" {
+                token = v.to_string();
+            }
+        }
+    }
+    if content_length > MAX_WRITE + 65536 {
+        return None;
+    }
+    let mut body = buf[header_end..].to_vec();
+    while body.len() < content_length {
+        let n = stream.read(&mut chunk).ok()?;
+        if n == 0 {
+            break;
+        }
+        body.extend_from_slice(&chunk[..n]);
+    }
+    body.truncate(content_length);
+
+    let (path, query) = match raw_path.split_once('?') {
+        Some((p, q)) => {
+            let pairs = q
+                .split('&')
+                .filter_map(|kv| {
+                    let (k, v) = kv.split_once('=')?;
+                    Some((url_decode(k), url_decode(v)))
+                })
+                .collect();
+            (url_decode(p), pairs)
+        }
+        None => (url_decode(&raw_path), Vec::new()),
+    };
+    Some(Request { method, path, query, token, body })
+}
+
+fn find(hay: &[u8], needle: &[u8]) -> Option<usize> {
+    hay.windows(needle.len()).position(|w| w == needle)
+}
+
+fn respond(stream: &mut TcpStream, code: u32, obj: serde_json::Value) {
+    let body = serde_json::to_vec(&obj).unwrap_or_default();
+    let reason = match code {
+        200 => "OK",
+        400 => "Bad Request",
+        401 => "Unauthorized",
+        403 => "Forbidden",
+        404 => "Not Found",
+        408 => "Request Timeout",
+        413 => "Payload Too Large",
+        415 => "Unsupported Media Type",
+        _ => "Error",
+    };
+    let head = format!(
+        "HTTP/1.1 {code} {reason}\r\nContent-Type: application/json; charset=utf-8\r\nContent-Length: {}\r\nConnection: close\r\n\r\n",
+        body.len()
+    );
+    let _ = stream.write_all(head.as_bytes());
+    let _ = stream.write_all(&body);
+    let _ = stream.flush();
+}
+
+fn err(msg: &str) -> serde_json::Value {
+    serde_json::json!({ "ok": false, "error": msg })
+}
+
+fn query_get<'a>(req: &'a Request, key: &str) -> &'a str {
+    req.query
+        .iter()
+        .find(|(k, _)| k == key)
+        .map(|(_, v)| v.as_str())
+        .unwrap_or(".")
+}
+
+// ---------------- handler ----------------
+
+fn run_exec(state: &BridgeState, command: &str) -> (u32, serde_json::Value) {
+    let ws = state.workspace();
+    if !(state.approve)(command, &ws) {
+        (state.log)(&format!("EXEC DITOLAK USER: {command}"));
+        return (403, err("ditolak di laptop"));
+    }
+    (state.log)(&format!("EXEC DISETUJUI: {command}"));
+    let mut cmd = if cfg!(target_os = "windows") {
+        let mut c = std::process::Command::new("cmd.exe");
+        c.args(["/d", "/s", "/c", command]);
+        c
+    } else {
+        let mut c = std::process::Command::new("/bin/sh");
+        c.args(["-c", command]);
+        c
+    };
+    cmd.current_dir(&ws)
+        .stdout(std::process::Stdio::piped())
+        .stderr(std::process::Stdio::piped());
+    let mut child = match cmd.spawn() {
+        Ok(c) => c,
+        Err(e) => return (500, err(&format!("gagal menjalankan: {e}"))),
+    };
+    // Baca stdout/stderr di thread terpisah supaya pipe tidak buntu.
+    let mut out_pipe = child.stdout.take().unwrap();
+    let mut err_pipe = child.stderr.take().unwrap();
+    let (txo, rxo) = std::sync::mpsc::channel::<Vec<u8>>();
+    let (txe, rxe) = std::sync::mpsc::channel::<Vec<u8>>();
+    std::thread::spawn(move || {
+        let mut v = Vec::new();
+        let _ = out_pipe.read_to_end(&mut v);
+        let _ = txo.send(v);
+    });
+    std::thread::spawn(move || {
+        let mut v = Vec::new();
+        let _ = err_pipe.read_to_end(&mut v);
+        let _ = txe.send(v);
+    });
+    let started = std::time::Instant::now();
+    let status = loop {
+        match child.try_wait() {
+            Ok(Some(s)) => break Some(s),
+            Ok(None) => {
+                if started.elapsed() > EXEC_TIMEOUT {
+                    let _ = child.kill();
+                    let _ = child.wait();
+                    break None;
+                }
+                std::thread::sleep(Duration::from_millis(50));
+            }
+            Err(_) => break None,
+        }
+    };
+    match status {
+        Some(s) => {
+            let code = s.code().unwrap_or(-1);
+            (state.log)(&format!("EXEC SELESAI (exit {code}): {command}"));
+            let stdout = String::from_utf8_lossy(&rxo.recv().unwrap_or_default()).into_owned();
+            let stderr = String::from_utf8_lossy(&rxe.recv().unwrap_or_default()).into_owned();
+            let tail = |s: &str, n: usize| -> String {
+                let rev: String = s.chars().rev().take(n).collect();
+                rev.chars().rev().collect()
+            };
+            (
+                200,
+                serde_json::json!({
+                    "ok": true,
+                    "exit_code": code,
+                    "stdout": tail(&stdout, 20000),
+                    "stderr": tail(&stderr, 5000),
+                }),
+            )
+        }
+        None => {
+            (state.log)(&format!("EXEC TIMEOUT: {command}"));
+            (408, err("timeout 60s"))
+        }
+    }
+}
+
+fn handle(state: &BridgeState, req: &Request, stream: &mut TcpStream) {
+    // /health satu-satunya tanpa token — hanya membuktikan bridge hidup.
+    if req.method == "GET" && req.path == "/health" {
+        return respond(
+            stream,
+            200,
+            serde_json::json!({ "ok": true, "app": "muse-bridge", "version": VERSION }),
+        );
+    }
+    if !token_eq(&req.token, &state.token) {
+        (state.log)(&format!("TOLAK {} {} — token salah/tidak ada", req.method, req.path));
+        return respond(stream, 401, err("unauthorized"));
+    }
+    let ws = state.workspace();
+
+    if req.method == "GET" && req.path == "/list" {
+        let rel = query_get(req, "path");
+        let target = match safe_path(&ws, rel) {
+            Some(p) => p,
+            None => return respond(stream, 403, err("path di luar workspace")),
+        };
+        let meta = match std::fs::metadata(&target) {
+            Ok(m) if m.is_dir() => m,
+            _ => return respond(stream, 404, err("bukan folder / tidak ada")),
+        };
+        let _ = meta;
+        let mut entries: Vec<serde_json::Value> = Vec::new();
+        if let Ok(rd) = std::fs::read_dir(&target) {
+            for e in rd.flatten() {
+                let is_dir = e.file_type().map(|t| t.is_dir()).unwrap_or(false);
+                let size = if is_dir {
+                    serde_json::Value::Null
+                } else {
+                    e.metadata().map(|m| m.len().into()).unwrap_or(serde_json::Value::Null)
+                };
+                entries.push(serde_json::json!({
+                    "name": e.file_name().to_string_lossy(),
+                    "type": if is_dir { "dir" } else { "file" },
+                    "size": size,
+                }));
+            }
+        }
+        entries.sort_by(|a, b| {
+            let (ta, tb) = (a["type"].as_str().unwrap_or(""), b["type"].as_str().unwrap_or(""));
+            tb.cmp(ta).then_with(|| {
+                a["name"].as_str().unwrap_or("").to_lowercase()
+                    .cmp(&b["name"].as_str().unwrap_or("").to_lowercase())
+            })
+        });
+        (state.log)(&format!("LIST {rel} -> {} entri", entries.len()));
+        return respond(stream, 200, serde_json::json!({ "ok": true, "path": rel, "entries": entries }));
+    }
+
+    if req.method == "GET" && req.path == "/read" {
+        let rel = query_get(req, "path");
+        let target = match safe_path(&ws, rel) {
+            Some(p) => p,
+            None => return respond(stream, 403, err("path di luar workspace")),
+        };
+        let meta = match std::fs::metadata(&target) {
+            Ok(m) if m.is_file() => m,
+            _ => return respond(stream, 404, err("file tidak ada")),
+        };
+        if meta.len() > MAX_READ {
+            return respond(stream, 413, err("file > 1 MB"));
+        }
+        let data = std::fs::read(&target).unwrap_or_default();
+        if data.contains(&0) {
+            return respond(stream, 415, err("file biner — hanya teks"));
+        }
+        (state.log)(&format!("READ {rel} ({} byte)", meta.len()));
+        return respond(
+            stream,
+            200,
+            serde_json::json!({ "ok": true, "path": rel,
+                "content": String::from_utf8_lossy(&data) }),
+        );
+    }
+
+    if req.method == "POST" && req.path == "/write" {
+        let data: serde_json::Value = serde_json::from_slice(&req.body).unwrap_or_default();
+        let rel = data["path"].as_str().unwrap_or("");
+        let content = data["content"].as_str();
+        if rel.is_empty() || content.is_none() {
+            return respond(stream, 400, err("butuh path + content (teks)"));
+        }
+        let content = content.unwrap();
+        if content.len() > MAX_WRITE {
+            return respond(stream, 413, err("konten terlalu besar"));
+        }
+        let target = match safe_path(&ws, rel) {
+            Some(p) => p,
+            None => return respond(stream, 403, err("path di luar workspace")),
+        };
+        if let Some(parent) = target.parent() {
+            let _ = std::fs::create_dir_all(parent);
+        }
+        match std::fs::write(&target, content) {
+            Ok(()) => {
+                (state.log)(&format!("WRITE {rel} ({} karakter)", content.chars().count()));
+                let size = std::fs::metadata(&target).map(|m| m.len()).unwrap_or(0);
+                return respond(stream, 200, serde_json::json!({ "ok": true, "path": rel, "bytes": size }));
+            }
+            Err(e) => return respond(stream, 500, err(&format!("gagal tulis: {e}"))),
+        }
+    }
+
+    if req.method == "POST" && req.path == "/exec" {
+        if !state.allow_exec.load(Ordering::SeqCst) {
+            (state.log)("TOLAK EXEC — terminal mati");
+            return respond(stream, 403, err("exec mati. Hidupkan dari Panel Kontrol Muse Desktop."));
+        }
+        let data: serde_json::Value = serde_json::from_slice(&req.body).unwrap_or_default();
+        let command = data["command"].as_str().unwrap_or("");
+        if command.trim().is_empty() {
+            return respond(stream, 400, err("butuh command (string)"));
+        }
+        let (code, obj) = run_exec(state, command);
+        return respond(stream, code, obj);
+    }
+
+    respond(stream, 404, err("route tidak dikenal"))
+}
+
+// ---------------- server ----------------
+
+pub struct BridgeServer {
+    stop: Arc<AtomicBool>,
+    pub addr: std::net::SocketAddr,
+    handle: Option<std::thread::JoinHandle<()>>,
+}
+
+impl BridgeServer {
+    pub fn start(state: BridgeState, bind: &str, port: u16) -> std::io::Result<Self> {
+        if bind == "0.0.0.0" || bind == "::" {
+            return Err(std::io::Error::new(
+                std::io::ErrorKind::InvalidInput,
+                "bind 0.0.0.0 ditolak: bridge tidak boleh membuka ke semua jaringan",
+            ));
+        }
+        let listener = TcpListener::bind((bind, port))?;
+        listener.set_nonblocking(true)?;
+        let addr = listener.local_addr()?;
+        let stop = Arc::new(AtomicBool::new(false));
+        let stop_thread = stop.clone();
+        let handle = std::thread::spawn(move || {
+            while !stop_thread.load(Ordering::SeqCst) {
+                match listener.accept() {
+                    Ok((mut stream, _)) => {
+                        let st = state.clone();
+                        std::thread::spawn(move || {
+                            let _ = stream.set_read_timeout(Some(Duration::from_secs(90)));
+                            if let Some(req) = read_request(&mut stream) {
+                                handle(&st, &req, &mut stream);
+                            }
+                        });
+                    }
+                    Err(e) if e.kind() == std::io::ErrorKind::WouldBlock => {
+                        std::thread::sleep(Duration::from_millis(50));
+                    }
+                    Err(_) => break,
+                }
+            }
+        });
+        Ok(Self { stop, addr, handle: Some(handle) })
+    }
+
+    pub fn stop(mut self) {
+        self.stop.store(true, Ordering::SeqCst);
+        if let Some(h) = self.handle.take() {
+            let _ = h.join();
+        }
+    }
+}
+
+// ---------------- tests ----------------
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use std::io::{Read, Write};
+
+    fn tmp_ws() -> PathBuf {
+        static COUNTER: std::sync::atomic::AtomicU64 = std::sync::atomic::AtomicU64::new(0);
+        let n = COUNTER.fetch_add(1, std::sync::atomic::Ordering::SeqCst);
+        let dir = std::env::temp_dir().join(format!("fb-test-{}-{n}", std::process::id()));
+        let _ = std::fs::remove_dir_all(&dir);
+        std::fs::create_dir_all(&dir).unwrap();
+        dir.canonicalize().unwrap()
+    }
+
+    fn state(ws: &Path, allow_exec: bool, approve_ok: bool) -> BridgeState {
+        BridgeState::new(
+            ws.to_path_buf(),
+            "test-token-1234567890".to_string(),
+            allow_exec,
+            Arc::new(move |_, _| approve_ok),
+            Arc::new(|_| {}),
+        )
+        .unwrap()
+    }
+
+    fn raw(addr: std::net::SocketAddr, request: &str) -> String {
+        let mut s = TcpStream::connect(addr).unwrap();
+        s.write_all(request.as_bytes()).unwrap();
+        let mut out = String::new();
+        s.read_to_string(&mut out).unwrap();
+        out
+    }
+
+    fn get(addr: std::net::SocketAddr, path: &str, token: Option<&str>) -> String {
+        let t = token.map(|t| format!("X-Bridge-Token: {t}\r\n")).unwrap_or_default();
+        raw(addr, &format!("GET {path} HTTP/1.1\r\nHost: x\r\n{t}Connection: close\r\n\r\n"))
+    }
+
+    fn post(addr: std::net::SocketAddr, path: &str, body: &str, token: Option<&str>) -> String {
+        let t = token.map(|t| format!("X-Bridge-Token: {t}\r\n")).unwrap_or_default();
+        raw(addr, &format!(
+            "POST {path} HTTP/1.1\r\nHost: x\r\n{t}Content-Type: application/json\r\nContent-Length: {}\r\nConnection: close\r\n\r\n{body}",
+            body.len()
+        ))
+    }
+
+    const TOK: &str = "test-token-1234567890";
+
+    #[test]
+    fn token_compare() {
+        assert!(token_eq("abc", "abc"));
+        assert!(!token_eq("abc", "abd"));
+        assert!(!token_eq("abc", "abcd"));
+    }
+
+    #[test]
+    fn safe_path_blocks_escape() {
+        let ws = tmp_ws();
+        assert!(safe_path(&ws, "a/b.txt").is_some());
+        assert!(safe_path(&ws, "../secret").is_none());
+        assert!(safe_path(&ws, "..").is_none());
+    }
+
+    #[cfg(unix)]
+    #[test]
+    fn safe_path_blocks_symlink() {
+        let ws = tmp_ws();
+        std::os::unix::fs::symlink("/etc/passwd", ws.join("link-keluar")).unwrap();
+        assert!(safe_path(&ws, "link-keluar").is_none());
+    }
+
+    #[test]
+    fn http_flow() {
+        let ws = tmp_ws();
+        std::fs::write(ws.join("catatan.txt"), "halo dari workspace\n").unwrap();
+        let server = BridgeServer::start(state(&ws, true, true), "127.0.0.1", 0).unwrap();
+        let a = server.addr;
+
+        let r = get(a, "/health", None);
+        assert!(r.contains("200") && r.contains("muse-bridge"), "{r}");
+
+        let r = get(a, "/list?path=.", None);
+        assert!(r.contains("401"), "{r}");
+
+        let r = get(a, "/list?path=.", Some(TOK));
+        assert!(r.contains("catatan.txt"), "{r}");
+
+        let r = get(a, "/read?path=catatan.txt", Some(TOK));
+        assert!(r.contains("halo"), "{r}");
+
+        let r = get(a, "/read?path=..%2Fsecret", Some(TOK));
+        assert!(r.contains("403"), "{r}");
+
+        let r = post(a, "/write", r#"{"path":"baru/sub.txt","content":"isi baru"}"#, Some(TOK));
+        assert!(r.contains("200"), "{r}");
+        assert_eq!(std::fs::read_to_string(ws.join("baru/sub.txt")).unwrap(), "isi baru");
+
+        let r = post(a, "/write", r#"{"path":"../evil.txt","content":"x"}"#, Some(TOK));
+        assert!(r.contains("403"), "{r}");
+
+        let r = post(a, "/exec", r#"{"command":"echo perintah-jalan"}"#, Some(TOK));
+        assert!(r.contains("perintah-jalan"), "{r}");
+
+        server.stop();
+    }
+
+    #[test]
+    fn exec_denied_and_disabled() {
+        let ws = tmp_ws();
+        let server = BridgeServer::start(state(&ws, true, false), "127.0.0.1", 0).unwrap();
+        let r = post(server.addr, "/exec", r#"{"command":"echo x"}"#, Some(TOK));
+        assert!(r.contains("403"), "{r}");
+        server.stop();
+
+        let server = BridgeServer::start(state(&ws, false, true), "127.0.0.1", 0).unwrap();
+        let r = post(server.addr, "/exec", r#"{"command":"echo x"}"#, Some(TOK));
+        assert!(r.contains("403"), "{r}");
+        server.stop();
+    }
+
+    #[test]
+    fn bind_all_rejected() {
+        let ws = tmp_ws();
+        assert!(BridgeServer::start(state(&ws, false, true), "0.0.0.0", 0).is_err());
+    }
+}
