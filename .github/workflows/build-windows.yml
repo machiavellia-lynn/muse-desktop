@@ -1,0 +1,54 @@
+name: Build Muse Desktop (Windows)
+
+# Build .exe di mesin Windows milik GitHub (gratis untuk repo publik,
+# atau jatah Actions repo privat). Hasilnya muncul di tab Actions
+# sebagai artifact "Muse-Desktop-Windows" — tinggal download.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            src-tauri
+            crates/muse-bridge
+
+      - name: Test inti bridge (Rust murni, tanpa GUI)
+        run: cargo test -p muse-bridge
+
+      - name: Setup Node (untuk Tauri CLI)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install Tauri CLI
+        run: npm install
+
+      - name: Generate ikon aplikasi (PNG tidak di-commit)
+        run: |
+          pip install pillow
+          python scripts/make_icon.py
+          npx tauri icon src-tauri/icons/icon.png
+
+      - name: Build aplikasi (NSIS installer + exe portable)
+        run: npx tauri build
+
+      - name: Upload hasil build
+        uses: actions/upload-artifact@v4
+        with:
+          name: Muse-Desktop-Windows
+          path: |
+            src-tauri/target/release/bundle/nsis/*.exe
+            src-tauri/target/release/muse-desktop.exe
+          if-no-files-found: error
