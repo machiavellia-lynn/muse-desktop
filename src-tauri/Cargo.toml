@@ -1,1 +1,21 @@
-W3BhY2thZ2VdCm5hbWUgPSAibXVzZS1kZXNrdG9wIgp2ZXJzaW9uID0gIjAuMi4wIgplZGl0aW9uID0gIjIwMjEiCmRlc2NyaXB0aW9uID0gIk11c2UgRGVza3RvcCAoVGF1cmkvUnVzdCkg4oCUIGplbmRlbGEgbXVzZS5haSByZXNtaSArIGJyaWRnZSBsb2thbCBhbWFuIgoKW2J1aWxkLWRlcGVuZGVuY2llc10KdGF1cmktYnVpbGQgPSB7IHZlcnNpb24gPSAiMiIsIGZlYXR1cmVzID0gW10gfQoKW2RlcGVuZGVuY2llc10KdGF1cmkgPSB7IHZlcnNpb24gPSAiMiIsIGZlYXR1cmVzID0gWyJ0cmF5LWljb24iXSB9CnRhdXJpLXBsdWdpbi1kaWFsb2cgPSAiMiIKc2VyZGUgPSB7IHZlcnNpb24gPSAiMSIsIGZlYXR1cmVzID0gWyJkZXJpdmUiXSB9CnNlcmRlX2pzb24gPSAiMSIKbXVzZS1icmlkZ2UgPSB7IHBhdGggPSAiLi4vY3JhdGVzL211c2UtYnJpZGdlIiB9CnJhbmQgPSAiMC44IgoKW3Byb2ZpbGUucmVsZWFzZV0Kb3B0LWxldmVsID0gInMiCmx0byA9IHRydWUKc3RyaXAgPSB0cnVlCg==
+[package]
+name = "muse-desktop"
+version = "0.2.0"
+edition = "2021"
+description = "Muse Desktop (Tauri/Rust) — jendela muse.ai resmi + bridge lokal aman"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon"] }
+tauri-plugin-dialog = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+muse-bridge = { path = "../crates/muse-bridge" }
+rand = "0.8"
+
+[profile.release]
+opt-level = "s"
+lto = true
+strip = true
