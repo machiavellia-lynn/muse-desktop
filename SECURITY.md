@@ -1,1 +1,59 @@
-IyBTZWN1cml0eSBtb2RlbAoKIyMgV2hhdCB0aGlzIGFwcCBpcyB0cnVzdGVkIHdpdGgKCk11c2UgRGVza3RvcCBkZWxpYmVyYXRlbHkgaG9sZHMgdmVyeSBsaXR0bGUgcG93ZXI6CgotIEl0IGNhbiByZWFkL3dyaXRlICoqdGV4dCBmaWxlcyBpbnNpZGUgb25lIGZvbGRlciB5b3UgY2hvb3NlKiouCi0gSXQgY2FuIHJ1biB0ZXJtaW5hbCBjb21tYW5kcyAqKm9ubHkqKiBpZiB5b3UgZW5hYmxlZCB0aGUgdGVybWluYWwgaW4KICB0aGUgQ29udHJvbCBQYW5lbCwgYW5kICoqb25seSoqIHdpdGggeW91ciBtYW51YWwsIHBlci1jb21tYW5kCiAgYXBwcm92YWwgaW4gYSBkaWFsb2cgb24geW91ciBvd24gc2NyZWVuLgotIEl0IGRpc3BsYXlzIHRoZSBvZmZpY2lhbCBtdXNlLmFpIHdlYnNpdGUgaW4gYSB3aW5kb3cuIFRoYXQgd2luZG93IGlzCiAgZ2l2ZW4gKipubyoqIGFwcCBwZXJtaXNzaW9ucyAoc2VlIGBzcmMtdGF1cmkvY2FwYWJpbGl0aWVzL2Ag4oCUIG9ubHkKICB0aGUgYHBhbmVsYCB3aW5kb3cgaGFzIGFueSksIGFuZCB0aGUgYXBwIGluamVjdHMgbm8gc2NyaXB0cyBpbnRvIGl0LgoKIyMgV2hhdCBwcm90ZWN0cyB5b3UKCjEuICoqTmV0d29yayBwb3NpdGlvbi4qKiBUaGUgYnJpZGdlIGJpbmRzIG9ubHkgdG8geW91ciBUYWlsc2NhbGUgSVAKICAgKG9yIGxvY2FsaG9zdCkgYW5kIHJlZnVzZXMgYDAuMC4wLjBgIGluIGNvZGUuIE5vdGhpbmcgaXMgZXhwb3NlZCB0bwogICB5b3VyIExBTiBvciB0aGUgaW50ZXJuZXQgYnkgdGhlIGFwcCBpdHNlbGYuCjIuICoqUGFpcmluZyB0b2tlbi4qKiBFdmVyeSBicmlkZ2UgcmVxdWVzdCByZXF1aXJlcyB0aGUgdG9rZW4KICAgKGNvbXBhcmVkIGluIGNvbnN0YW50IHRpbWUpLiBUaGUgdG9rZW4gaXMgZ2VuZXJhdGVkIG9uIHlvdXIgbWFjaGluZQogICBhbmQgc3RvcmVkIG9ubHkgdGhlcmUgKGFwcCBkYXRhIGZvbGRlcikgYW5kIHdoZXJldmVyICp5b3UqIHBhc3RlIGl0LgozLiAqKlNhbmRib3guKiogUGF0aHMgYXJlIGNhbm9uaWNhbGl6ZWQgYW5kIGNoZWNrZWQgYWdhaW5zdCB0aGUKICAgd29ya3NwYWNlIHJvb3Q7IGAuLi9gIGFuZCBzeW1saW5rIGVzY2FwZXMgYXJlIHJlamVjdGVkLiBUaGlzIGlzCiAgIGNvdmVyZWQgYnkgdW5pdCB0ZXN0cyBpbiBgY3JhdGVzL211c2UtYnJpZGdlYC4KNC4gKipObyBvdXRib3VuZCB0cmFmZmljLioqIFRoZSBicmlkZ2Ugb25seSBhbnN3ZXJzIHJlcXVlc3RzLiBUaGVyZSBpcwogICBubyB0ZWxlbWV0cnksIG5vIHVwZGF0ZSBzZXJ2ZXIsIG5vIGFuYWx5dGljcy4KNS4gKipBdWRpdGFiaWxpdHkuKiogfjcwMCBsaW5lcyBvZiBSdXN0IGZvciB0aGUgYnJpZGdlIGNvcmUsIHBsYWluCiAgIEhUTUwvSlMgZm9yIHRoZSBwYW5lbC4gRXZlcnkgYWNjZXNzIGlzIGxvZ2dlZCBpbiB0aGUgQ29udHJvbCBQYW5lbC4KCiMjIFdoYXQgdGhlIHRva2VuIGRvZXMgTk9UIHByb3RlY3QKCi0gQW55b25lIHdobyBoYXMgeW91ciB0b2tlbiAqKmFuZCoqIG5ldHdvcmsgYWNjZXNzIHRvIHRoZSBicmlkZ2UKICAoaS5lLiBhIGRldmljZSBvbiB5b3VyIHRhaWxuZXQpIGNhbiB1c2UgdGhlIGJyaWRnZSBhcyB5b3VyIE11c2UKICB3b3VsZC4gVHJlYXQgdGhlIHRva2VuIGxpa2UgYSBwYXNzd29yZDogbmV2ZXIgcG9zdCBpdCBwdWJsaWNseSwKICByb3RhdGUgaXQgaWYgaXQgbGVha3MgKGRlbGV0ZSBgdG9rZW4udHh0YCwgcmVzdGFydCB0aGUgYXBwKS4KLSBUZXJtaW5hbCBjb21tYW5kcyB5b3UgYXBwcm92ZSBydW4gd2l0aCAqKnlvdXIqKiBXaW5kb3dzIGFjY291bnTigJlzCiAgcmlnaHRzLCBpbnNpZGUgeW91ciB3aG9sZSBhY2NvdW50IOKAlCB0aGUgd29ya3NwYWNlIHNhbmRib3ggYXBwbGllcyB0bwogIHRoZSBicmlkZ2XigJlzIGZpbGUgQVBJLCBub3QgdG8gYSBzaGVsbCB5b3UgYXBwcm92ZWQuIFJlYWQgZXZlcnkKICBhcHByb3ZhbCBkaWFsb2cuIFdoZW4gaW4gZG91YnQsIGNsaWNrICoqRGVueSoqLgotIFRhaWxzY2FsZeKAmXMgb3duIHNlY3VyaXR5IGlzIHBhcnQgb2YgdGhlIGNoYWluOiBrZWVwIHlvdXIgdGFpbG5ldAogIGxpbWl0ZWQgdG8gZGV2aWNlcyB5b3UgdHJ1c3QuCgojIyBLbm93biBsaW1pdGF0aW9ucyAodjAuMikKCi0gVGV4dCBmaWxlcyBvbmx5OyAxIE1CIHJlYWQgLyAyIE1CIHdyaXRlIGNhcHMuCi0gVGhlIHRva2VuIGlzIHN0b3JlZCBpbiBwbGFpbnRleHQgaW4gdGhlIGFwcCBkYXRhIGZvbGRlciAoc2FtZQogIHRyYWRlLW9mZiBtb3N0IGxvY2FsIHRvb2xzIG1ha2U7IE9TLWxldmVsIGRpc2sgZW5jcnlwdGlvbiBzdWNoIGFzCiAgQml0TG9ja2VyIGlzIHJlY29tbWVuZGVkKS4gSGFyZGVuaW5nIHRoaXMgaXMgb24gdGhlIHJvYWRtYXAuCi0gVGhlIGluc3RhbGxlciBpcyBub3QgY29kZS1zaWduZWQgeWV0ICh1bnNpZ25lZCBidWlsZHMgbWF5IHRyaWdnZXIgYQogIFdpbmRvd3MgU21hcnRTY3JlZW4gcHJvbXB0KS4gVmVyaWZ5IGRvd25sb2FkcyBhZ2FpbnN0IHRoZSBjaGVja3N1bXMKICBwdWJsaXNoZWQgd2l0aCBlYWNoIHJlbGVhc2UsIG9yIGJ1aWxkIGZyb20gc291cmNlIHZpYSB0aGUgaW5jbHVkZWQKICBHaXRIdWIgQWN0aW9ucyB3b3JrZmxvdy4KCiMjIFJlcG9ydGluZyBhIHZ1bG5lcmFiaWxpdHkKCk9wZW4gYSBHaXRIdWIgaXNzdWUgd2l0aCB0aGUgbGFiZWwgYHNlY3VyaXR5YCwgb3IgY29udGFjdCB0aGUKbWFpbnRhaW5lcnMgcHJpdmF0ZWx5IHRocm91Z2ggR2l0SHViIGlmIHRoZSBpc3N1ZSBpcyBzZW5zaXRpdmUuClBsZWFzZSBkbyBub3QgaW5jbHVkZSBhbnlvbmXigJlzIHBhaXJpbmcgdG9rZW4gaW4gYSByZXBvcnQuCg==
+# Security model
+
+## What this app is trusted with
+
+Muse Desktop deliberately holds very little power:
+
+- It can read/write **text files inside one folder you choose**.
+- It can run terminal commands **only** if you enabled the terminal in
+  the Control Panel, and **only** with your manual, per-command
+  approval in a dialog on your own screen.
+- It displays the official muse.ai website in a window. That window is
+  given **no** app permissions (see `src-tauri/capabilities/` — only
+  the `panel` window has any), and the app injects no scripts into it.
+
+## What protects you
+
+1. **Network position.** The bridge binds only to your Tailscale IP
+   (or localhost) and refuses `0.0.0.0` in code. Nothing is exposed to
+   your LAN or the internet by the app itself.
+2. **Pairing token.** Every bridge request requires the token
+   (compared in constant time). The token is generated on your machine
+   and stored only there (app data folder) and wherever *you* paste it.
+3. **Sandbox.** Paths are canonicalized and checked against the
+   workspace root; `../` and symlink escapes are rejected. This is
+   covered by unit tests in `crates/muse-bridge`.
+4. **No outbound traffic.** The bridge only answers requests. There is
+   no telemetry, no update server, no analytics.
+5. **Auditability.** ~700 lines of Rust for the bridge core, plain
+   HTML/JS for the panel. Every access is logged in the Control Panel.
+
+## What the token does NOT protect
+
+- Anyone who has your token **and** network access to the bridge
+  (i.e. a device on your tailnet) can use the bridge as your Muse
+  would. Treat the token like a password: never post it publicly,
+  rotate it if it leaks (delete `token.txt`, restart the app).
+- Terminal commands you approve run with **your** Windows account’s
+  rights, inside your whole account — the workspace sandbox applies to
+  the bridge’s file API, not to a shell you approved. Read every
+  approval dialog. When in doubt, click **Deny**.
+- Tailscale’s own security is part of the chain: keep your tailnet
+  limited to devices you trust.
+
+## Known limitations (v0.2)
+
+- Text files only; 1 MB read / 2 MB write caps.
+- The token is stored in plaintext in the app data folder (same
+  trade-off most local tools make; OS-level disk encryption such as
+  BitLocker is recommended). Hardening this is on the roadmap.
+- The installer is not code-signed yet (unsigned builds may trigger a
+  Windows SmartScreen prompt). Verify downloads against the checksums
+  published with each release, or build from source via the included
+  GitHub Actions workflow.
+
+## Reporting a vulnerability
+
+Open a GitHub issue with the label `security`, or contact the
+maintainers privately through GitHub if the issue is sensitive.
+Please do not include anyone’s pairing token in a report.
