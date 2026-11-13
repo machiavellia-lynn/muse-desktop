@@ -1,1 +1,12 @@
-ewogICJkZXNjcmlwdGlvbiI6ICJNdXNlIERlc2t0b3AgKHVub2ZmaWNpYWwpIOKAlCBsaWdodHdlaWdodCBXaW5kb3dzIGNvbXBhbmlvbiAoVGF1cmkvUnVzdCkgZm9yIHlvdXIgb3duIE11c2U6IG9mZmljaWFsIG11c2UuYWkgd2luZG93ICsgc2FuZGJveGVkIGxvY2FsIGJyaWRnZS4iLAogICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAiQHRhdXJpLWFwcHMvY2xpIjogIl4yIgogIH0sCiAgIm5hbWUiOiAibXVzZS1kZXNrdG9wIiwKICAicHJpdmF0ZSI6IHRydWUsCiAgInNjcmlwdHMiOiB7CiAgICAidGF1cmkiOiAidGF1cmkiCiAgfSwKICAidmVyc2lvbiI6ICIwLjIuMCIKfQ==
+{
+  "description": "Muse Desktop (unofficial) — lightweight Windows companion (Tauri/Rust) for your own Muse: official muse.ai window + sandboxed local bridge.",
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  },
+  "name": "muse-desktop",
+  "private": true,
+  "scripts": {
+    "tauri": "tauri"
+  },
+  "version": "0.2.0"
+}
