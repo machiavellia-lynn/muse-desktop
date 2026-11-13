@@ -1,1 +1,47 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiJHZW5lcmF0ZSBzcmMtdGF1cmkvaWNvbnMvaWNvbi5wbmcgKDUxMng1MTIpIOKAlCBhIHNpbXBsZSAiTSIgbWFyay4KClRoZSBQTkcgaXMgZ2VuZXJhdGVkIChub3QgY29tbWl0dGVkKSBzbyB0aGUgcmVwb3NpdG9yeSBzdGF5cyB0ZXh0LW9ubHkKYW5kIGFueW9uZSBjYW4gYXVkaXQvcmVwbGFjZSB0aGUgYnJhbmRpbmcuIFJ1biBvbmNlIGJlZm9yZQpgbnB4IHRhdXJpIGljb25gIC8gYG5weCB0YXVyaSBidWlsZGA6CgogICAgcGlwIGluc3RhbGwgcGlsbG93CiAgICBweXRob24zIHNjcmlwdHMvbWFrZV9pY29uLnB5CiIiIgpmcm9tIHBhdGhsaWIgaW1wb3J0IFBhdGgKCmZyb20gUElMIGltcG9ydCBJbWFnZSwgSW1hZ2VEcmF3LCBJbWFnZUZvbnQKCk9VVCA9IFBhdGgoX19maWxlX18pLnJlc29sdmUoKS5wYXJlbnQucGFyZW50IC8gInNyYy10YXVyaSIgLyAiaWNvbnMiIC8gImljb24ucG5nIgoKCmRlZiBsb2FkX2ZvbnQoc2l6ZTogaW50KToKICAgIGNhbmRpZGF0ZXMgPSBbCiAgICAgICAgIi91c3Ivc2hhcmUvZm9udHMvdHJ1ZXR5cGUvZGVqYXZ1L0RlamFWdVNhbnMtQm9sZC50dGYiLAogICAgICAgICJDOlxcV2luZG93c1xcRm9udHNcXHNlZ29ldWliLnR0ZiIsCiAgICAgICAgIkM6XFxXaW5kb3dzXFxGb250c1xcYXJpYWxiZC50dGYiLAogICAgXQogICAgZm9yIGMgaW4gY2FuZGlkYXRlczoKICAgICAgICB0cnk6CiAgICAgICAgICAgIHJldHVybiBJbWFnZUZvbnQudHJ1ZXR5cGUoYywgc2l6ZSkKICAgICAgICBleGNlcHQgT1NFcnJvcjoKICAgICAgICAgICAgY29udGludWUKICAgIHJldHVybiBJbWFnZUZvbnQubG9hZF9kZWZhdWx0KCkKCgpkZWYgbWFpbigpIC0+IE5vbmU6CiAgICBpbWcgPSBJbWFnZS5uZXcoIlJHQkEiLCAoNTEyLCA1MTIpLCAoMCwgMCwgMCwgMCkpCiAgICBkID0gSW1hZ2VEcmF3LkRyYXcoaW1nKQogICAgZC5yb3VuZGVkX3JlY3RhbmdsZSgKICAgICAgICBbMTYsIDE2LCA0OTYsIDQ5Nl0sIHJhZGl1cz05NiwKICAgICAgICBmaWxsPSgxNiwgMjAsIDI0LCAyNTUpLCBvdXRsaW5lPSg2MywgMTg1LCAxMDcsIDI1NSksIHdpZHRoPTEwLAogICAgKQogICAgZC50ZXh0KCgyNTYsIDI2OCksICJNIiwgZm9udD1sb2FkX2ZvbnQoMjgwKSwgYW5jaG9yPSJtbSIsCiAgICAgICAgICAgZmlsbD0oMjMyLCAyMzYsIDIzOSwgMjU1KSkKICAgIE9VVC5wYXJlbnQubWtkaXIocGFyZW50cz1UcnVlLCBleGlzdF9vaz1UcnVlKQogICAgaW1nLnNhdmUoT1VUKQogICAgcHJpbnQoZiJ3cm90ZSB7T1VUfSIpCgoKaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoKICAgIG1haW4oKQo=
+#!/usr/bin/env python3
+"""Generate src-tauri/icons/icon.png (512x512) — a simple "M" mark.
+
+The PNG is generated (not committed) so the repository stays text-only
+and anyone can audit/replace the branding. Run once before
+`npx tauri icon` / `npx tauri build`:
+
+    pip install pillow
+    python3 scripts/make_icon.py
+"""
+from pathlib import Path
+
+from PIL import Image, ImageDraw, ImageFont
+
+OUT = Path(__file__).resolve().parent.parent / "src-tauri" / "icons" / "icon.png"
+
+
+def load_font(size: int):
+    candidates = [
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "C:\\Windows\\Fonts\\segoeuib.ttf",
+        "C:\\Windows\\Fonts\\arialbd.ttf",
+    ]
+    for c in candidates:
+        try:
+            return ImageFont.truetype(c, size)
+        except OSError:
+            continue
+    return ImageFont.load_default()
+
+
+def main() -> None:
+    img = Image.new("RGBA", (512, 512), (0, 0, 0, 0))
+    d = ImageDraw.Draw(img)
+    d.rounded_rectangle(
+        [16, 16, 496, 496], radius=96,
+        fill=(16, 20, 24, 255), outline=(63, 185, 107, 255), width=10,
+    )
+    d.text((256, 268), "M", font=load_font(280), anchor="mm",
+           fill=(232, 236, 239, 255))
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    img.save(OUT)
+    print(f"wrote {OUT}")
+
+
+if __name__ == "__main__":
+    main()
