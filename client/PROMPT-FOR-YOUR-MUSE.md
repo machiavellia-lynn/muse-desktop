@@ -1,1 +1,41 @@
-IyBQYWlyaW5nIHByb21wdCDigJQgcGFzdGUgdGhpcyB0byB5b3VyIE11c2UKCkZpbGwgaW4gdGhlIHR3byB2YWx1ZXMgZnJvbSB0aGUgTXVzZSBEZXNrdG9wIENvbnRyb2wgUGFuZWwsIGF0dGFjaApgYnJpZGdlX2NsaWVudC5weWAgKGZyb20gdGhpcyBgY2xpZW50L2AgZm9sZGVyKSB0byB0aGUgc2FtZSBtZXNzYWdlLAphbmQgc2VuZCBpdCB0byB5b3VyIE11c2U6CgotLS0KCkkgaW5zdGFsbGVkICoqTXVzZSBEZXNrdG9wICh1bm9mZmljaWFsKSoqIG9uIG15IFdpbmRvd3MgUEMuIEl0IHJ1bnMgYQpzbWFsbCBsb2NhbCBicmlkZ2UgdGhhdCBsZXRzIHlvdSB3b3JrIGluIE9ORSBmb2xkZXIgb24gbXkgbGFwdG9wLgoKLSBCcmlkZ2UgYWRkcmVzczogYGh0dHA6Ly8xMDAueC54Lng6ODc2NWAg4oaQIHJlcGxhY2Ugd2l0aCB5b3VycwotIFBhaXJpbmcgdG9rZW46IGA8cGFzdGUgdG9rZW4gaGVyZT5gCgpJIGF0dGFjaGVkIGBicmlkZ2VfY2xpZW50LnB5YC4gUGxlYXNlIHVzZSBpdCBsaWtlIHRoaXM6CgpgYGAKQlJJREdFX1VSTD1odHRwOi8vMTAwLngueC54Ojg3NjUgQlJJREdFX1RPS0VOPTxteSB0b2tlbj4gXAogIHB5dGhvbjMgYnJpZGdlX2NsaWVudC5weSBsaXN0IC4KYGBgCgpOb3RlcyBmb3IgeW91OgoKLSBJZiB5b3VyIGVudmlyb25tZW50IHJlYWNoZXMgbXkgVGFpbHNjYWxlIG5ldHdvcmsgdGhyb3VnaCBhIHByb3h5LAogIHNldCBgQlJJREdFX1BST1hZYCBhY2NvcmRpbmdseSAodGhlIFRhaWxzY2FsZSBjb25uZWN0b3IgZG9jcwogIGRlc2NyaWJlIHRoZSB0dW5uZWwgcHJveHkgcG9ydCkuIEEgYC9oZWFsdGhgIGNhbGwgbmVlZHMgbm8gdG9rZW4g4oCUCiAgdGVzdCB0aGF0IGZpcnN0LCB0aGVuIHRlc3QgYGxpc3QgLmAgd2l0aCB0aGUgdG9rZW4uCi0gVGhlIGJyaWRnZSBvbmx5IGFsbG93cyB0aGF0IG9uZSB3b3Jrc3BhY2UgZm9sZGVyLiBgbGlzdGAsIGByZWFkYAogIGFuZCBgd3JpdGVgIHdvcmsgaW5zaWRlIGl0OyBwYXRocyBvdXRzaWRlIGl0IHdpbGwgYmUgcmVqZWN0ZWQuCi0gYGV4ZWNgIHJ1bnMgYSB0ZXJtaW5hbCBjb21tYW5kIG9uIG15IGxhcHRvcCwgYnV0ICoqb25seSoqIGFmdGVyIEkKICBhcHByb3ZlIGl0IGluIGEgZGlhbG9nIG9uIG15IHNjcmVlbiwgYW5kIG9ubHkgaWYgSSBlbmFibGVkIHRoZQogIHRlcm1pbmFsIGluIHRoZSBhcHAuIEEgcmVqZWN0aW9uIGlzIG5vcm1hbCDigJQgbmV2ZXIgcmV0cnkgYSByZWplY3RlZAogIGNvbW1hbmQgaW4gYSBsb29wLgotIFRyZWF0IHRoZSB0b2tlbiBsaWtlIGEgcGFzc3dvcmQ6IGRvIG5vdCBwcmludCBpdCBpbiB5b3VyIHJlcGxpZXMsCiAgZG8gbm90IHNhdmUgaXQgaW50byBsb25nLXRlcm0gbWVtb3J5LCBhbmQgZG8gbm90IHNlbmQgaXQgYW55d2hlcmUKICBleGNlcHQgdGhlIGJyaWRnZSBpdHNlbGYuIEtlZXAgaXQgb25seSBpbiB0aGUgd29ya2luZyBmaWxlL2VudiB5b3UKICB1c2UgdG8gY2FsbCB0aGUgY2xpZW50IGR1cmluZyBvdXIgd29yayB0b2dldGhlci4KClBsZWFzZSBjb25maXJtIHRoZSBjb25uZWN0aW9uIGJ5IGxpc3RpbmcgbXkgd29ya3NwYWNlIGZvbGRlci4KCi0tLQo=
+# Pairing prompt — paste this to your Muse
+
+Fill in the two values from the Muse Desktop Control Panel, attach
+`bridge_client.py` (from this `client/` folder) to the same message,
+and send it to your Muse:
+
+---
+
+I installed **Muse Desktop (unofficial)** on my Windows PC. It runs a
+small local bridge that lets you work in ONE folder on my laptop.
+
+- Bridge address: `http://100.x.x.x:8765` ← replace with yours
+- Pairing token: `<paste token here>`
+
+I attached `bridge_client.py`. Please use it like this:
+
+```
+BRIDGE_URL=http://100.x.x.x:8765 BRIDGE_TOKEN=<my token> \
+  python3 bridge_client.py list .
+```
+
+Notes for you:
+
+- If your environment reaches my Tailscale network through a proxy,
+  set `BRIDGE_PROXY` accordingly (the Tailscale connector docs
+  describe the tunnel proxy port). A `/health` call needs no token —
+  test that first, then test `list .` with the token.
+- The bridge only allows that one workspace folder. `list`, `read`
+  and `write` work inside it; paths outside it will be rejected.
+- `exec` runs a terminal command on my laptop, but **only** after I
+  approve it in a dialog on my screen, and only if I enabled the
+  terminal in the app. A rejection is normal — never retry a rejected
+  command in a loop.
+- Treat the token like a password: do not print it in your replies,
+  do not save it into long-term memory, and do not send it anywhere
+  except the bridge itself. Keep it only in the working file/env you
+  use to call the client during our work together.
+
+Please confirm the connection by listing my workspace folder.
+
+---
