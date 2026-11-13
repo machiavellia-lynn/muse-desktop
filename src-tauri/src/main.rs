@@ -71,7 +71,8 @@ fn push_log(app: &tauri::AppHandle, lines: &Mutex<Vec<String>>, msg: &str) {
     if let Ok(mut v) = lines.lock() {
         v.push(line.clone());
         if v.len() > 200 {
-            v.drain(0..v.len() - 200);
+            let excess = v.len() - 200;
+            v.drain(0..excess);
         }
     }
     let _ = app.emit_to("panel", "bridge-log", line);
