@@ -1,1 +1,318 @@
-Ly8gTXVzZSBEZXNrdG9wIOKAlCBwcm9zZXMgdXRhbWEgKFJ1c3QvVGF1cmkpLgovLwovLyBEdWEgamVuZGVsYSwgZHVhIGR1bmlhIHlhbmcgc2VuZ2FqYSBkaXBpc2FoOgovLyAtICJtdXNlIjogbWVtdWF0IGh0dHBzOi8vbXVzZS5haSBSRVNNSSAoTWV0YSkuIFRpZGFrIGFkYSBwcmVsb2FkLAovLyAgIHRpZGFrIGFkYSBjYXBhYmlsaXR5IElQQyAobGloYXQgY2FwYWJpbGl0aWVzL3BhbmVsLmpzb24pIOKAlCBhcGxpa2FzaQovLyAgIGluaSB0aWRhayBiaXNhIG1lbWJhY2EsIG1lbnl1bnRpaywgYXRhdSBtZW5jdXJpIGFwYSBwdW4gZGFyaQovLyAgIGhhbGFtYW4gaXR1LiBMb2dpbiBkaWtldGlrIGxhbmdzdW5nIGtlIE1ldGEsIHNlcGVydGkgZGkgYnJvd3Nlci4KLy8gLSAicGFuZWwiOiBoYWxhbWFuIGxva2FsIFBhbmVsIEtvbnRyb2wsIHNhdHUtc2F0dW55YSB5YW5nIGJvbGVoCi8vICAgYmljYXJhIGtlIFJ1c3QgKHN0YXR1cyBicmlkZ2UsIGdhbnRpIGZvbGRlciwgdG9rZW4sIHRvZ2dsZSBleGVjLAovLyAgIHRvbWJvbCBzZXR1anUvdG9sYWsgcGVyaW50YWggdGVybWluYWwpLgovLwovLyBCcmlkZ2UgSFRUUCBqYWxhbiBkaSB0aHJlYWQgc2VuZGlyaSAoY3JhdGUgbXVzZS1icmlkZ2UpLCBiaW5kCi8vIGtlIElQIFRhaWxzY2FsZSBhdGF1IDEyNy4wLjAuMSwgdGlkYWsgcGVybmFoIDAuMC4wLjAsIGRhbiB0aWRhawovLyBwZXJuYWggbWVtYnVhdCBrb25la3NpIGtlbHVhci4KIyFbY2ZnX2F0dHIobm90KGRlYnVnX2Fzc2VydGlvbnMpLCB3aW5kb3dzX3N1YnN5c3RlbSA9ICJ3aW5kb3dzIildCgp1c2UgbXVzZV9icmlkZ2U6OntCcmlkZ2VTZXJ2ZXIsIEJyaWRnZVN0YXRlfTsKdXNlIHJhbmQ6OlJuZzsKdXNlIHNlcmRlOjpTZXJpYWxpemU7CnVzZSBzdGQ6OmNvbGxlY3Rpb25zOjpIYXNoTWFwOwp1c2Ugc3RkOjpwYXRoOjpQYXRoQnVmOwp1c2Ugc3RkOjpzeW5jOjphdG9taWM6OntBdG9taWNCb29sLCBPcmRlcmluZ307CnVzZSBzdGQ6OnN5bmM6OntBcmMsIE11dGV4fTsKdXNlIHRhdXJpOjp7RW1pdHRlciwgTGlzdGVuZXIsIE1hbmFnZXJ9OwoKY29uc3QgUE9SVDogdTE2ID0gODc2NTsKCiNbZGVyaXZlKENsb25lLCBTZXJpYWxpemUpXQpzdHJ1Y3QgU3RhdHVzIHsKICAgIHdvcmtzcGFjZTogU3RyaW5nLAogICAgYWRkcmVzczogU3RyaW5nLAogICAgdG9rZW46IFN0cmluZywKICAgIHRva2VuX2ZpbmdlcnByaW50OiBTdHJpbmcsCiAgICBleGVjX2VuYWJsZWQ6IGJvb2wsCn0KCnN0cnVjdCBBcHBTdGF0ZSB7CiAgICBicmlkZ2U6IEJyaWRnZVN0YXRlLAogICAgYWRkcmVzczogU3RyaW5nLAogICAgcGVuZGluZzogTXV0ZXg8SGFzaE1hcDx1NjQsIHN0ZDo6c3luYzo6bXBzYzo6U2VuZGVyPGJvb2w+Pj4sCiAgICBjb3VudGVyOiBNdXRleDx1NjQ+LAogICAgbG9nX2xpbmVzOiBNdXRleDxWZWM8U3RyaW5nPj4sCn0KCmZuIGZpbmdlcnByaW50KHRva2VuOiAmc3RyKSAtPiBTdHJpbmcgewogICAgLy8gRk5WLTFhIHNlZGVyaGFuYSBoYW55YSB1bnR1ayBzaWRpayBqYXJpIHRhbXBpbGFuIChidWthbiBrZWFtYW5hbikuCiAgICBsZXQgbXV0IGg6IHU2NCA9IDB4Y2JmMjljZTQ4NDIyMjMyNTsKICAgIGZvciBiIGluIHRva2VuLmFzX2J5dGVzKCkgewogICAgICAgIGggXj0gKmIgYXMgdTY0OwogICAgICAgIGggPSBoLndyYXBwaW5nX211bCgweDEwMDAwMDAwMWIzKTsKICAgIH0KICAgIGZvcm1hdCEoIns6MDh4fSIsIChoID4+IDMyKSBhcyB1MzIpCn0KCmZuIGdlbl90b2tlbigpIC0+IFN0cmluZyB7CiAgICBsZXQgbXV0IHJuZyA9IHJhbmQ6OnRocmVhZF9ybmcoKTsKICAgICgwLi4zMikKICAgICAgICAubWFwKHxffCB7CiAgICAgICAgICAgIGNvbnN0IENIQVJTOiAmW3U4XSA9IGIiQUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVphYmNkZWZnaGlqa2xtbm9wcXJzdHV2d3h5ejAxMjM0NTY3ODktXyI7CiAgICAgICAgICAgIENIQVJTW3JuZy5nZW5fcmFuZ2UoMC4uQ0hBUlMubGVuKCkpXSBhcyBjaGFyCiAgICAgICAgfSkKICAgICAgICAuY29sbGVjdCgpCn0KCmZuIHB1c2hfbG9nKGFwcDogJnRhdXJpOjpBcHBIYW5kbGUsIGxpbmVzOiAmTXV0ZXg8VmVjPFN0cmluZz4+LCBtc2c6ICZzdHIpIHsKICAgIGxldCBsaW5lID0gZm9ybWF0ISgKICAgICAgICAiW3t9XSB7fSIsCiAgICAgICAgY2hyb25vX2xpa2Vfbm93KCksCiAgICAgICAgbXNnCiAgICApOwogICAgaWYgbGV0IE9rKG11dCB2KSA9IGxpbmVzLmxvY2soKSB7CiAgICAgICAgdi5wdXNoKGxpbmUuY2xvbmUoKSk7CiAgICAgICAgaWYgdi5sZW4oKSA+IDIwMCB7CiAgICAgICAgICAgIHYuZHJhaW4oMC4udi5sZW4oKSAtIDIwMCk7CiAgICAgICAgfQogICAgfQogICAgbGV0IF8gPSBhcHAuZW1pdF90bygicGFuZWwiLCAiYnJpZGdlLWxvZyIsIGxpbmUpOwp9CgpmbiBjaHJvbm9fbGlrZV9ub3coKSAtPiBTdHJpbmcgewogICAgLy8gVGFucGEgY3JhdGUgdGFuZ2dhbDogcGFrYWkgZGV0aWsgc2VqYWsgZXBvY2ggLT4gSEg6TU06U1MgVVRDIGthc2FyLgogICAgLy8gKExvZyBsb2thbCB1bnR1ayBkaWJhY2EgcGVtaWxpayBsYXB0b3A7IHpvbmEgdGlkYWsga3JpdGlzLikKICAgIGxldCBzZWNzID0gc3RkOjp0aW1lOjpTeXN0ZW1UaW1lOjpub3coKQogICAgICAgIC5kdXJhdGlvbl9zaW5jZShzdGQ6OnRpbWU6OlVOSVhfRVBPQ0gpCiAgICAgICAgLm1hcCh8ZHwgZC5hc19zZWNzKCkpCiAgICAgICAgLnVud3JhcF9vcigwKTsKICAgIGZvcm1hdCEoCiAgICAgICAgIns6MDJ9Ons6MDJ9Ons6MDJ9IiwKICAgICAgICAoc2VjcyAvIDM2MDApICUgMjQsCiAgICAgICAgKHNlY3MgLyA2MCkgJSA2MCwKICAgICAgICBzZWNzICUgNjAKICAgICkKfQoKI1t0YXVyaTo6Y29tbWFuZF0KZm4gZ2V0X3N0YXR1cyhzdGF0ZTogdGF1cmk6OlN0YXRlPCdfLCBBcmM8QXBwU3RhdGU+PikgLT4gU3RhdHVzIHsKICAgIFN0YXR1cyB7CiAgICAgICAgd29ya3NwYWNlOiBzdGF0ZS5icmlkZ2Uud29ya3NwYWNlKCkudG9fc3RyaW5nX2xvc3N5KCkuaW50b19vd25lZCgpLAogICAgICAgIGFkZHJlc3M6IGZvcm1hdCEoImh0dHA6Ly97fSIsIHN0YXRlLmFkZHJlc3MpLAogICAgICAgIHRva2VuX2ZpbmdlcnByaW50OiBmaW5nZXJwcmludCgmc3RhdGUuYnJpZGdlLnRva2VuKSwKICAgICAgICB0b2tlbjogc3RhdGUuYnJpZGdlLnRva2VuLmNsb25lKCksCiAgICAgICAgZXhlY19lbmFibGVkOiBzdGF0ZS5icmlkZ2UuYWxsb3dfZXhlYy5sb2FkKE9yZGVyaW5nOjpTZXFDc3QpLAogICAgfQp9CgojW3RhdXJpOjpjb21tYW5kXQpmbiBnZXRfbG9nKHN0YXRlOiB0YXVyaTo6U3RhdGU8J18sIEFyYzxBcHBTdGF0ZT4+KSAtPiBWZWM8U3RyaW5nPiB7CiAgICBzdGF0ZS5sb2dfbGluZXMubG9jaygpLnVud3JhcCgpLmNsb25lKCkKfQoKI1t0YXVyaTo6Y29tbWFuZF0KZm4gc2V0X2V4ZWNfZW5hYmxlZChzdGF0ZTogdGF1cmk6OlN0YXRlPCdfLCBBcmM8QXBwU3RhdGU+PiwgZW5hYmxlZDogYm9vbCkgewogICAgc3RhdGUuYnJpZGdlLmFsbG93X2V4ZWMuc3RvcmUoZW5hYmxlZCwgT3JkZXJpbmc6OlNlcUNzdCk7Cn0KCiNbdGF1cmk6OmNvbW1hbmRdCmZuIHNldF93b3Jrc3BhY2UoCiAgICBhcHA6IHRhdXJpOjpBcHBIYW5kbGUsCiAgICBzdGF0ZTogdGF1cmk6OlN0YXRlPCdfLCBBcmM8QXBwU3RhdGU+PiwKICAgIGRpcjogU3RyaW5nLAopIC0+IFJlc3VsdDwoKSwgU3RyaW5nPiB7CiAgICBzdGF0ZQogICAgICAgIC5icmlkZ2UKICAgICAgICAuc2V0X3dvcmtzcGFjZSgmUGF0aEJ1Zjo6ZnJvbSgmZGlyKSkKICAgICAgICAubWFwX2Vycih8ZXwgZS50b19zdHJpbmcoKSk/OwogICAgc2F2ZV9jb25maWcoJmFwcCwgJmRpcik7CiAgICBPaygoKSkKfQoKI1t0YXVyaTo6Y29tbWFuZF0KZm4gZXhlY19kZWNpc2lvbihzdGF0ZTogdGF1cmk6OlN0YXRlPCdfLCBBcmM8QXBwU3RhdGU+PiwgaWQ6IHU2NCwgYXBwcm92ZWQ6IGJvb2wpIHsKICAgIGlmIGxldCBTb21lKHR4KSA9IHN0YXRlLnBlbmRpbmcubG9jaygpLnVud3JhcCgpLnJlbW92ZSgmaWQpIHsKICAgICAgICBsZXQgXyA9IHR4LnNlbmQoYXBwcm92ZWQpOwogICAgfQp9CgpmbiBjb25maWdfcGF0aChhcHA6ICZ0YXVyaTo6QXBwSGFuZGxlKSAtPiBQYXRoQnVmIHsKICAgIGFwcC5wYXRoKCkKICAgICAgICAuYXBwX2RhdGFfZGlyKCkKICAgICAgICAuZXhwZWN0KCJhcHAgZGF0YSBkaXIiKQogICAgICAgIC5qb2luKCJjb25maWcuanNvbiIpCn0KCmZuIHNhdmVfY29uZmlnKGFwcDogJnRhdXJpOjpBcHBIYW5kbGUsIHdvcmtzcGFjZTogJnN0cikgewogICAgbGV0IGNmZyA9IHNlcmRlX2pzb246Ompzb24hKHsgIndvcmtzcGFjZSI6IHdvcmtzcGFjZSB9KTsKICAgIGxldCBfID0gc3RkOjpmczo6d3JpdGUoY29uZmlnX3BhdGgoYXBwKSwgY2ZnLnRvX3N0cmluZygpKTsKfQoKZm4gbG9hZF93b3Jrc3BhY2UoYXBwOiAmdGF1cmk6OkFwcEhhbmRsZSkgLT4gUGF0aEJ1ZiB7CiAgICBpZiBsZXQgT2sodGV4dCkgPSBzdGQ6OmZzOjpyZWFkX3RvX3N0cmluZyhjb25maWdfcGF0aChhcHApKSB7CiAgICAgICAgaWYgbGV0IE9rKHYpID0gc2VyZGVfanNvbjo6ZnJvbV9zdHI6OjxzZXJkZV9qc29uOjpWYWx1ZT4oJnRleHQpIHsKICAgICAgICAgICAgaWYgbGV0IFNvbWUodykgPSB2WyJ3b3Jrc3BhY2UiXS5hc19zdHIoKSB7CiAgICAgICAgICAgICAgICBsZXQgcCA9IFBhdGhCdWY6OmZyb20odyk7CiAgICAgICAgICAgICAgICBpZiBwLmlzX2RpcigpIHsKICAgICAgICAgICAgICAgICAgICByZXR1cm4gcDsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgIH0KICAgIH0KICAgIGxldCBkZWZhdWx0ID0gYXBwCiAgICAgICAgLnBhdGgoKQogICAgICAgIC5ob21lX2RpcigpCiAgICAgICAgLmV4cGVjdCgiaG9tZSBkaXIiKQogICAgICAgIC5qb2luKCJNdXNlV29ya3NwYWNlIik7CiAgICBsZXQgXyA9IHN0ZDo6ZnM6OmNyZWF0ZV9kaXJfYWxsKCZkZWZhdWx0KTsKICAgIHNhdmVfY29uZmlnKGFwcCwgJmRlZmF1bHQudG9fc3RyaW5nX2xvc3N5KCkpOwogICAgZGVmYXVsdAp9CgpmbiBsb2FkX3Rva2VuKGFwcDogJnRhdXJpOjpBcHBIYW5kbGUpIC0+IFN0cmluZyB7CiAgICBsZXQgcGF0aCA9IGFwcAogICAgICAgIC5wYXRoKCkKICAgICAgICAuYXBwX2RhdGFfZGlyKCkKICAgICAgICAuZXhwZWN0KCJhcHAgZGF0YSBkaXIiKQogICAgICAgIC5qb2luKCJ0b2tlbi50eHQiKTsKICAgIGlmIGxldCBPayh0KSA9IHN0ZDo6ZnM6OnJlYWRfdG9fc3RyaW5nKCZwYXRoKSB7CiAgICAgICAgbGV0IHQgPSB0LnRyaW0oKS50b19zdHJpbmcoKTsKICAgICAgICBpZiB0LmxlbigpID49IDMyIHsKICAgICAgICAgICAgcmV0dXJuIHQ7CiAgICAgICAgfQogICAgfQogICAgbGV0IHQgPSBnZW5fdG9rZW4oKTsKICAgIGxldCBfID0gc3RkOjpmczo6Y3JlYXRlX2Rpcl9hbGwocGF0aC5wYXJlbnQoKS51bndyYXAoKSk7CiAgICBsZXQgXyA9IHN0ZDo6ZnM6OndyaXRlKCZwYXRoLCAmdCk7CiAgICB0Cn0KCmZuIG1haW4oKSB7CiAgICB0YXVyaTo6QnVpbGRlcjo6ZGVmYXVsdCgpCiAgICAgICAgLnBsdWdpbih0YXVyaV9wbHVnaW5fZGlhbG9nOjppbml0KCkpCiAgICAgICAgLmludm9rZV9oYW5kbGVyKHRhdXJpOjpnZW5lcmF0ZV9oYW5kbGVyIVsKICAgICAgICAgICAgZ2V0X3N0YXR1cywKICAgICAgICAgICAgZ2V0X2xvZywKICAgICAgICAgICAgc2V0X2V4ZWNfZW5hYmxlZCwKICAgICAgICAgICAgc2V0X3dvcmtzcGFjZSwKICAgICAgICAgICAgZXhlY19kZWNpc2lvbgogICAgICAgIF0pCiAgICAgICAgLnNldHVwKHxhcHB8IHsKICAgICAgICAgICAgbGV0IGhhbmRsZSA9IGFwcC5oYW5kbGUoKS5jbG9uZSgpOwogICAgICAgICAgICBsZXQgd29ya3NwYWNlID0gbG9hZF93b3Jrc3BhY2UoJmhhbmRsZSk7CiAgICAgICAgICAgIGxldCB0b2tlbiA9IGxvYWRfdG9rZW4oJmhhbmRsZSk7CiAgICAgICAgICAgIGxldCBiaW5kID0gbXVzZV9icmlkZ2U6OmRldGVjdF90YWlsc2NhbGVfaXAoKQogICAgICAgICAgICAgICAgLnVud3JhcF9vcl9lbHNlKHx8ICIxMjcuMC4wLjEiLnRvX3N0cmluZygpKTsKCiAgICAgICAgICAgIGxldCBsb2dfbGluZXMgPSBNdXRleDo6bmV3KFZlYzo6PFN0cmluZz46Om5ldygpKTsKICAgICAgICAgICAgbGV0IGFwcF9zdGF0ZV9ob2xkZXI6IEFyYzxNdXRleDxPcHRpb248QXJjPEFwcFN0YXRlPj4+PiA9CiAgICAgICAgICAgICAgICBBcmM6Om5ldyhNdXRleDo6bmV3KE5vbmUpKTsKCiAgICAgICAgICAgIC8vIENhbGxiYWNrIHBlcnNldHVqdWFuIGV4ZWM6IGxlbXBhciBldmVudCBrZSBwYW5lbCwgdHVuZ2d1CiAgICAgICAgICAgIC8vIGphd2FiYW4gbWFudXNpYSAobWFrcyA2MCBkZXRpaywgbGV3YXQgPSBUT0xBSykuCiAgICAgICAgICAgIGxldCBhcHByb3ZlOiBtdXNlX2JyaWRnZTo6QXBwcm92ZUZuID0gewogICAgICAgICAgICAgICAgbGV0IGhhbmRsZSA9IGhhbmRsZS5jbG9uZSgpOwogICAgICAgICAgICAgICAgbGV0IGhvbGRlciA9IGFwcF9zdGF0ZV9ob2xkZXIuY2xvbmUoKTsKICAgICAgICAgICAgICAgIEFyYzo6bmV3KG1vdmUgfGNvbW1hbmQ6ICZzdHIsIF93czogJnN0ZDo6cGF0aDo6UGF0aHwgewogICAgICAgICAgICAgICAgICAgIGxldCBzdGF0ZSA9IGhvbGRlci5sb2NrKCkudW53cmFwKCkuY2xvbmUoKTsKICAgICAgICAgICAgICAgICAgICBsZXQgU29tZShzdGF0ZSkgPSBzdGF0ZSBlbHNlIHsgcmV0dXJuIGZhbHNlIH07CiAgICAgICAgICAgICAgICAgICAgbGV0ICh0eCwgcngpID0gc3RkOjpzeW5jOjptcHNjOjpjaGFubmVsOjo8Ym9vbD4oKTsKICAgICAgICAgICAgICAgICAgICBsZXQgaWQgPSB7CiAgICAgICAgICAgICAgICAgICAgICAgIGxldCBtdXQgYyA9IHN0YXRlLmNvdW50ZXIubG9jaygpLnVud3JhcCgpOwogICAgICAgICAgICAgICAgICAgICAgICAqYyArPSAxOwogICAgICAgICAgICAgICAgICAgICAgICAqYwogICAgICAgICAgICAgICAgICAgIH07CiAgICAgICAgICAgICAgICAgICAgc3RhdGUucGVuZGluZy5sb2NrKCkudW53cmFwKCkuaW5zZXJ0KGlkLCB0eCk7CiAgICAgICAgICAgICAgICAgICAgaWYgbGV0IFNvbWUod2luKSA9IGhhbmRsZS5nZXRfd2Vidmlld193aW5kb3coInBhbmVsIikgewogICAgICAgICAgICAgICAgICAgICAgICBsZXQgXyA9IHdpbi5zaG93KCk7CiAgICAgICAgICAgICAgICAgICAgICAgIGxldCBfID0gd2luLnNldF9mb2N1cygpOwogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICBsZXQgXyA9IGhhbmRsZS5lbWl0X3RvKAogICAgICAgICAgICAgICAgICAgICAgICAicGFuZWwiLAogICAgICAgICAgICAgICAgICAgICAgICAiZXhlYy1yZXF1ZXN0IiwKICAgICAgICAgICAgICAgICAgICAgICAgc2VyZGVfanNvbjo6anNvbiEoeyAiaWQiOiBpZCwgImNvbW1hbmQiOiBjb21tYW5kIH0pLAogICAgICAgICAgICAgICAgICAgICk7CiAgICAgICAgICAgICAgICAgICAgcngucmVjdl90aW1lb3V0KHN0ZDo6dGltZTo6RHVyYXRpb246OmZyb21fc2Vjcyg2MCkpCiAgICAgICAgICAgICAgICAgICAgICAgIC51bndyYXBfb3IoZmFsc2UpCiAgICAgICAgICAgICAgICB9KQogICAgICAgICAgICB9OwoKICAgICAgICAgICAgbGV0IGxvZ19mbjogbXVzZV9icmlkZ2U6OkxvZ0ZuID0gewogICAgICAgICAgICAgICAgbGV0IGhhbmRsZSA9IGhhbmRsZS5jbG9uZSgpOwogICAgICAgICAgICAgICAgQXJjOjpuZXcobW92ZSB8bXNnOiAmc3RyfCB7CiAgICAgICAgICAgICAgICAgICAgLy8gbG9nX2xpbmVzIGRpYWtzZXMgbGV3YXQgc3RhdGU7IHNlYmVsdW0gc3RhdGUgc2lhcCwKICAgICAgICAgICAgICAgICAgICAvLyB0dWxpcyBrZSBzdGRlcnIgc2FqYS4KICAgICAgICAgICAgICAgICAgICBlcHJpbnRsbiEoIlticmlkZ2VdIHttc2d9Iik7CiAgICAgICAgICAgICAgICAgICAgbGV0IF8gPSBoYW5kbGUuZW1pdF90bygicGFuZWwiLCAiYnJpZGdlLWxvZyIsIG1zZy50b19zdHJpbmcoKSk7CiAgICAgICAgICAgICAgICB9KQogICAgICAgICAgICB9OwoKICAgICAgICAgICAgbGV0IGJyaWRnZSA9IEJyaWRnZVN0YXRlOjpuZXcod29ya3NwYWNlLCB0b2tlbiwgZmFsc2UsIGFwcHJvdmUsIGxvZ19mbikKICAgICAgICAgICAgICAgIC5leHBlY3QoIndvcmtzcGFjZSB2YWxpZCIpOwogICAgICAgICAgICBsZXQgc2VydmVyID0gQnJpZGdlU2VydmVyOjpzdGFydChicmlkZ2UuY2xvbmUoKSwgJmJpbmQsIFBPUlQpCiAgICAgICAgICAgICAgICAuZXhwZWN0KCJicmlkZ2UgZ2FnYWwgYmluZCIpOwogICAgICAgICAgICBsZXQgYWRkcmVzcyA9IHNlcnZlci5hZGRyLnRvX3N0cmluZygpOwogICAgICAgICAgICAvLyBTZXJ2ZXIgc2VuZ2FqYSB0aWRhayBkaXNpbXBhbiBoYW5kbGUgc3RvcC1ueWE6IGJyaWRnZSBoaWR1cAogICAgICAgICAgICAvLyBzZWxhbWEgYXBsaWthc2kgaGlkdXA7IG1lbnV0dXAgYXBsaWthc2kgPSBicmlkZ2UgbWF0aS4KICAgICAgICAgICAgc3RkOjptZW06OmZvcmdldChzZXJ2ZXIpOwoKICAgICAgICAgICAgbGV0IHN0YXRlID0gQXJjOjpuZXcoQXBwU3RhdGUgewogICAgICAgICAgICAgICAgYnJpZGdlLAogICAgICAgICAgICAgICAgYWRkcmVzcywKICAgICAgICAgICAgICAgIHBlbmRpbmc6IE11dGV4OjpuZXcoSGFzaE1hcDo6bmV3KCkpLAogICAgICAgICAgICAgICAgY291bnRlcjogTXV0ZXg6Om5ldygwKSwKICAgICAgICAgICAgICAgIGxvZ19saW5lcywKICAgICAgICAgICAgfSk7CiAgICAgICAgICAgICphcHBfc3RhdGVfaG9sZGVyLmxvY2soKS51bndyYXAoKSA9IFNvbWUoc3RhdGUuY2xvbmUoKSk7CiAgICAgICAgICAgIGFwcC5tYW5hZ2Uoc3RhdGUpOwoKICAgICAgICAgICAgLy8gVHJheTogaWtvbiArIG1lbnUgc2VkZXJoYW5hLgogICAgICAgICAgICB1c2UgdGF1cmk6Om1lbnU6OntNZW51LCBNZW51SXRlbX07CiAgICAgICAgICAgIHVzZSB0YXVyaTo6dHJheTo6VHJheUljb25CdWlsZGVyOwogICAgICAgICAgICBsZXQgb3Blbl9pID0gTWVudUl0ZW06OndpdGhfaWQoYXBwLCAib3BlbiIsICJCdWthIE11c2UiLCB0cnVlLCBOb25lOjo8JnN0cj4pPzsKICAgICAgICAgICAgbGV0IHBhbmVsX2kgPQogICAgICAgICAgICAgICAgTWVudUl0ZW06OndpdGhfaWQoYXBwLCAicGFuZWwiLCAiUGFuZWwgS29udHJvbCIsIHRydWUsIE5vbmU6Ojwmc3RyPik/OwogICAgICAgICAgICBsZXQgcXVpdF9pID0gTWVudUl0ZW06OndpdGhfaWQoYXBwLCAicXVpdCIsICJLZWx1YXIgKGJyaWRnZSBtYXRpKSIsIHRydWUsIE5vbmU6Ojwmc3RyPik/OwogICAgICAgICAgICBsZXQgbWVudSA9IE1lbnU6OndpdGhfaXRlbXMoYXBwLCAmWyZvcGVuX2ksICZwYW5lbF9pLCAmcXVpdF9pXSk/OwogICAgICAgICAgICBUcmF5SWNvbkJ1aWxkZXI6Om5ldygpCiAgICAgICAgICAgICAgICAubWVudSgmbWVudSkKICAgICAgICAgICAgICAgIC50b29sdGlwKCJNdXNlIERlc2t0b3Ag4oCUIGJyaWRnZSBha3RpZiIpCiAgICAgICAgICAgICAgICAub25fbWVudV9ldmVudCh8YXBwLCBldmVudHwgbWF0Y2ggZXZlbnQuaWQuYXNfcmVmKCkgewogICAgICAgICAgICAgICAgICAgICJvcGVuIiA9PiB7CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIGxldCBTb21lKHcpID0gYXBwLmdldF93ZWJ2aWV3X3dpbmRvdygibXVzZSIpIHsKICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxldCBfID0gdy5zaG93KCk7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBsZXQgXyA9IHcuc2V0X2ZvY3VzKCk7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgInBhbmVsIiA9PiB7CiAgICAgICAgICAgICAgICAgICAgICAgIGlmIGxldCBTb21lKHcpID0gYXBwLmdldF93ZWJ2aWV3X3dpbmRvdygicGFuZWwiKSB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBsZXQgXyA9IHcuc2hvdygpOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgbGV0IF8gPSB3LnNldF9mb2N1cygpOwogICAgICAgICAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgICAgICAgICAgfQogICAgICAgICAgICAgICAgICAgICJxdWl0IiA9PiBhcHAuZXhpdCgwKSwKICAgICAgICAgICAgICAgICAgICBfID0+IHt9CiAgICAgICAgICAgICAgICB9KQogICAgICAgICAgICAgICAgLmJ1aWxkKGFwcCk/OwoKICAgICAgICAgICAgLy8gVHV0dXAgamVuZGVsYSBtdXNlID0gc2VtYnVueWlrYW4gKGFwcCB0ZXRhcCBkaSB0cmF5KSwKICAgICAgICAgICAgLy8gYnVrYW4ga2VsdWFyLiBCZXJsYWt1IGp1Z2EgdW50dWsgcGFuZWwuCiAgICAgICAgICAgIGZvciBsYWJlbCBpbiBbIm11c2UiLCAicGFuZWwiXSB7CiAgICAgICAgICAgICAgICBpZiBsZXQgU29tZSh3KSA9IGFwcC5nZXRfd2Vidmlld193aW5kb3cobGFiZWwpIHsKICAgICAgICAgICAgICAgICAgICBsZXQgdzIgPSB3LmNsb25lKCk7CiAgICAgICAgICAgICAgICAgICAgdy5vbl93aW5kb3dfZXZlbnQobW92ZSB8ZXZlbnR8IHsKICAgICAgICAgICAgICAgICAgICAgICAgaWYgbGV0IHRhdXJpOjpXaW5kb3dFdmVudDo6Q2xvc2VSZXF1ZXN0ZWQgeyBhcGksIC4uIH0gPSBldmVudCB7CiAgICAgICAgICAgICAgICAgICAgICAgICAgICBhcGkucHJldmVudF9jbG9zZSgpOwogICAgICAgICAgICAgICAgICAgICAgICAgICAgbGV0IF8gPSB3Mi5oaWRlKCk7CiAgICAgICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgICB9KTsKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICBsZXQgXyA9IGFwcC5saXN0ZW4oIm5vb3AiLCB8X3wge30pOwogICAgICAgICAgICBPaygoKSkKICAgICAgICB9KQogICAgICAgIC5ydW4odGF1cmk6OmdlbmVyYXRlX2NvbnRleHQhKCkpCiAgICAgICAgLmV4cGVjdCgiTXVzZSBEZXNrdG9wIGdhZ2FsIGphbGFuIik7Cn0KCi8vIFBlbmFuZGEgYWdhciBBdG9taWNCb29sIHRlcnBha2FpIGVrc3BsaXNpdCAodG9nZ2xlIGV4ZWMgZGFyaSB0cmF5IG5hbnRpKS4KI1thbGxvdyhkZWFkX2NvZGUpXQpmbiBfdW51c2VkKF86ICZBdG9taWNCb29sKSB7fQo=
+// Muse Desktop — proses utama (Rust/Tauri).
+//
+// Dua jendela, dua dunia yang sengaja dipisah:
+// - "muse": memuat https://muse.ai RESMI (Meta). Tidak ada preload,
+//   tidak ada capability IPC (lihat capabilities/panel.json) — aplikasi
+//   ini tidak bisa membaca, menyuntik, atau mencuri apa pun dari
+//   halaman itu. Login diketik langsung ke Meta, seperti di browser.
+// - "panel": halaman lokal Panel Kontrol, satu-satunya yang boleh
+//   bicara ke Rust (status bridge, ganti folder, token, toggle exec,
+//   tombol setuju/tolak perintah terminal).
+//
+// Bridge HTTP jalan di thread sendiri (crate muse-bridge), bind
+// ke IP Tailscale atau 127.0.0.1, tidak pernah 0.0.0.0, dan tidak
+// pernah membuat koneksi keluar.
+#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+
+use muse_bridge::{BridgeServer, BridgeState};
+use rand::Rng;
+use serde::Serialize;
+use std::collections::HashMap;
+use std::path::PathBuf;
+use std::sync::atomic::{AtomicBool, Ordering};
+use std::sync::{Arc, Mutex};
+use tauri::{Emitter, Listener, Manager};
+
+const PORT: u16 = 8765;
+
+#[derive(Clone, Serialize)]
+struct Status {
+    workspace: String,
+    address: String,
+    token: String,
+    token_fingerprint: String,
+    exec_enabled: bool,
+}
+
+struct AppState {
+    bridge: BridgeState,
+    address: String,
+    pending: Mutex<HashMap<u64, std::sync::mpsc::Sender<bool>>>,
+    counter: Mutex<u64>,
+    log_lines: Mutex<Vec<String>>,
+}
+
+fn fingerprint(token: &str) -> String {
+    // FNV-1a sederhana hanya untuk sidik jari tampilan (bukan keamanan).
+    let mut h: u64 = 0xcbf29ce484222325;
+    for b in token.as_bytes() {
+        h ^= *b as u64;
+        h = h.wrapping_mul(0x100000001b3);
+    }
+    format!("{:08x}", (h >> 32) as u32)
+}
+
+fn gen_token() -> String {
+    let mut rng = rand::thread_rng();
+    (0..32)
+        .map(|_| {
+            const CHARS: &[u8] = b"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
+            CHARS[rng.gen_range(0..CHARS.len())] as char
+        })
+        .collect()
+}
+
+fn push_log(app: &tauri::AppHandle, lines: &Mutex<Vec<String>>, msg: &str) {
+    let line = format!(
+        "[{}] {}",
+        chrono_like_now(),
+        msg
+    );
+    if let Ok(mut v) = lines.lock() {
+        v.push(line.clone());
+        if v.len() > 200 {
+            v.drain(0..v.len() - 200);
+        }
+    }
+    let _ = app.emit_to("panel", "bridge-log", line);
+}
+
+fn chrono_like_now() -> String {
+    // Tanpa crate tanggal: pakai detik sejak epoch -> HH:MM:SS UTC kasar.
+    // (Log lokal untuk dibaca pemilik laptop; zona tidak kritis.)
+    let secs = std::time::SystemTime::now()
+        .duration_since(std::time::UNIX_EPOCH)
+        .map(|d| d.as_secs())
+        .unwrap_or(0);
+    format!(
+        "{:02}:{:02}:{:02}",
+        (secs / 3600) % 24,
+        (secs / 60) % 60,
+        secs % 60
+    )
+}
+
+#[tauri::command]
+fn get_status(state: tauri::State<'_, Arc<AppState>>) -> Status {
+    Status {
+        workspace: state.bridge.workspace().to_string_lossy().into_owned(),
+        address: format!("http://{}", state.address),
+        token_fingerprint: fingerprint(&state.bridge.token),
+        token: state.bridge.token.clone(),
+        exec_enabled: state.bridge.allow_exec.load(Ordering::SeqCst),
+    }
+}
+
+#[tauri::command]
+fn get_log(state: tauri::State<'_, Arc<AppState>>) -> Vec<String> {
+    state.log_lines.lock().unwrap().clone()
+}
+
+#[tauri::command]
+fn set_exec_enabled(state: tauri::State<'_, Arc<AppState>>, enabled: bool) {
+    state.bridge.allow_exec.store(enabled, Ordering::SeqCst);
+}
+
+#[tauri::command]
+fn set_workspace(
+    app: tauri::AppHandle,
+    state: tauri::State<'_, Arc<AppState>>,
+    dir: String,
+) -> Result<(), String> {
+    state
+        .bridge
+        .set_workspace(&PathBuf::from(&dir))
+        .map_err(|e| e.to_string())?;
+    save_config(&app, &dir);
+    Ok(())
+}
+
+#[tauri::command]
+fn exec_decision(state: tauri::State<'_, Arc<AppState>>, id: u64, approved: bool) {
+    if let Some(tx) = state.pending.lock().unwrap().remove(&id) {
+        let _ = tx.send(approved);
+    }
+}
+
+fn config_path(app: &tauri::AppHandle) -> PathBuf {
+    app.path()
+        .app_data_dir()
+        .expect("app data dir")
+        .join("config.json")
+}
+
+fn save_config(app: &tauri::AppHandle, workspace: &str) {
+    let cfg = serde_json::json!({ "workspace": workspace });
+    let _ = std::fs::write(config_path(app), cfg.to_string());
+}
+
+fn load_workspace(app: &tauri::AppHandle) -> PathBuf {
+    if let Ok(text) = std::fs::read_to_string(config_path(app)) {
+        if let Ok(v) = serde_json::from_str::<serde_json::Value>(&text) {
+            if let Some(w) = v["workspace"].as_str() {
+                let p = PathBuf::from(w);
+                if p.is_dir() {
+                    return p;
+                }
+            }
+        }
+    }
+    let default = app
+        .path()
+        .home_dir()
+        .expect("home dir")
+        .join("MuseWorkspace");
+    let _ = std::fs::create_dir_all(&default);
+    save_config(app, &default.to_string_lossy());
+    default
+}
+
+fn load_token(app: &tauri::AppHandle) -> String {
+    let path = app
+        .path()
+        .app_data_dir()
+        .expect("app data dir")
+        .join("token.txt");
+    if let Ok(t) = std::fs::read_to_string(&path) {
+        let t = t.trim().to_string();
+        if t.len() >= 32 {
+            return t;
+        }
+    }
+    let t = gen_token();
+    let _ = std::fs::create_dir_all(path.parent().unwrap());
+    let _ = std::fs::write(&path, &t);
+    t
+}
+
+fn main() {
+    tauri::Builder::default()
+        .plugin(tauri_plugin_dialog::init())
+        .invoke_handler(tauri::generate_handler![
+            get_status,
+            get_log,
+            set_exec_enabled,
+            set_workspace,
+            exec_decision
+        ])
+        .setup(|app| {
+            let handle = app.handle().clone();
+            let workspace = load_workspace(&handle);
+            let token = load_token(&handle);
+            let bind = muse_bridge::detect_tailscale_ip()
+                .unwrap_or_else(|| "127.0.0.1".to_string());
+
+            let log_lines = Mutex::new(Vec::<String>::new());
+            let app_state_holder: Arc<Mutex<Option<Arc<AppState>>>> =
+                Arc::new(Mutex::new(None));
+
+            // Callback persetujuan exec: lempar event ke panel, tunggu
+            // jawaban manusia (maks 60 detik, lewat = TOLAK).
+            let approve: muse_bridge::ApproveFn = {
+                let handle = handle.clone();
+                let holder = app_state_holder.clone();
+                Arc::new(move |command: &str, _ws: &std::path::Path| {
+                    let state = holder.lock().unwrap().clone();
+                    let Some(state) = state else { return false };
+                    let (tx, rx) = std::sync::mpsc::channel::<bool>();
+                    let id = {
+                        let mut c = state.counter.lock().unwrap();
+                        *c += 1;
+                        *c
+                    };
+                    state.pending.lock().unwrap().insert(id, tx);
+                    if let Some(win) = handle.get_webview_window("panel") {
+                        let _ = win.show();
+                        let _ = win.set_focus();
+                    }
+                    let _ = handle.emit_to(
+                        "panel",
+                        "exec-request",
+                        serde_json::json!({ "id": id, "command": command }),
+                    );
+                    rx.recv_timeout(std::time::Duration::from_secs(60))
+                        .unwrap_or(false)
+                })
+            };
+
+            let log_fn: muse_bridge::LogFn = {
+                let handle = handle.clone();
+                Arc::new(move |msg: &str| {
+                    // log_lines diakses lewat state; sebelum state siap,
+                    // tulis ke stderr saja.
+                    eprintln!("[bridge] {msg}");
+                    let _ = handle.emit_to("panel", "bridge-log", msg.to_string());
+                })
+            };
+
+            let bridge = BridgeState::new(workspace, token, false, approve, log_fn)
+                .expect("workspace valid");
+            let server = BridgeServer::start(bridge.clone(), &bind, PORT)
+                .expect("bridge gagal bind");
+            let address = server.addr.to_string();
+            // Server sengaja tidak disimpan handle stop-nya: bridge hidup
+            // selama aplikasi hidup; menutup aplikasi = bridge mati.
+            std::mem::forget(server);
+
+            let state = Arc::new(AppState {
+                bridge,
+                address,
+                pending: Mutex::new(HashMap::new()),
+                counter: Mutex::new(0),
+                log_lines,
+            });
+            *app_state_holder.lock().unwrap() = Some(state.clone());
+            app.manage(state);
+
+            // Tray: ikon + menu sederhana.
+            use tauri::menu::{Menu, MenuItem};
+            use tauri::tray::TrayIconBuilder;
+            let open_i = MenuItem::with_id(app, "open", "Buka Muse", true, None::<&str>)?;
+            let panel_i =
+                MenuItem::with_id(app, "panel", "Panel Kontrol", true, None::<&str>)?;
+            let quit_i = MenuItem::with_id(app, "quit", "Keluar (bridge mati)", true, None::<&str>)?;
+            let menu = Menu::with_items(app, &[&open_i, &panel_i, &quit_i])?;
+            TrayIconBuilder::new()
+                .menu(&menu)
+                .tooltip("Muse Desktop — bridge aktif")
+                .on_menu_event(|app, event| match event.id.as_ref() {
+                    "open" => {
+                        if let Some(w) = app.get_webview_window("muse") {
+                            let _ = w.show();
+                            let _ = w.set_focus();
+                        }
+                    }
+                    "panel" => {
+                        if let Some(w) = app.get_webview_window("panel") {
+                            let _ = w.show();
+                            let _ = w.set_focus();
+                        }
+                    }
+                    "quit" => app.exit(0),
+                    _ => {}
+                })
+                .build(app)?;
+
+            // Tutup jendela muse = sembunyikan (app tetap di tray),
+            // bukan keluar. Berlaku juga untuk panel.
+            for label in ["muse", "panel"] {
+                if let Some(w) = app.get_webview_window(label) {
+                    let w2 = w.clone();
+                    w.on_window_event(move |event| {
+                        if let tauri::WindowEvent::CloseRequested { api, .. } = event {
+                            api.prevent_close();
+                            let _ = w2.hide();
+                        }
+                    });
+                }
+            }
+            let _ = app.listen("noop", |_| {});
+            Ok(())
+        })
+        .run(tauri::generate_context!())
+        .expect("Muse Desktop gagal jalan");
+}
+
+// Penanda agar AtomicBool terpakai eksplisit (toggle exec dari tray nanti).
+#[allow(dead_code)]
+fn _unused(_: &AtomicBool) {}
