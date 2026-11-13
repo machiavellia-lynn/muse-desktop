@@ -1,1 +1,3 @@
-W3dvcmtzcGFjZV0KbWVtYmVycyA9IFsiY3JhdGVzL211c2UtYnJpZGdlIiwgInNyYy10YXVyaSJdCnJlc29sdmVyID0gIjIiCg==
+[workspace]
+members = ["crates/muse-bridge", "src-tauri"]
+resolver = "2"
