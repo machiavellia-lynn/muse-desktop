@@ -1,1 +1,74 @@
-IyBTZXR1cCDigJQgY29ubmVjdCB5b3VyIE11c2UgdG8geW91ciBsYXB0b3AKCllvdSBvbmx5IGRvIHRoaXMgb25jZS4gRml2ZSBzaG9ydCBwYXJ0cy4KCiMjIDEuIEluc3RhbGwgVGFpbHNjYWxlIG9uIHlvdXIgUEMKCkluc3RhbGwgW1RhaWxzY2FsZV0oaHR0cHM6Ly90YWlsc2NhbGUuY29tL2Rvd25sb2FkKSBvbiB5b3VyIFdpbmRvd3MgUEMKYW5kIHNpZ24gaW4gKGEgZnJlZSBhY2NvdW50IGlzIGZpbmUpLiBMZWF2ZSBpdCBydW5uaW5nIOKAlCBpdCBjcmVhdGVzIHRoZQpwcml2YXRlLCBlbmNyeXB0ZWQgbmV0d29yayBiZXR3ZWVuIHlvdXIgUEMgYW5kIHlvdXIgTXVzZSwgc28gdGhlCmJyaWRnZSBuZXZlciBoYXMgdG8gYmUgZXhwb3NlZCB0byB0aGUgaW50ZXJuZXQuCgpGaW5kIHlvdXIgUEPigJlzIFRhaWxzY2FsZSBhZGRyZXNzOiBjbGljayB0aGUgVGFpbHNjYWxlIHRyYXkgaWNvbiwgb3IgcnVuCmB0YWlsc2NhbGUgaXAgLTRgIGluIGEgdGVybWluYWwuIEl0IGxvb2tzIGxpa2UgYDEwMC54LngueGAuIE11c2UKRGVza3RvcCBhdXRvbWF0aWNhbGx5IGJpbmRzIGl0cyBicmlkZ2UgdG8gdGhpcyBhZGRyZXNzIChwb3J0IGA4NzY1YCkKd2hlbiBUYWlsc2NhbGUgaXMgdXAsIGFuZCBmYWxscyBiYWNrIHRvIGAxMjcuMC4wLjFgIChQQy1vbmx5KSB3aGVuIGl0CmlzbuKAmXQuCgojIyAyLiBMZXQgeW91ciBNdXNlIGpvaW4geW91ciB0YWlsbmV0CgpZb3VyIE11c2UgcnVucyBvbiBpdHMgb3duIGNsb3VkIGNvbXB1dGVyLiBJdCBuZWVkcyB0byBqb2luIHRoZSAqc2FtZSoKVGFpbHNjYWxlIG5ldHdvcms6CgoxLiBJbiB5b3VyIE11c2UgYXBwLCBsb29rIGZvciB0aGUgKipUYWlsc2NhbGUqKiBjb25uZWN0b3IKICAgKFNldHRpbmdzIOKGkiBDb25uZWN0b3JzKSwgb3Igc2ltcGx5IHRlbGwgeW91ciBNdXNlOgogICAq4oCcUGxlYXNlIGpvaW4gbXkgVGFpbHNjYWxlIG5ldHdvcmsu4oCdKgoyLiBZb3VyIE11c2Ugd2lsbCBnaXZlIHlvdSBhbiBhcHByb3ZhbCBsaW5rLiBPcGVuIGl0LCBzaWduIGluIHRvCiAgIFRhaWxzY2FsZSwgYW5kIGFwcHJvdmUgdGhlIG5ldyBkZXZpY2UgKGl0IGFwcGVhcnMgYXMgYG11c2VgKS4KMy4gVGhhdOKAmXMgaXQg4oCUIHlvdXIgTXVzZSBjYW4gbm93IHJlYWNoIG90aGVyIGRldmljZXMgb24geW91ciB0YWlsbmV0LAogICBvdXRib3VuZCBvbmx5LgoKIyMgMy4gUnVuIE11c2UgRGVza3RvcCBhbmQgc2lnbiBpbgoKMS4gU3RhcnQgKipNdXNlIERlc2t0b3AqKi4KMi4gSW4gdGhlIG1haW4gd2luZG93LCBzaWduIGluIHRvICoqbXVzZS5haSoqIHdpdGggeW91ciBvd24gTXVzZQogICBhY2NvdW50IOKAlCBleGFjdGx5IGxpa2UgaW4gYSBicm93c2VyLiBUaGUgYXBwIGl0c2VsZiBuZXZlciBoYW5kbGVzCiAgIHlvdXIgcGFzc3dvcmQuCjMuIFRoZSAqKkNvbnRyb2wgUGFuZWwqKiB3aW5kb3cgc2hvd3M6CiAgIC0gdGhlIHdvcmtzcGFjZSBmb2xkZXIgKGRlZmF1bHQgYEM6XFVzZXJzXDx5b3U+XE11c2VXb3Jrc3BhY2VgKSDigJQKICAgICBjaGFuZ2UgaXQgaWYgeW91IGxpa2UsIHRoaXMgZm9sZGVyIGlzIHRoZSAqb25seSogcGxhY2UgeW91ciBNdXNlCiAgICAgY2FuIHRvdWNoOwogICAtIHRoZSBicmlkZ2UgYWRkcmVzcyAoZS5nLiBgaHR0cDovLzEwMC54LngueDo4NzY1YCk7CiAgIC0geW91ciAqKnBhaXJpbmcgdG9rZW4qKiBhbmQgaXRzIGZpbmdlcnByaW50LgoKIyMgNC4gUGFpciB5b3VyIE11c2UKCjEuIERvd25sb2FkIFtgY2xpZW50L2JyaWRnZV9jbGllbnQucHlgXShjbGllbnQvYnJpZGdlX2NsaWVudC5weSkgZnJvbQogICB0aGlzIHJlcG8gYW5kIGdpdmUgdGhlIGZpbGUgdG8geW91ciBNdXNlIChhdHRhY2ggaXQgaW4gY2hhdCwgb3IKICAgYXNrIHlvdXIgTXVzZSB0byBmZXRjaCBpdCBmcm9tIHRoZSByZXBvKS4KMi4gT3BlbiBbYGNsaWVudC9QUk9NUFQtRk9SLVlPVVItTVVTRS5tZGBdKGNsaWVudC9QUk9NUFQtRk9SLVlPVVItTVVTRS5tZCksCiAgIGZpbGwgaW4geW91ciBicmlkZ2UgYWRkcmVzcyBhbmQgdG9rZW4sIGFuZCBwYXN0ZSB0aGUgcHJvbXB0IHRvIHlvdXIKICAgTXVzZS4KMy4gWW91ciBNdXNlIHdpbGwgdGVzdCB0aGUgY29ubmVjdGlvbiAoYC9oZWFsdGhgLCB0aGVuIGEgZm9sZGVyCiAgIGxpc3RpbmcpLgoKIyMgNS4gVHJ5IGl0CgpBc2sgeW91ciBNdXNlIHRoaW5ncyBsaWtlOgoKLSDigJxMaXN0IHRoZSBmaWxlcyBpbiBteSBsYXB0b3Agd29ya3NwYWNlLuKAnQotIOKAnFJlYWQgYG5vdGVzLnR4dGAgZnJvbSBteSBsYXB0b3Agd29ya3NwYWNlLuKAnQotIOKAnFNhdmUgdGhhdCBzdW1tYXJ5IGFzIGBzdW1tYXJ5Lm1kYCBpbiBteSBsYXB0b3Agd29ya3NwYWNlLuKAnQoKVGVybWluYWwgY29tbWFuZHMgc3RheSBvZmYgdW50aWwgeW91IGVuYWJsZSB0aGVtIGluIHRoZSBDb250cm9sIFBhbmVsLAphbmQgZXZlbiB0aGVuIGV2ZXJ5IGNvbW1hbmQgYXNrcyB5b3UgZmlyc3QsIG9uIHlvdXIgc2NyZWVuLgoKIyMgUmV2b2tpbmcgYWNjZXNzCgotICoqSW1tZWRpYXRlbHk6KiogcXVpdCBNdXNlIERlc2t0b3AgZnJvbSBpdHMgdHJheSBpY29uLiBUaGUgYnJpZGdlCiAgc3RvcHM7IG5vdGhpbmcgY2FuIGNvbm5lY3QuCi0gKipQZXJtYW5lbnRseSByb3RhdGUgdGhlIHRva2VuOioqIGRlbGV0ZSBgdG9rZW4udHh0YCBpbiB0aGUgYXBw4oCZcwogIGRhdGEgZm9sZGVyIChzaG93biBpbiB0aGUgQ29udHJvbCBQYW5lbCBsb2cgb24gc3RhcnR1cCkgYW5kIHJlc3RhcnQKICB0aGUgYXBwIOKAlCBhIGZyZXNoIHRva2VuIGlzIGdlbmVyYXRlZCBhbmQgdGhlIG9sZCBvbmUgc3RvcHMgd29ya2luZy4KLSAqKlJlbW92ZSBNdXNlIGZyb20geW91ciBuZXR3b3JrOioqIGluIHRoZSBUYWlsc2NhbGUgYWRtaW4gY29uc29sZSwKICByZW1vdmUgdGhlIGBtdXNlYCBkZXZpY2UuCg==
+# Setup — connect your Muse to your laptop
+
+You only do this once. Five short parts.
+
+## 1. Install Tailscale on your PC
+
+Install [Tailscale](https://tailscale.com/download) on your Windows PC
+and sign in (a free account is fine). Leave it running — it creates the
+private, encrypted network between your PC and your Muse, so the
+bridge never has to be exposed to the internet.
+
+Find your PC’s Tailscale address: click the Tailscale tray icon, or run
+`tailscale ip -4` in a terminal. It looks like `100.x.x.x`. Muse
+Desktop automatically binds its bridge to this address (port `8765`)
+when Tailscale is up, and falls back to `127.0.0.1` (PC-only) when it
+isn’t.
+
+## 2. Let your Muse join your tailnet
+
+Your Muse runs on its own cloud computer. It needs to join the *same*
+Tailscale network:
+
+1. In your Muse app, look for the **Tailscale** connector
+   (Settings → Connectors), or simply tell your Muse:
+   *“Please join my Tailscale network.”*
+2. Your Muse will give you an approval link. Open it, sign in to
+   Tailscale, and approve the new device (it appears as `muse`).
+3. That’s it — your Muse can now reach other devices on your tailnet,
+   outbound only.
+
+## 3. Run Muse Desktop and sign in
+
+1. Start **Muse Desktop**.
+2. In the main window, sign in to **muse.ai** with your own Muse
+   account — exactly like in a browser. The app itself never handles
+   your password.
+3. The **Control Panel** window shows:
+   - the workspace folder (default `C:\Users\<you>\MuseWorkspace`) —
+     change it if you like, this folder is the *only* place your Muse
+     can touch;
+   - the bridge address (e.g. `http://100.x.x.x:8765`);
+   - your **pairing token** and its fingerprint.
+
+## 4. Pair your Muse
+
+1. Download [`client/bridge_client.py`](client/bridge_client.py) from
+   this repo and give the file to your Muse (attach it in chat, or
+   ask your Muse to fetch it from the repo).
+2. Open [`client/PROMPT-FOR-YOUR-MUSE.md`](client/PROMPT-FOR-YOUR-MUSE.md),
+   fill in your bridge address and token, and paste the prompt to your
+   Muse.
+3. Your Muse will test the connection (`/health`, then a folder
+   listing).
+
+## 5. Try it
+
+Ask your Muse things like:
+
+- “List the files in my laptop workspace.”
+- “Read `notes.txt` from my laptop workspace.”
+- “Save that summary as `summary.md` in my laptop workspace.”
+
+Terminal commands stay off until you enable them in the Control Panel,
+and even then every command asks you first, on your screen.
+
+## Revoking access
+
+- **Immediately:** quit Muse Desktop from its tray icon. The bridge
+  stops; nothing can connect.
+- **Permanently rotate the token:** delete `token.txt` in the app’s
+  data folder (shown in the Control Panel log on startup) and restart
+  the app — a fresh token is generated and the old one stops working.
+- **Remove Muse from your network:** in the Tailscale admin console,
+  remove the `muse` device.
