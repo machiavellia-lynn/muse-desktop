@@ -28,14 +28,17 @@ kamu sendiri** bekerja di **satu folder pilihanmu** di PC Windows kamu.
 
 ## ⬇️ Download
 
-**[➡️ Ambil build terbaru dari GitHub Actions](https://github.com/machiavellia-lynn/muse-desktop/actions/workflows/build-windows.yml)**
-— buka run hijau paling baru → download artifact
-**Muse-Desktop-Windows** → isinya:
+### [⬇️ DOWNLOAD — Muse-Desktop-Windows.zip](https://nightly.link/machiavellia-lynn/muse-desktop/actions/runs/43485913737/Muse-Desktop-Windows.zip)
+
+Satu klik, tanpa login. Unzip — isinya dua file ini:
 
 | File | Isi |
 |---|---|
 | `Muse Desktop_0.2.0_x64-setup.exe` | Installer (disarankan) |
 | `muse-desktop.exe` | Portable — tanpa install, langsung jalan |
+
+*(Link langsung ke build v0.2.0 saat ini. Build yang lebih baru
+muncul di halaman **Releases** / **Actions** repo.)*
 
 > Windows mungkin menampilkan peringatan SmartScreen karena aplikasi
 > ini belum ditandatangani secara digital. Klik **More info → Run
@@ -45,12 +48,13 @@ kamu sendiri** bekerja di **satu folder pilihanmu** di PC Windows kamu.
 **Yang kamu butuhkan:**
 - ✅ PC Windows 10/11
 - ✅ Akun Muse (login pakai akun kamu sendiri)
-- ✅ Akun [Tailscale](https://tailscale.com) gratis (dijelaskan di bawah)
+- ✅ Itu saja — pilih **Mode Mudah** (bawaan, tanpa akun) atau jalur
+  **Tailscale** yang lebih privat (akun gratis) di langkah 3
 - ⏱️ Sekitar 10 menit, sekali saja
 
 ---
 
-## 🚀 Instalasi 5 langkah
+## 🚀 Instalasi 4 langkah
 
 **1. Instal aplikasinya**
 Jalankan installer (atau `.exe` portable). Dua jendela terbuka:
@@ -61,20 +65,24 @@ Di jendela utama, login ke muse.ai pakai akun Muse kamu —
 persis seperti di browser. Aplikasi ini tidak pernah melihat
 password kamu.
 
-**3. Instal Tailscale di PC kamu**
-Download [Tailscale](https://tailscale.com/download), instal, login,
-biarkan berjalan. Tailscale adalah terowongan privat terenkripsi
-antara PC kamu dan Muse kamu — bridge tidak pernah terekspos ke
-internet.
+**3. Pilih mode koneksi**
 
-**4. Hubungkan Muse kamu ke jaringanmu**
-Minta Muse kamu bergabung ke jaringan Tailscale kamu dan setujui
-perangkatnya. Panduan lengkap: **[SETUP.md](SETUP.md)** (langkah 2–3).
+*Mode Mudah (disarankan untuk kebanyakan orang)* — di Control Panel,
+klik **Aktifkan Mode Mudah**. Setelah ±30 detik panel menampilkan
+alamat sementara seperti `https://kata-acak.trycloudflare.com`.
+Tanpa akun, tanpa instal tambahan. Alamat berubah tiap aplikasi
+dinyalakan ulang; perlakukan seperti kata sandi.
 
-**5. Pasangkan**
-Di Control Panel kamu akan melihat alamat (seperti
-`http://100.x.x.x:8765`) dan **token pairing**. Berikan keduanya ke
-Muse kamu, bersama prompt siap pakai di
+*Mode Privat (Tailscale)* — instal
+[Tailscale](https://tailscale.com/download), login, biarkan berjalan,
+dan minta Muse kamu bergabung ke jaringanmu (panduan:
+**[SETUP.md](SETUP.md)**). Lebih privat: bridge tidak pernah
+terekspos ke internet publik sama sekali.
+
+**4. Pasangkan**
+Berikan ke Muse kamu dua hal dari Control Panel: **alamat** (alamat
+Mode Mudah, atau `http://100.x.x.x:8765` di Tailscale) dan **token
+pairing** — bersama prompt siap pakai di
 [client/PROMPT-FOR-YOUR-MUSE.md](client/PROMPT-FOR-YOUR-MUSE.md).
 
 Selesai. Coba minta ke Muse kamu:
