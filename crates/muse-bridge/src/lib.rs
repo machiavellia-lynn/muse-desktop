@@ -22,7 +22,7 @@ use std::time::Duration;
 pub const MAX_READ: u64 = 1_000_000;
 pub const MAX_WRITE: usize = 2_000_000;
 pub const EXEC_TIMEOUT: Duration = Duration::from_secs(60);
-pub const VERSION: &str = "0.2.0";
+pub const VERSION: &str = "0.3.0";
 
 /// Callback persetujuan exec: (command, workspace) -> boleh jalan?
 pub type ApproveFn = Arc<dyn Fn(&str, &Path) -> bool + Send + Sync>;
