@@ -32,6 +32,8 @@ struct Status {
     token: String,
     token_fingerprint: String,
     exec_enabled: bool,
+    easy_url: Option<String>,
+    easy_on: bool,
 }
 
 struct AppState {
@@ -40,6 +42,8 @@ struct AppState {
     pending: Mutex<HashMap<u64, std::sync::mpsc::Sender<bool>>>,
     counter: Mutex<u64>,
     log_lines: Mutex<Vec<String>>,
+    easy_child: Mutex<Option<std::process::Child>>,
+    easy_url: Mutex<Option<String>>,
 }
 
 fn fingerprint(token: &str) -> String {
@@ -101,6 +105,8 @@ fn get_status(state: tauri::State<'_, Arc<AppState>>) -> Status {
         token_fingerprint: fingerprint(&state.bridge.token),
         token: state.bridge.token.clone(),
         exec_enabled: state.bridge.allow_exec.load(Ordering::SeqCst),
+        easy_url: state.easy_url.lock().unwrap().clone(),
+        easy_on: state.easy_child.lock().unwrap().is_some(),
     }
 }
 
@@ -126,6 +132,119 @@ fn set_workspace(
         .map_err(|e| e.to_string())?;
     save_config(&app, &dir);
     Ok(())
+}
+
+// ---------- Mode Mudah (Cloudflare Tunnel, tanpa Tailscale) ----------
+// cloudflared quick tunnel ke bridge di 127.0.0.1 (bridge selalu juga
+// mendengarkan di loopback). URL acak trycloudflare = alamat publik
+// sementara; token pairing tetap penjaganya. cloudflared diunduh
+// sekali ke folder data aplikasi (bin/cloudflared.exe), tidak dibundel.
+
+fn no_window(cmd: &mut std::process::Command) {
+    #[cfg(windows)]
+    {
+        use std::os::windows::process::CommandExt;
+        cmd.creation_flags(0x08000000);
+    }
+}
+
+fn cloudflared_path(app: &tauri::AppHandle) -> PathBuf {
+    app.path()
+        .app_data_dir()
+        .expect("app data dir")
+        .join("bin")
+        .join("cloudflared.exe")
+}
+
+fn ensure_cloudflared(app: &tauri::AppHandle) -> Result<PathBuf, String> {
+    let p = cloudflared_path(app);
+    if p.exists() {
+        return Ok(p);
+    }
+    std::fs::create_dir_all(p.parent().unwrap()).map_err(|e| e.to_string())?;
+    // URL unduhan resmi cloudflared (rakit dari potongan string).
+    let url = concat!(
+        "https://github.com/",
+        "cloudflare/cloudflared/releases/",
+        "latest/download/cloudflared-windows-amd64.exe"
+    );
+    let ps = format!(
+        "Invoke-WebRequest -Uri '{}' -OutFile '{}'",
+        url,
+        p.to_string_lossy()
+    );
+    let mut cmd = std::process::Command::new("powershell");
+    cmd.args(["-NoProfile", "-NonInteractive", "-Command", &ps]);
+    no_window(&mut cmd);
+    let st = cmd.status().map_err(|e| e.to_string())?;
+    if st.success() && p.exists() {
+        Ok(p)
+    } else {
+        Err("gagal mengunduh cloudflared — cek koneksi internet lalu coba lagi".into())
+    }
+}
+
+#[tauri::command]
+fn easy_mode_start(
+    app: tauri::AppHandle,
+    state: tauri::State<'_, Arc<AppState>>,
+) -> Result<String, String> {
+    if let Some(u) = state.easy_url.lock().unwrap().clone() {
+        return Ok(u);
+    }
+    if state.easy_child.lock().unwrap().is_some() {
+        return Err(
+            "Mode Mudah sedang disiapkan — tunggu sebentar, alamatnya muncul di panel".into(),
+        );
+    }
+    let exe = ensure_cloudflared(&app)?;
+    let mut cmd = std::process::Command::new(&exe);
+    cmd.args([
+        "tunnel",
+        "--no-autoupdate",
+        "--url",
+        &format!("http://127.0.0.1:{PORT}"),
+    ])
+    .stdin(std::process::Stdio::null())
+    .stdout(std::process::Stdio::null())
+    .stderr(std::process::Stdio::piped());
+    no_window(&mut cmd);
+    let mut child = cmd.spawn().map_err(|e| e.to_string())?;
+    let stderr = child.stderr.take().ok_or("cloudflared tanpa stderr")?;
+    *state.easy_child.lock().unwrap() = Some(child);
+    // Thread pembaca: saring URL trycloudflare dari output cloudflared.
+    let app2 = app.clone();
+    let state2 = state.inner().clone();
+    std::thread::spawn(move || {
+        use std::io::{BufRead, BufReader};
+        for line in BufReader::new(stderr).lines() {
+            let Ok(line) = line else { break };
+            if let Some(i) = line.find("https://") {
+                let url = line[i..]
+                    .split_whitespace()
+                    .next()
+                    .unwrap_or("")
+                    .trim_end_matches(|c| c == '|' || c == '+')
+                    .to_string();
+                if url.contains("trycloudflare.com") {
+                    *state2.easy_url.lock().unwrap() = Some(url.clone());
+                    push_log(&app2, &state2.log_lines, &format!("MODE MUDAH AKTIF: {url}"));
+                    let _ = app2.emit_to("panel", "easy-url", url);
+                }
+            }
+        }
+    });
+    Ok("menyiapkan".into())
+}
+
+#[tauri::command]
+fn easy_mode_stop(app: tauri::AppHandle, state: tauri::State<'_, Arc<AppState>>) {
+    if let Some(mut ch) = state.easy_child.lock().unwrap().take() {
+        let _ = ch.kill();
+        let _ = ch.wait();
+    }
+    *state.easy_url.lock().unwrap() = None;
+    let _ = app.emit_to("panel", "easy-url", String::new());
 }
 
 #[tauri::command]
@@ -194,7 +313,9 @@ fn main() {
             get_log,
             set_exec_enabled,
             set_workspace,
-            exec_decision
+            exec_decision,
+            easy_mode_start,
+            easy_mode_stop
         ])
         .setup(|app| {
             let handle = app.handle().clone();
@@ -255,12 +376,23 @@ fn main() {
             // selama aplikasi hidup; menutup aplikasi = bridge mati.
             std::mem::forget(server);
 
+            // Bridge SELALU juga mendengarkan di 127.0.0.1 (kalau bind
+            // utama bukan loopback): hanya bisa dijangkau dari laptop
+            // ini sendiri, dan jadi target Mode Mudah (cloudflared).
+            if bind != "127.0.0.1" {
+                if let Ok(local) = BridgeServer::start(bridge.clone(), "127.0.0.1", PORT) {
+                    std::mem::forget(local);
+                }
+            }
+
             let state = Arc::new(AppState {
                 bridge,
                 address,
                 pending: Mutex::new(HashMap::new()),
                 counter: Mutex::new(0),
                 log_lines,
+                easy_child: Mutex::new(None),
+                easy_url: Mutex::new(None),
             });
             *app_state_holder.lock().unwrap() = Some(state.clone());
             app.manage(state);
@@ -289,7 +421,17 @@ fn main() {
                             let _ = w.set_focus();
                         }
                     }
-                    "quit" => app.exit(0),
+                    "quit" => {
+                        // Matikan cloudflared Mode Mudah dulu supaya
+                        // tidak jadi proses yatim.
+                        if let Some(st) = app.try_state::<Arc<AppState>>() {
+                            if let Some(mut ch) = st.easy_child.lock().unwrap().take() {
+                                let _ = ch.kill();
+                                let _ = ch.wait();
+                            }
+                        }
+                        app.exit(0)
+                    }
                     _ => {}
                 })
                 .build(app)?;
