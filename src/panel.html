@@ -28,6 +28,17 @@
   </section>
 
   <section class="card">
+    <div class="row"><strong>Mode Mudah</strong><span class="sub"> — tanpa Tailscale, tanpa akun tambahan</span></div>
+    <p class="sub">Klik Aktifkan, tunggu alamat muncul, lalu kasih <b>alamat ini + token di atas</b> ke Muse kamu. Alamat berubah tiap aplikasi dinyalakan ulang dan hanya berlaku selama aplikasi jalan. Perlakukan alamat ini seperti kata sandi — siapa pun yang punya alamat + token bisa menyambung ke laptop ini.</p>
+    <div class="row mono" id="easy-url">Mode Mudah mati</div>
+    <div class="row">
+      <button id="btn-easy-on">Aktifkan Mode Mudah</button>
+      <button id="btn-copy-easy">Salin alamat</button>
+      <button id="btn-easy-off" class="deny">Matikan</button>
+    </div>
+  </section>
+
+  <section class="card">
     <label class="row switch">
       <input type="checkbox" id="exec-toggle">
       <span>Terminal hidup (setiap perintah tetap ditanya dulu di sini)</span>
