@@ -27,14 +27,17 @@ agent** work in **one folder you choose** on your Windows PC.
 
 ## ⬇️ Download
 
-**[➡️ Get the latest build from GitHub Actions](https://github.com/machiavellia-lynn/muse-desktop/actions/workflows/build-windows.yml)**
-— open the newest green run → download the **Muse-Desktop-Windows**
-artifact → it contains:
+### [⬇️ DOWNLOAD — Muse-Desktop-Windows.zip](https://nightly.link/machiavellia-lynn/muse-desktop/actions/runs/43485913737/Muse-Desktop-Windows.zip)
+
+One click, no sign-in. Unzip it — inside are both files:
 
 | File | What it is |
 |---|---|
 | `Muse Desktop_0.2.0_x64-setup.exe` | Installer (recommended) |
 | `muse-desktop.exe` | Portable — no install, just run it |
+
+*(Direct link to the current v0.2.0 build. Newer builds appear in the
+repo’s **Releases** / **Actions** pages.)*
 
 > Windows may show a SmartScreen warning because the app is not
 > code-signed yet. Click **More info → Run anyway** — or build it
@@ -44,12 +47,13 @@ artifact → it contains:
 **You need:**
 - ✅ A Windows 10/11 PC
 - ✅ A Muse account (you sign in with *your own*)
-- ✅ A free [Tailscale](https://tailscale.com) account (explained below)
+- ✅ Nothing else — pick **Easy Mode** (built in, no account) or the
+  more private **Tailscale** route (free account) in step 3
 - ⏱️ About 10 minutes, once
 
 ---
 
-## 🚀 Install in 5 steps
+## 🚀 Install in 4 steps
 
 **1. Install the app**
 Run the installer (or the portable `.exe`). Two windows open: the main
@@ -59,20 +63,25 @@ Run the installer (or the portable `.exe`). Two windows open: the main
 In the main window, sign in to muse.ai with your own Muse account —
 exactly like in your browser. The app never sees your password.
 
-**3. Install Tailscale on your PC**
-Download [Tailscale](https://tailscale.com/download), install it,
-sign in, leave it running. Tailscale is the private, encrypted tunnel
-between your PC and your Muse — the bridge is never exposed to the
-internet.
+**3. Choose a connection mode**
 
-**4. Connect your Muse to your network**
-Ask your Muse to join your Tailscale network and approve the device.
-Full walkthrough: **[SETUP.md](SETUP.md)** (steps 2–3).
+*Easy Mode (recommended for most people)* — in the Control Panel,
+click **Aktifkan Mode Mudah / Enable Easy Mode**. After ±30 seconds
+the panel shows a temporary address like
+`https://random-words.trycloudflare.com`. No account, no extra
+install. The address changes every time the app restarts; treat it
+like a password.
 
-**5. Pair them**
-In the Control Panel you’ll see an address (like
-`http://100.x.x.x:8765`) and a **pairing token**. Give both to your
-Muse, together with the ready-made prompt in
+*Private Mode (Tailscale)* — install
+[Tailscale](https://tailscale.com/download), sign in, leave it
+running, and ask your Muse to join your network (walkthrough:
+**[SETUP.md](SETUP.md)**). More private: the bridge is never exposed
+to the public internet at all.
+
+**4. Pair them**
+Give your Muse two things from the Control Panel: the **address**
+(the Easy Mode address, or `http://100.x.x.x:8765` on Tailscale) and
+the **pairing token** — together with the ready-made prompt in
 [client/PROMPT-FOR-YOUR-MUSE.md](client/PROMPT-FOR-YOUR-MUSE.md).
 
 Done. Try asking your Muse:
