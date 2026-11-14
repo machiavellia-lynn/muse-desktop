@@ -27,17 +27,15 @@ agent** work in **one folder you choose** on your Windows PC.
 
 ## ⬇️ Download
 
-### [⬇️ DOWNLOAD — Muse-Desktop-Windows.zip](https://nightly.link/machiavellia-lynn/muse-desktop/actions/runs/43485913737/Muse-Desktop-Windows.zip)
+### [⬇️ Download the latest version](https://github.com/machiavellia-lynn/muse-desktop/releases/latest)
 
-One click, no sign-in. Unzip it — inside are both files:
+Download the .exe files from the official Release page — they are
+listed under **Assets**:
 
 | File | What it is |
 |---|---|
-| `Muse Desktop_0.2.0_x64-setup.exe` | Installer (recommended) |
-| `muse-desktop.exe` | Portable — no install, just run it |
-
-*(Direct link to the current v0.2.0 build. Newer builds appear in the
-repo’s **Releases** / **Actions** pages.)*
+| `Muse.Desktop_0.3.0_x64-setup.exe` | Installer (recommended) — [direct download](https://github.com/machiavellia-lynn/muse-desktop/releases/download/v0.3.0/Muse.Desktop_0.3.0_x64-setup.exe) |
+| `muse-desktop.exe` | Portable — no install, just run it — [direct download](https://github.com/machiavellia-lynn/muse-desktop/releases/download/v0.3.0/muse-desktop.exe)|
 
 > Windows may show a SmartScreen warning because the app is not
 > code-signed yet. Click **More info → Run anyway** — or build it
