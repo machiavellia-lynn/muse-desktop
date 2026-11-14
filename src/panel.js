@@ -14,9 +14,39 @@ async function refresh() {
   $('token').textContent = s.token;
   $('fp').textContent = s.token_fingerprint;
   $('exec-toggle').checked = s.exec_enabled;
+  $('easy-url').textContent = s.easy_url
+    ? s.easy_url
+    : (s.easy_on ? 'Menyiapkan Mode Mudah…' : 'Mode Mudah mati');
   const lines = await invoke('get_log');
   if (lines.length) $('log').textContent = lines.join('\n');
 }
+
+$('btn-easy-on').addEventListener('click', async () => {
+  $('easy-url').textContent = 'Menyiapkan Mode Mudah… (unduhan pertama ±1 menit, sesudahnya ±30 detik)';
+  try {
+    await invoke('easy_mode_start');
+  } catch (e) {
+    $('easy-url').textContent = 'Gagal: ' + e;
+  }
+});
+
+$('btn-easy-off').addEventListener('click', async () => {
+  await invoke('easy_mode_stop');
+  $('easy-url').textContent = 'Mode Mudah mati';
+});
+
+$('btn-copy-easy').addEventListener('click', async () => {
+  const t = $('easy-url').textContent;
+  if (t.startsWith('http')) {
+    await navigator.clipboard.writeText(t);
+    $('btn-copy-easy').textContent = 'Tersalin ✓';
+    setTimeout(() => ($('btn-copy-easy').textContent = 'Salin alamat'), 1500);
+  }
+});
+
+listen('easy-url', (e) => {
+  $('easy-url').textContent = e.payload ? e.payload : 'Mode Mudah mati';
+});
 
 $('btn-copy').addEventListener('click', async () => {
   await navigator.clipboard.writeText($('token').textContent);
