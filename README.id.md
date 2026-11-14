@@ -28,17 +28,15 @@ kamu sendiri** bekerja di **satu folder pilihanmu** di PC Windows kamu.
 
 ## ⬇️ Download
 
-### [⬇️ DOWNLOAD — Muse-Desktop-Windows.zip](https://nightly.link/machiavellia-lynn/muse-desktop/actions/runs/43485913737/Muse-Desktop-Windows.zip)
+### [⬇️ Download versi terbaru](https://github.com/machiavellia-lynn/muse-desktop/releases/latest)
 
-Satu klik, tanpa login. Unzip — isinya dua file ini:
+Download file .exe dari halaman Release resmi — file-file tersebut
+ada di bagian **Assets**:
 
 | File | Isi |
 |---|---|
-| `Muse Desktop_0.2.0_x64-setup.exe` | Installer (disarankan) |
-| `muse-desktop.exe` | Portable — tanpa install, langsung jalan |
-
-*(Link langsung ke build v0.2.0 saat ini. Build yang lebih baru
-muncul di halaman **Releases** / **Actions** repo.)*
+| `Muse.Desktop_0.3.0_x64-setup.exe` | Installer (disarankan) — [download langsung](https://github.com/machiavellia-lynn/muse-desktop/releases/download/v0.3.0/Muse.Desktop_0.3.0_x64-setup.exe) |
+| `muse-desktop.exe` | Portable — tanpa install, langsung jalan — [download langsung](https://github.com/machiavellia-lynn/muse-desktop/releases/download/v0.3.0/muse-desktop.exe) |
 
 > Windows mungkin menampilkan peringatan SmartScreen karena aplikasi
 > ini belum ditandatangani secara digital. Klik **More info → Run
